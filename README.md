@@ -28,8 +28,14 @@ For non-search functions safe search is a boolean
   ddg.query(query<String>) // returns a Promise
   
   //Image Search (unstable, not sure why)
-  ddg.image(query<String>, safe<Boolean>, locale<locale string>) //Returns a Promise
+  ddg.image(query<String>, safe<Boolean>, locale<locale string>) // returns a Promise
   
   //Video Search
-  ddg.video(query<String>, safe<Boolean>, locale<locale string>) //Returns a Promise
+  ddg.video(query<String>, safe<Boolean>, locale<locale string>) // returns a Promise
+  
+  //Amazon Search
+  ddg.amazon(query<String>, safe<Boolean>) // returns a Promise
+  
+  //Twitter Search
+  ddg.twitter(handle<String>) // returns a Promise
 ```
