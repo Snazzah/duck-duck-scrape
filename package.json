@@ -1,6 +1,6 @@
 {
   "name": "duck-duck-scrape",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A DuckDuckGo scraper for Node.js.",
   "main": "index.js",
   "scripts": {
