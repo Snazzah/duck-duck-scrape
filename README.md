@@ -42,3 +42,8 @@ For non-search functions safe search is a boolean
   //Twitter Search
   ddg.twitter(handle<String>) // returns a Promise
 ```
+
+# Example
+``` javascript
+ddg.autocomplete("how to convert to ").then((value) => { console.log(value[0].phrase); }); // "how to convert to pdf"
+```
