@@ -1,6 +1,6 @@
 {
   "name": "duck-duck-scrape",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A DuckDuckGo scraper for Node.js.",
   "main": "index.js",
   "scripts": {
@@ -10,11 +10,17 @@
     "duckduckgo"
   ],
   "author": "suushii <suushii@protonmail.com> (https://suushii.github.io)",
+  "contributors": [
+    "Snazzah"
+  ],
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "mustache": "^2.3.0",
-    "querystring": "^0.2.0",
     "snekfetch": "^3.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suushii/duck-duck-scrape.git"
   }
 }
