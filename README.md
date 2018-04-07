@@ -14,7 +14,7 @@ const DuckDuckScrape = require("duck-duck-scrape");
 const ddg = new DuckDuckScrape();
 ```
 # Documentation
-https://suushii.github.io/duck-duck-scrape
+https://suushii.github.io/duck-duck-scrape/index.html
 
 
 # Attribution
