@@ -102,7 +102,7 @@ module.exports = class DDGScraper {
     async autocomplete(query) {
         const response = await sf.get('https://duckduckgo.com/ac/').query({
             callback: 'autocompleteCallback',
-            q: _format(query)
+            q: this._format(query)
         })
         return JSON.parse(response.text.replace(/autocompleteCallback\((.+)\);/, "$1"))
     }
