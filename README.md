@@ -47,3 +47,8 @@ For non-search functions safe search is a boolean
 ``` javascript
 ddg.autocomplete("how to convert to ").then((value) => { console.log(value[0].phrase); }); // "how to convert to pdf"
 ```
+# Attribution
+
+Original code by Snazzah
+
+Packaged by suushii
