@@ -104,164 +104,7 @@
     
 
     
-    <h4 class="name" id="_defineSpice"><span class="type-signature"></span>_defineSpice<span class="signature">(spice)</span><span class="type-signature"> &rarr; {string}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Defines a spice
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>spice</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The DDG spice you want to use</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line69">line 69</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    - Returns a spice
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="amazon"><span class="type-signature">(async) </span>amazon<span class="signature">(query, safe)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id="amazon"><span class="type-signature">(async) </span>amazon<span class="signature">(query, safe)</span><span class="type-signature"> &rarr; {Promise.&lt;Array.&lt;Object>>}</span></h4>
     
 
     
@@ -321,7 +164,7 @@
 
             
 
-            <td class="description last">The query string</td>
+            <td class="description last">The query to search with</td>
         </tr>
 
     
@@ -385,7 +228,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line170">line 170</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line176">line 176</a>
     </li></ul></dd>
     
 
@@ -412,7 +255,7 @@
 
         
 <div class="param-desc">
-    - Promise object represents an array of your results
+    - Product results
 </div>
 
 
@@ -423,7 +266,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise</span>
+<span class="param-type">Promise.&lt;Array.&lt;Object>></span>
 
 
     </dd>
@@ -441,7 +284,7 @@
     
 
     
-    <h4 class="name" id="autocomplete"><span class="type-signature">(async) </span>autocomplete<span class="signature">(query)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id="autocomplete"><span class="type-signature">(async) </span>autocomplete<span class="signature">(query)</span><span class="type-signature"> &rarr; {Promise.&lt;Array.&lt;Object>>}</span></h4>
     
 
     
@@ -501,7 +344,7 @@
 
             
 
-            <td class="description last">The query string</td>
+            <td class="description last">The query to search with</td>
         </tr>
 
     
@@ -542,7 +385,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line122">line 122</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line134">line 134</a>
     </li></ul></dd>
     
 
@@ -569,7 +412,7 @@
 
         
 <div class="param-desc">
-    - Promise object represents an array of your results
+    - The results that autocomplete your query
 </div>
 
 
@@ -580,7 +423,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise</span>
+<span class="param-type">Promise.&lt;Array.&lt;Object>></span>
 
 
     </dd>
@@ -598,7 +441,7 @@
     
 
     
-    <h4 class="name" id="image"><span class="type-signature">(async) </span>image<span class="signature">(query, safe, locale)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id="image"><span class="type-signature">(async) </span>image<span class="signature">(query, safe, locale)</span><span class="type-signature"> &rarr; {Promise.&lt;Array.&lt;Object>>}</span></h4>
     
 
     
@@ -658,7 +501,7 @@
 
             
 
-            <td class="description last">The query string</td>
+            <td class="description last">The query to search with</td>
         </tr>
 
     
@@ -745,7 +588,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line138">line 138</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line146">line 146</a>
     </li></ul></dd>
     
 
@@ -772,7 +615,7 @@
 
         
 <div class="param-desc">
-    - Promise object represents an array of your results
+    - Image results
 </div>
 
 
@@ -783,7 +626,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise</span>
+<span class="param-type">Promise.&lt;Array.&lt;Object>></span>
 
 
     </dd>
@@ -801,7 +644,7 @@
     
 
     
-    <h4 class="name" id="search"><span class="type-signature">(async) </span>search<span class="signature">(query, safeSearch, locale)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id="search"><span class="type-signature">(async) </span>search<span class="signature">(query, safeSearch, locale)</span><span class="type-signature"> &rarr; {Promise.&lt;Array.&lt;<a href="global.html#SearchResult">SearchResult</a>>>}</span></h4>
     
 
     
@@ -944,7 +787,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line98">line 98</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line112">line 112</a>
     </li></ul></dd>
     
 
@@ -971,7 +814,7 @@
 
         
 <div class="param-desc">
-    - Promise object represents an array of your results
+    - The results of your query
 </div>
 
 
@@ -982,7 +825,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise</span>
+<span class="param-type">Promise.&lt;Array.&lt;<a href="global.html#SearchResult">SearchResult</a>>></span>
 
 
     </dd>
@@ -1000,7 +843,7 @@
     
 
     
-    <h4 class="name" id="twitter"><span class="type-signature">(async) </span>twitter<span class="signature">(handle)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id="twitter"><span class="type-signature">(async) </span>twitter<span class="signature">(handle)</span><span class="type-signature"> &rarr; {Promise.&lt;Object>}</span></h4>
     
 
     
@@ -1008,7 +851,7 @@
 
 
 <div class="description">
-    Searches Twitter
+    Gets someone's latest Twitter information
 </div>
 
 
@@ -1101,7 +944,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line185">line 185</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line190">line 190</a>
     </li></ul></dd>
     
 
@@ -1128,7 +971,7 @@
 
         
 <div class="param-desc">
-    - Promise object represents an array of your results
+    - The result from the twitter account
 </div>
 
 
@@ -1139,7 +982,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise</span>
+<span class="param-type">Promise.&lt;Object></span>
 
 
     </dd>
@@ -1157,7 +1000,7 @@
     
 
     
-    <h4 class="name" id="video"><span class="type-signature">(async) </span>video<span class="signature">(query, safe, locale)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id="video"><span class="type-signature">(async) </span>video<span class="signature">(query, safe, locale)</span><span class="type-signature"> &rarr; {Promise.&lt;Array.&lt;Object>>}</span></h4>
     
 
     
@@ -1217,7 +1060,7 @@
 
             
 
-            <td class="description last">The query string</td>
+            <td class="description last">The query to search with</td>
         </tr>
 
     
@@ -1304,7 +1147,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line154">line 154</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line161">line 161</a>
     </li></ul></dd>
     
 
@@ -1331,7 +1174,7 @@
 
         
 <div class="param-desc">
-    - Promise object represents an array of your results
+    - Video results
 </div>
 
 
@@ -1342,7 +1185,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise</span>
+<span class="param-type">Promise.&lt;Array.&lt;Object>></span>
 
 
     </dd>
@@ -1433,6 +1276,271 @@
 
 
             
+                
+<h4 class="name" id="SearchResult">SearchResult</h4>
+
+
+
+
+<div class="description">
+    A result given from searching.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The title of the search result</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>description</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The description from the result.The description can be changed by DuckDuckGo depending on your search query.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rawDescription</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Same as description but includes HTML elements.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>description</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The description from the result.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The URL of the search result</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line10">line 10</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>DDG#search</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
     
 
     
@@ -1446,13 +1554,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module.exports.html">exports</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_defineSpice">_defineSpice</a></li><li><a href="global.html#amazon">amazon</a></li><li><a href="global.html#autocomplete">autocomplete</a></li><li><a href="global.html#image">image</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#twitter">twitter</a></li><li><a href="global.html#video">video</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module.exports.html">exports</a></li></ul><h3>Global</h3><ul><li><a href="global.html#amazon">amazon</a></li><li><a href="global.html#autocomplete">autocomplete</a></li><li><a href="global.html#image">image</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#twitter">twitter</a></li><li><a href="global.html#video">video</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Apr 07 2018 16:56:27 GMT-0400 (EDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Apr 08 2018 23:23:43 GMT-0500 (Central Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -4,6 +4,7 @@
   "description": "A DuckDuckGo scraper for Node.js.",
   "main": "index.js",
   "scripts": {
+    "docs": "jsdoc index.js -d ./docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

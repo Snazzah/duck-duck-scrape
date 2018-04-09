@@ -8,6 +8,18 @@ const M = require('mustache')
  */
 
 /**
+ * A result given from searching.
+ * @see DDG#search
+ * @typedef {Object} SearchResult
+ * @property {string} [title] The title of the search result
+ * @property {string} [description] The description from the result.
+ * The description can be changed by DuckDuckGo depending on your search query.
+ * @property {string} [rawDescription] Same as description but includes HTML elements.
+ * @property {string} [description] The description from the result.
+ * @property {number} [url] The URL of the search result
+ */
+
+/**
  * Creates a DuckDuckDo scraper.
  * @class 
  */
@@ -93,6 +105,10 @@ module.exports = class DDG {
     return new RegExp(`^${name}\\(\\n?((?:.|\\n)+)\\n?\\);?`)
   }
 
+  _cleanUp(s) {
+    return s.replace(/&amp;/g, '&').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&apos;/g, "'").replace(/&quot;/g, '"')
+  }
+
   /**
    * 
    * @function search
@@ -100,7 +116,7 @@ module.exports = class DDG {
    * @param {string} query - The query string 
    * @param {safeSearchInt} safeSearch - Level of SafeSearch.
    * @param {string} locale - The locale to search in
-   * @returns {Promise<Array<Object>>} - The results of your query
+   * @returns {Promise<Array<SearchResult>>} - The results of your query
    */
   async search(query, safeSearch = -2, locale = 'us-en') {
     const response = await sf.get(`https://duckduckgo.com/html/?q=${this._format(query)}&kr=${locale}&kp=${safeSearch}`)
@@ -108,9 +124,8 @@ module.exports = class DDG {
     let results = Array.from($('.results_links_deep:not(.result--ad) .result__body')).map(result => ({
       title: $('.result__a', result).text(),
       description: $('.result__snippet', result).text(),
-      rawDescription: $('.result__snippet', result).html().replace(/&amp;/g, '&').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&apos;/g, "'").replace(/&quot;/g, '"'),
-      url: qs.parse($('.result__a', result).attr('href').slice(3)).uddg,
-      icon: `https://favicon.yandex.net/favicon/${qs.parse($('.result__a', result).attr('href').slice(3)).uddg.split('/')[2]}`
+      rawDescription: this._cleanUp($('.result__snippet', result).html()),
+      url: qs.parse($('.result__a', result).attr('href').slice(3)).uddg
     }))
     if ($('.no-results')[0]) return null
     return results
