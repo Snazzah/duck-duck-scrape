@@ -13,6 +13,17 @@ A DuckDuckGo scraper NPM module
 const DuckDuckScrape = require("duck-duck-scrape");
 const ddg = new DuckDuckScrape();
 ```
+
+# Quickstart
+```javascript 
+const DuckDuckScrape = require("duck-duck-scrape");
+const ddg = new DuckDuckScrape();
+let search = ddg.search("test", 1, "en-us"); 
+
+search.then((data) => {
+  console.log(data)
+});
+```
 # Documentation
 https://suushii.github.io/duck-duck-scrape/index.html
 
