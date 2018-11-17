@@ -125,7 +125,8 @@ module.exports = class DDG {
       title: $('.result__a', result).text(),
       description: $('.result__snippet', result).text(),
       rawDescription: this._cleanUp($('.result__snippet', result).html()),
-      url: qs.parse($('.result__a', result).attr('href').slice(3)).uddg
+      url: qs.parse($('.result__a', result).attr('href').slice(3)).uddg,
+      icon: `https://icons.duckduckgo.com/ip3/${qs.parse($('.result__a', result).attr('href').slice(3)).uddg.split('/')[2]}.ico`
     }))
     if ($('.no-results')[0]) return null
     return results
