@@ -1,3 +1,5 @@
+# This project is abandoned. If anyone wants to take over, please file an issue.
+
 # duck-duck-scrape
 A DuckDuckGo scraper NPM module
 
