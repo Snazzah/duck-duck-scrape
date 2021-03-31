@@ -1,5 +1,3 @@
-# This project is abandoned. If anyone wants to take over, please file an issue.
-
 # duck-duck-scrape
 A DuckDuckGo scraper NPM module
 
@@ -10,28 +8,19 @@ A DuckDuckGo scraper NPM module
 # Installation
 `npm install --save duck-duck-scrape`
 
-# Setup
+# Quickstart
 ```javascript
 const DuckDuckScrape = require("duck-duck-scrape");
 const ddg = new DuckDuckScrape();
-```
-
-# Quickstart
-```javascript 
-const DuckDuckScrape = require("duck-duck-scrape");
-const ddg = new DuckDuckScrape();
-let search = ddg.search("test", 1, "en-us"); 
+let search = ddg.search("test", 1, "en-us");
 
 search.then((data) => {
   console.log(data)
 });
 ```
-# Documentation
-https://suushii.github.io/duck-duck-scrape/index.html
 
 
 # Attribution
 
-Original code by Snazzah
-
+Original code and v2 Rewrite by Snazzah
 Packaged by suushii
