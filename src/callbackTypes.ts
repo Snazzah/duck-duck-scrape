@@ -32,7 +32,7 @@ export interface CallbackSearchResult {
 }
 
 export interface CallbackNextSearch {
-  /** URL to the next page of results. */
+  /** URL to the next page of results */
   n: string;
 }
 
@@ -58,24 +58,37 @@ export interface DuckbarImageResult {
 }
 
 export interface DuckbarVideoResult {
+  /** URL of the video */
   content: string;
+  /** Description of the video */
   description: string;
+  /** Duration of the video */
   duration: string;
+  /** Embed HTML for the video */
   embed_html: string;
+  /** Embed URL for the video */
   embed_url: string;
+  /** Thumbnail images of the video */
   images: {
     large: string;
     medium: string;
     motion: string;
     small: string;
   };
+  /** Where this search result came from */
   provider: string;
+  /** ISO timestamp of the upload */
   published: string;
+  /** What site the video was on */
   publisher: string;
+  /** Various statistics */
   statistics: {
+    /** View count of the video */
     viewCount?: number;
   };
+  /** Title of the video */
   title: string;
+  /** Name of the video uploader(?) */
   uploader: string;
 }
 
@@ -83,4 +96,15 @@ export interface DuckbarRelatedSearch {
   display_text: string;
   text: string;
   web_search_url: string;
+}
+
+export interface DuckbarNewsResult {
+  date: number;
+  excerpt: string;
+  image: string;
+  relative_time: string;
+  syndicate: string;
+  title: string;
+  url: string;
+  use_relevancy: number;
 }

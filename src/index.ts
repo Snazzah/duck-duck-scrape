@@ -1,2 +1,2 @@
 export * from './search';
-export { DuckbarImageResult } from './callbackTypes';
+export { DuckbarImageResult, DuckbarNewsResult } from './callbackTypes';

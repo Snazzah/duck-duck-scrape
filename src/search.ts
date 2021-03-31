@@ -5,7 +5,9 @@ import {
   DuckbarImageResult,
   CallbackNextSearch,
   CallbackSearchResult,
-  DuckbarVideoResult
+  DuckbarVideoResult,
+  DuckbarRelatedSearch,
+  DuckbarNewsResult
 } from './callbackTypes';
 import { getVQD, queryString } from './util';
 
@@ -70,7 +72,9 @@ export interface SearchResults {
   vqd: string;
   results: SearchResult[];
   images?: DuckbarImageResult[];
+  news?: DuckbarNewsResult[];
   videos?: VideoResult[];
+  related?: RelatedResult[];
 }
 
 export interface SearchResult {
@@ -98,6 +102,11 @@ export interface VideoResult {
   published: string;
   publishedOn: string;
   viewCount?: number;
+}
+
+export interface RelatedResult {
+  text: string;
+  raw: string;
 }
 
 export async function search(query: string, options?: SearchOptions, needleOptions?: NeedleOptions) {
@@ -183,6 +192,15 @@ export async function search(query: string, options?: SearchOptions, needleOptio
     results.images = imagesResult.results;
   }
 
+  // News
+  const newsMatch = NEWS_REGEX.exec(response.body);
+  if (newsMatch) {
+    const newsResult = JSON.parse(
+      newsMatch[1].replace(/\t/g, '    ')
+    ) as CallbackDuckbarPayload<DuckbarNewsResult>;
+    results.news = newsResult.results;
+  }
+
   // Videos
   const videosMatch = VIDEOS_REGEX.exec(response.body);
   if (videosMatch) {
@@ -203,6 +221,23 @@ export async function search(query: string, options?: SearchOptions, needleOptio
       });
     }
   }
+
+  // Related Searches
+  const relatedMatch = RELATED_SEARCHES_REGEX.exec(response.body);
+  if (relatedMatch) {
+    const relatedResult = JSON.parse(
+      relatedMatch[1].replace(/\t/g, '    ')
+    ) as CallbackDuckbarPayload<DuckbarRelatedSearch>;
+    results.related = [];
+    for (const related of relatedResult.results) {
+      results.related.push({
+        text: related.text,
+        raw: related.display_text
+      });
+    }
+  }
+
+  // TODO: Products
 
   return results;
 }
