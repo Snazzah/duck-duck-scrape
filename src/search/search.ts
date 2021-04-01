@@ -8,15 +8,8 @@ import {
   DuckbarVideoResult,
   DuckbarRelatedSearch,
   DuckbarNewsResult
-} from './callbackTypes';
-import { getVQD, queryString } from './util';
-
-/** The safe search values when searching DuckDuckGo. */
-export enum SafeSearchType {
-  STRICT = 0,
-  MODERATE = -1,
-  OFF = -2
-}
+} from '../types';
+import { SafeSearchType, getVQD, queryString } from '../util';
 
 /** The type of times of the search results in DuckDuckGo. */
 export enum SearchTimeType {
@@ -47,7 +40,7 @@ export interface SearchOptions {
   vqd?: string;
 }
 
-const defaultSearchOptions: SearchOptions = {
+const defaultOptions: SearchOptions = {
   safeSearch: SafeSearchType.OFF,
   time: SearchTimeType.ALL,
   locale: 'en-us',
@@ -101,6 +94,7 @@ export interface VideoResult {
   duration: string;
   published: string;
   publishedOn: string;
+  publisher: string;
   viewCount?: number;
 }
 
@@ -111,7 +105,7 @@ export interface RelatedResult {
 
 export async function search(query: string, options?: SearchOptions, needleOptions?: NeedleOptions) {
   if (!query) throw new Error('Query cannot be empty!');
-  if (!options) options = defaultSearchOptions;
+  if (!options) options = defaultOptions;
   else options = sanityCheck(options);
 
   let vqd = options.vqd!;
@@ -189,7 +183,10 @@ export async function search(query: string, options?: SearchOptions, needleOptio
     const imagesResult = JSON.parse(
       imagesMatch[1].replace(/\t/g, '    ')
     ) as CallbackDuckbarPayload<DuckbarImageResult>;
-    results.images = imagesResult.results;
+    results.images = imagesResult.results.map((i) => {
+      i.title = decode(i.title);
+      return i;
+    });
   }
 
   // News
@@ -198,7 +195,11 @@ export async function search(query: string, options?: SearchOptions, needleOptio
     const newsResult = JSON.parse(
       newsMatch[1].replace(/\t/g, '    ')
     ) as CallbackDuckbarPayload<DuckbarNewsResult>;
-    results.news = newsResult.results;
+    results.news = newsResult.results.map((n) => {
+      n.title = decode(n.title);
+      n.excerpt = decode(n.excerpt);
+      return n;
+    });
   }
 
   // Videos
@@ -212,11 +213,12 @@ export async function search(query: string, options?: SearchOptions, needleOptio
       results.videos.push({
         url: video.content,
         title: video.title,
-        description: video.description,
+        description: decode(video.description),
         image: video.images.large,
         duration: video.duration,
         publishedOn: video.publisher,
         published: video.published,
+        publisher: video.publisher,
         viewCount: video.statistics.viewCount
       });
     }
@@ -243,7 +245,7 @@ export async function search(query: string, options?: SearchOptions, needleOptio
 }
 
 function sanityCheck(options: SearchOptions) {
-  options = Object.assign({}, defaultSearchOptions, options);
+  options = Object.assign({}, defaultOptions, options);
 
   if (!(options.safeSearch! in SafeSearchType))
     throw new TypeError(`${options.safeSearch} is an invalid safe search type!`);
@@ -271,7 +273,7 @@ function sanityCheck(options: SearchOptions) {
   if (!options.marketRegion || typeof options.marketRegion! !== 'string')
     throw new TypeError('Search market region must be a string!');
 
-  if (options.vqd && !/\d-\d+-\d+/.test(options.vqd)) throw new Error(`${options.time} is an invalid VQD!`);
+  if (options.vqd && !/\d-\d+-\d+/.test(options.vqd)) throw new Error(`${options.vqd} is an invalid VQD!`);
 
   return options;
 }

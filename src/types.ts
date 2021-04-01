@@ -108,3 +108,15 @@ export interface DuckbarNewsResult {
   url: string;
   use_relevancy: number;
 }
+
+export interface DuckbarResponse<T> {
+  ads: null;
+  next: string;
+  query: string;
+  queryEncoded: string;
+  response_type: string;
+  results: T[];
+  vqd: {
+    [query: string]: string;
+  };
+}

@@ -2,6 +2,13 @@ import needle, { NeedleOptions } from 'needle';
 
 const VQD_REGEX = /vqd='(\d+-\d+-\d+)'/;
 
+/** The safe search values when searching DuckDuckGo. */
+export enum SafeSearchType {
+  STRICT = 0,
+  MODERATE = -1,
+  OFF = -2
+}
+
 export function queryString(query: Record<string, string>) {
   return new URLSearchParams(query).toString();
 }
