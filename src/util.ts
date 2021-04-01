@@ -9,6 +9,15 @@ export enum SafeSearchType {
   OFF = -2
 }
 
+/** The type of times of the search results in DuckDuckGo. */
+export enum SearchTimeType {
+  ALL = 'a',
+  DAY = 'd',
+  WEEK = 'w',
+  MONTH = 'm',
+  YEAR = 'y'
+}
+
 export function queryString(query: Record<string, string>) {
   return new URLSearchParams(query).toString();
 }
@@ -20,4 +29,10 @@ export async function getVQD(query: string, ia = 'web', options?: NeedleOptions)
   } catch (e) {
     throw new Error(`Failed to get the VQD for query "${query}".`);
   }
+}
+
+export function ensureJSON(body: any) {
+  if (body instanceof Buffer) return JSON.parse(body.toString());
+  else if (typeof body === 'string') return JSON.parse(body);
+  return body;
 }

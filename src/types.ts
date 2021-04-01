@@ -37,7 +37,7 @@ export interface CallbackNextSearch {
 }
 
 export interface CallbackDuckbarPayload<T> {
-  ads: any[];
+  ads: null | any[];
   query: string;
   queryEncoded: string;
   response_type: string;
@@ -84,7 +84,7 @@ export interface DuckbarVideoResult {
   /** Various statistics */
   statistics: {
     /** View count of the video */
-    viewCount?: number;
+    viewCount: number | null;
   };
   /** Title of the video */
   title: string;
@@ -109,14 +109,6 @@ export interface DuckbarNewsResult {
   use_relevancy: number;
 }
 
-export interface DuckbarResponse<T> {
-  ads: null;
+export interface DuckbarResponse<T> extends CallbackDuckbarPayload<T> {
   next: string;
-  query: string;
-  queryEncoded: string;
-  response_type: string;
-  results: T[];
-  vqd: {
-    [query: string]: string;
-  };
 }

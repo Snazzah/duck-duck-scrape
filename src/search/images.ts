@@ -57,10 +57,10 @@ export interface ImageSearchOptions {
    * Set this if you made a search with the same query.
    */
   vqd?: string;
-  colorFilter?: ImageColor;
-  layoutFilter?: ImageLayout;
-  sizeFilter?: ImageSize;
-  typeFilter?: ImageType;
+  color?: ImageColor;
+  layout?: ImageLayout;
+  size?: ImageSize;
+  type?: ImageType;
 }
 
 const defaultOptions: ImageSearchOptions = {
@@ -70,7 +70,7 @@ const defaultOptions: ImageSearchOptions = {
 };
 
 export interface ImageSearchResults {
-  noResults: false;
+  noResults: boolean;
   vqd: string;
   results: DuckbarImageResult[];
 }
@@ -79,7 +79,7 @@ export async function searchImages(
   query: string,
   options?: ImageSearchOptions,
   needleOptions?: NeedleOptions
-) {
+): Promise<ImageSearchResults> {
   if (!query) throw new Error('Query cannot be empty!');
   if (!options) options = defaultOptions;
   else options = sanityCheck(options);
@@ -88,10 +88,10 @@ export async function searchImages(
   if (!vqd) vqd = await getVQD(query, 'web', needleOptions);
 
   const filters = [
-    options.sizeFilter ? `size:${options.sizeFilter}` : '',
-    options.typeFilter ? `type:${options.typeFilter}` : '',
-    options.layoutFilter ? `layout:${options.layoutFilter}` : '',
-    options.colorFilter ? `color:${options.colorFilter}` : ''
+    options.size ? `size:${options.size}` : '',
+    options.type ? `type:${options.type}` : '',
+    options.layout ? `layout:${options.layout}` : '',
+    options.color ? `color:${options.color}` : ''
   ];
 
   const queryObject: Record<string, string> = {
@@ -117,11 +117,11 @@ export async function searchImages(
   return {
     noResults: !!imagesResult.results.length,
     vqd,
-    results: imagesResult.results.map((i) => {
-      i.title = decode(i.title);
-      return i;
-    })
-  } as ImageSearchResults;
+    results: imagesResult.results.map((image) => ({
+      ...image,
+      title: decode(image.title)
+    }))
+  };
 }
 
 function sanityCheck(options: ImageSearchOptions) {
@@ -141,17 +141,17 @@ function sanityCheck(options: ImageSearchOptions) {
   if (!options.locale || typeof options.locale! !== 'string')
     throw new TypeError('Search locale must be a string!');
 
-  if (options.sizeFilter && Object.values(ImageSize).includes(options.sizeFilter))
-    throw new TypeError(`${options.sizeFilter} is an invalid image size filter!`);
+  if (options.size && !Object.values(ImageSize).includes(options.size))
+    throw new TypeError(`${options.size} is an invalid image size filter!`);
 
-  if (options.typeFilter && Object.values(ImageType).includes(options.typeFilter))
-    throw new TypeError(`${options.typeFilter} is an invalid image type filter!`);
+  if (options.type && !Object.values(ImageType).includes(options.type))
+    throw new TypeError(`${options.type} is an invalid image type filter!`);
 
-  if (options.layoutFilter && !Object.values(ImageLayout).includes(options.layoutFilter))
-    throw new TypeError(`${options.layoutFilter} is an invalid image layout filter!`);
+  if (options.layout && !Object.values(ImageLayout).includes(options.layout))
+    throw new TypeError(`${options.layout} is an invalid image layout filter!`);
 
-  if (options.colorFilter && !Object.values(ImageColor).includes(options.colorFilter))
-    throw new TypeError(`${options.colorFilter} is an invalid color filter!`);
+  if (options.color && !Object.values(ImageColor).includes(options.color))
+    throw new TypeError(`${options.color} is an invalid color filter!`);
 
   if (options.vqd && !/\d-\d+-\d+/.test(options.vqd)) throw new Error(`${options.vqd} is an invalid VQD!`);
 

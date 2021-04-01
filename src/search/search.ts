@@ -9,21 +9,13 @@ import {
   DuckbarRelatedSearch,
   DuckbarNewsResult
 } from '../types';
-import { SafeSearchType, getVQD, queryString } from '../util';
-
-/** The type of times of the search results in DuckDuckGo. */
-export enum SearchTimeType {
-  ALL = 'a',
-  DAY = 'd',
-  WEEK = 'w',
-  MONTH = 'm',
-  YEAR = 'y'
-}
+import { SafeSearchType, SearchTimeType, getVQD, queryString } from '../util';
+import { VideoResult } from './videos';
 
 export interface SearchOptions {
   /** The safe search type of the search. */
   safeSearch?: SafeSearchType;
-  /** The time of the searches, can be a SearchTimeType or a date range ("2021-03-16..2021-03-30") */
+  /** The time range of the searches, can be a SearchTimeType or a date range ("2021-03-16..2021-03-30") */
   time?: SearchTimeType | string;
   /** The locale(?) of the search. Defaults to "en-us". */
   locale?: string;
@@ -55,13 +47,8 @@ const NEWS_REGEX = /;DDG\.duckbar\.load\('news', ({"ads":.+"vqd":{".+":"\d-\d+-\
 const VIDEOS_REGEX = /;DDG\.duckbar\.load\('videos', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.loadModule\('related_searches/;
 const RELATED_SEARCHES_REGEX = /DDG\.duckbar\.loadModule\('related_searches', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.load\('products/;
 
-export interface SearchNoResults {
-  noResults: true;
-  vqd: string;
-}
-
 export interface SearchResults {
-  noResults: false;
+  noResults: boolean;
   vqd: string;
   results: SearchResult[];
   images?: DuckbarImageResult[];
@@ -86,24 +73,16 @@ export interface SearchResultBang {
   domain: string;
 }
 
-export interface VideoResult {
-  url: string;
-  title: string;
-  description: string;
-  image: string;
-  duration: string;
-  published: string;
-  publishedOn: string;
-  publisher: string;
-  viewCount?: number;
-}
-
 export interface RelatedResult {
   text: string;
   raw: string;
 }
 
-export async function search(query: string, options?: SearchOptions, needleOptions?: NeedleOptions) {
+export async function search(
+  query: string,
+  options?: SearchOptions,
+  needleOptions?: NeedleOptions
+): Promise<SearchResults> {
   if (!query) throw new Error('Query cannot be empty!');
   if (!options) options = defaultOptions;
   else options = sanityCheck(options);
@@ -148,7 +127,8 @@ export async function search(query: string, options?: SearchOptions, needleOptio
     if ((!onlyResult.da && onlyResult.t === 'EOF') || !onlyResult.a || onlyResult.d === 'google.com search')
       return {
         noResults: true,
-        vqd: options.vqd!
+        vqd: options.vqd!,
+        results: []
       };
   }
 
@@ -212,14 +192,14 @@ export async function search(query: string, options?: SearchOptions, needleOptio
     for (const video of videoResult.results) {
       results.videos.push({
         url: video.content,
-        title: video.title,
+        title: decode(video.title),
         description: decode(video.description),
         image: video.images.large,
         duration: video.duration,
         publishedOn: video.publisher,
         published: video.published,
         publisher: video.publisher,
-        viewCount: video.statistics.viewCount
+        viewCount: video.statistics.viewCount || undefined
       });
     }
   }
@@ -259,7 +239,8 @@ function sanityCheck(options: SearchOptions) {
   if (options.offset! < 0) throw new RangeError('Search offset cannot be below zero!');
 
   if (
-    !(options.time! in SearchTimeType) &&
+    !options.time ||
+    !Object.values(SearchTimeType).includes(options.time as SearchTimeType) ||
     !/\d{4}-\d{2}-\d{2}..\d{4}-\d{2}-\d{2}/.test(options.time as string)
   )
     throw new TypeError(`${options.time} is an invalid search time!`);
