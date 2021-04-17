@@ -258,3 +258,28 @@ function sanityCheck(options: SearchOptions) {
 
   return options;
 }
+
+export interface AutocompleteTerm {
+  phrase: string;
+}
+
+export async function autocomplete(
+  query: string,
+  region?: string,
+  needleOptions?: NeedleOptions
+): Promise<AutocompleteTerm[]> {
+  if (!query) throw new Error('Query cannot be empty!');
+
+  const queryObject: Record<string, string> = {
+    q: query,
+    kl: region || 'wt-wt'
+  };
+
+  const response = await needle(
+    'get',
+    `https://duckduckgo.com/ac/?${queryString(queryObject)}`,
+    needleOptions
+  );
+
+  return JSON.parse(response.body.toString());
+}
