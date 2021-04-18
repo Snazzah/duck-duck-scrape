@@ -34,4 +34,4 @@ jobs:
         with:
           branch: gh-pages
           folder: docs/out
-          commit-message: "Update documentation [${{ github.sha }}]"'
+          commit-message: "Update documentation [${{ github.sha }}]"
