@@ -1,0 +1,31 @@
+name: Docs
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+
+jobs:
+  docs:
+    name: Generate & Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run TypeDoc
+        run: npm run docs
+
+      - name: Copy over public files
+        run: cp docs/public/* docs/out/ -r
+
+      - name: Publish
+        run: npm run deploy

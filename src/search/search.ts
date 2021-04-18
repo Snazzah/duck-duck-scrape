@@ -78,6 +78,14 @@ export interface RelatedResult {
   raw: string;
 }
 
+/**
+ * Search something.
+ * @category Search
+ * @param query The query to search with
+ * @param options The options of the search
+ * @param needleOptions The options of the HTTP request
+ * @returns Search results
+ */
 export async function search(
   query: string,
   options?: SearchOptions,
@@ -263,6 +271,14 @@ export interface AutocompleteTerm {
   phrase: string;
 }
 
+/**
+ * Get autocomplete terms from a query.
+ * @category Search
+ * @param query The query to search
+ * @param region The region to search as
+ * @param needleOptions The options of the HTTP request
+ * @returns Autocomplete terms
+ */
 export async function autocomplete(
   query: string,
   region?: string,

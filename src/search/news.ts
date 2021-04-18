@@ -32,6 +32,14 @@ export interface NewsSearchResults {
   results: DuckbarNewsResult[];
 }
 
+/**
+ * Search news articles.
+ * @category Search
+ * @param query The query to search with
+ * @param options The options of the search
+ * @param needleOptions The options of the HTTP request
+ * @returns Search results
+ */
 export async function searchNews(
   query: string,
   options?: NewsSearchOptions,

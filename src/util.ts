@@ -1,7 +1,9 @@
 import needle, { NeedleOptions } from 'needle';
 
+/** @internal */
 export const SPICE_BASE = 'https://duckduckgo.com/js/spice';
-const VQD_REGEX = /vqd='(\d+-\d+-\d+)'/;
+/** @internal */
+export const VQD_REGEX = /vqd='(\d+-\d+-\d+)'/;
 
 /** The safe search values when searching DuckDuckGo. */
 export enum SafeSearchType {

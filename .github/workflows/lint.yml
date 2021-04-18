@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - "*"
-      - "!docs"
+      - "!gh-pages"
     paths:
       - "src/**"
       - ".eslintignore"

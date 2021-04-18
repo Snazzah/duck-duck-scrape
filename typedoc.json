@@ -1,0 +1,8 @@
+{
+  "name": "DuckDuckScrape",
+  "entryPoints": ["src/index.ts"],
+  "categoryOrder": ["Search", "Spice", "*"],
+  "out": "docs/out",
+  "highlightTheme": "monokai",
+  "theme": "docs/theme"
+}

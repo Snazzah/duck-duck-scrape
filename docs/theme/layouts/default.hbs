@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="minimal no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{#ifCond model.name '==' project.name}}{{project.name}}{{else}}{{model.name}} | {{project.name}}{{/ifCond}}</title>
+  <meta name="description" content="Documentation for NPM module {{project.name}}">
+  <meta name="twitter:title" content="{{#ifCond model.name '==' project.name}}{{project.name}}{{else}}{{model.name}} | {{project.name}}{{/ifCond}}">
+  <meta property="og:site_name" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
+  <meta property="og:url" content="https://duck-duck-scrape.js.org/">
+  <meta property="og:title" content="{{#ifCond model.name '==' project.name}}{{project.name}}{{else}}{{model.name}} | {{project.name}}{{/ifCond}}">
+  <meta property="og:description" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
+  <meta name="twitter:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+  <meta property="og:image:secure" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="{{project.name}} Logo">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4495d4">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#4495d4">
+  <link rel="stylesheet" href="{{relativeURL "assets/css/main.css"}}">
+  <link rel="stylesheet" href="{{relativeURL "assets/css/dark.css"}}">
+</head>
+<body>
+
+{{> header}}
+
+<nav class="tsd-navigation secondary">
+  {{#ifCond model.name '==' project.name}}
+    <strong><a class="dds-icon" href="{{relativeURL "index.html"}}">DuckDuckScrape</a></strong>
+  {{else}}
+    <a class="dds-icon" href="{{relativeURL "index.html"}}">DuckDuckScrape</a>
+  {{/ifCond}}
+  <br>
+
+  <strong>Search</strong>
+  <ul>
+		<li class=" tsd-kind-function">
+			<a href="{{relativeURL "modules.html#search"}}" class="tsd-kind-icon">search</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="{{relativeURL "modules.html#searchimages"}}" class="tsd-kind-icon">search<wbr>Images</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="{{relativeURL "modules.html#searchnews"}}" class="tsd-kind-icon">search<wbr>News</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="{{relativeURL "modules.html#searchvideos"}}" class="tsd-kind-icon">search<wbr>Videos</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="{{relativeURL "modules.html#autocomplete"}}" class="tsd-kind-icon">autocomplete</a>
+		</li>
+	</ul>
+
+  <strong>Spices</strong>
+  <ul>
+		<li class=" tsd-kind-function">
+			<a href="{{relativeURL "modules.html#stocks"}}" class="tsd-kind-icon">stocks</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="{{relativeURL "modules.html#time"}}" class="tsd-kind-icon">time</a>
+		</li>
+	</ul>
+
+  <ul>
+    {{#each toc.children}}
+      {{> toc}}
+    {{/each}}
+  </ul>
+</nav>
+
+<div class="container container-main">
+  <div class="content-wrap">
+    {{#if model.readme}}
+      <div class="tsd-panel tsd-typography">
+        {{#markdown}}{{{model.readme}}}{{/markdown}}
+      </div>
+    {{/if}}
+
+    {{{contents}}}
+    {{> footer}}
+  </div>
+</div>
+
+<script src="{{relativeURL "assets/js/main.js"}}"></script>
+
+{{> analytics}}
+
+</body>
+</html>
