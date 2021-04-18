@@ -1,0 +1,47 @@
+:root {
+  --color-background: #222;
+  --color-text: #fdfdfd;
+  --color-text-aside: #848484;
+  --color-link: #4da6ff;
+  --color-menu-divider: #eee;
+  --color-menu-divider-focus: #000;
+  --color-menu-label: #707070;
+  --color-panel: #333;
+  --color-panel-divider: #444;
+  --color-comment-tag: #707070;
+  --color-comment-tag-text: #fff;
+  --color-code-background: rgba(0, 0, 0, 0.15);
+  --color-ts: #9600ff;
+  --color-ts-interface: #2ecc71;
+  --color-ts-enum: #f1c40f;
+  --color-ts-class: #0672de;
+  --color-ts-private: #707070;
+  --color-toolbar: #111;
+  --color-toolbar-text: #eee;
+}
+
+.tsd-page-toolbar {
+  border-color: var(--color-toolbar);
+}
+
+.dds-icon:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 2px 0;
+  background-size: contain;
+  background-image: url(../images/icon.png);
+}
+
+.gh-icon:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 2px 0;
+  background-size: contain;
+  background-image: url(../images/github.svg);
+}
