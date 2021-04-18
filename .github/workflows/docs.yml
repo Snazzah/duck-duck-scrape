@@ -26,5 +26,9 @@ jobs:
       - name: Copy over public files
         run: cp docs/public/* docs/out/ -r
 
-      - name: Publish
-        run: 'npm run deploy -m "Update documentation [${{ github.sha }}]]"'
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: docs/out
+          commit-message: "Update documentation [${{ github.sha }}]]"'
