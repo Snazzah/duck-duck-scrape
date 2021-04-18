@@ -11,6 +11,7 @@ Search from DuckDuckGo and utilize its spice APIs for things such as stocks, wea
 
 </div>
 
+> This is currently on a dev branch for v2 which is not yet live on NPM. You can install using the `v2` branch.
 
 ### Available Features
 - Search
