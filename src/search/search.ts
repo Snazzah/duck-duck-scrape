@@ -135,14 +135,14 @@ export async function search(
     if ((!onlyResult.da && onlyResult.t === 'EOF') || !onlyResult.a || onlyResult.d === 'google.com search')
       return {
         noResults: true,
-        vqd: options.vqd!,
+        vqd,
         results: []
       };
   }
 
   const results: SearchResults = {
     noResults: false,
-    vqd: options.vqd!,
+    vqd,
     results: []
   };
 
@@ -151,7 +151,7 @@ export async function search(
     if ('n' in search) continue;
     let bang: SearchResultBang | undefined;
     if (search.b) {
-      const [prefix, title, domain] = search.b.split('    ');
+      const [prefix, title, domain] = search.b.split('\t');
       bang = { prefix, title, domain };
     }
     results.results.push({
@@ -247,8 +247,8 @@ function sanityCheck(options: SearchOptions) {
   if (options.offset! < 0) throw new RangeError('Search offset cannot be below zero!');
 
   if (
-    !options.time ||
-    !Object.values(SearchTimeType).includes(options.time as SearchTimeType) ||
+    !options.time &&
+    !Object.values(SearchTimeType).includes(options.time as SearchTimeType) &&
     !/\d{4}-\d{2}-\d{2}..\d{4}-\d{2}-\d{2}/.test(options.time as string)
   )
     throw new TypeError(`${options.time} is an invalid search time!`);
