@@ -28,4 +28,4 @@ jobs:
         run: cp docs/public/* docs/out/ -r
 
       - name: Publish
-        run: npm run deploy
+        run: "npm run deploy -m \"Update documentation [${{ github.sha }}]]\"""
