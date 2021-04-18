@@ -8,3 +8,4 @@ export * from './search/news';
 
 export * from './spices/stocks';
 export * from './spices/time';
+export * from './spices/currency';
