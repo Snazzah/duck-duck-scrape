@@ -1,5 +1,8 @@
 name: Docs
 on:
+  push:
+    branches:
+      - v2
   release:
     types: [published]
   workflow_dispatch:
@@ -31,4 +34,4 @@ jobs:
         with:
           branch: gh-pages
           folder: docs/out
-          commit-message: "Update documentation [${{ github.sha }}]]"'
+          commit-message: "Update documentation [${{ github.sha }}]"'
