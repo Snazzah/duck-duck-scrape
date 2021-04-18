@@ -1,5 +1,6 @@
 import needle, { NeedleOptions } from 'needle';
 
+export const SPICE_BASE = 'https://duckduckgo.com/js/spice';
 const VQD_REGEX = /vqd='(\d+-\d+-\d+)'/;
 
 /** The safe search values when searching DuckDuckGo. */
@@ -35,4 +36,8 @@ export function ensureJSON(body: any) {
   if (body instanceof Buffer) return JSON.parse(body.toString());
   else if (typeof body === 'string') return JSON.parse(body);
   return body;
+}
+
+export function parseSpiceBody(body: any, regex?: RegExp) {
+  return JSON.parse(body.toString().replace(regex || /^ddg_spice_[\w]+\(\n?((?:.|\n)+)\n?\);?/, '$1'));
 }

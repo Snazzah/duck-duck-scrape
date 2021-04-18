@@ -9,7 +9,7 @@ import {
   DuckbarRelatedSearch,
   DuckbarNewsResult
 } from '../types';
-import { SafeSearchType, SearchTimeType, getVQD, queryString } from '../util';
+import { SafeSearchType, SearchTimeType, getVQD, queryString, ensureJSON } from '../util';
 import { VideoResult } from './videos';
 
 export interface SearchOptions {
@@ -281,5 +281,5 @@ export async function autocomplete(
     needleOptions
   );
 
-  return JSON.parse(response.body.toString());
+  return ensureJSON(response.body);
 }

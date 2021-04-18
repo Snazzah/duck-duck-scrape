@@ -5,3 +5,5 @@ export * from './search/search';
 export * from './search/images';
 export * from './search/videos';
 export * from './search/news';
+
+export * from './spices/stocks';
