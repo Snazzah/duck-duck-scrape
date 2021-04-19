@@ -2,7 +2,7 @@
 
 [![](https://get.snaz.in/45RrSvq.png)](https://duck-duck-scrape.js.org/)
 
-[![NPM version](https://img.shields.io/npm/v/duck-duck-scrape?maxAge=3600?&color=3498db)](https://www.npmjs.com/package/dexare) [![NPM downloads](https://img.shields.io/npm/dt/duck-duck-scrape?maxAge=3600&color=3498db)](https://www.npmjs.com/package/duck-duck-scrape) [![ESLint status](https://github.com/Snazzah/duck-duck-scrape/workflows/ESLint/badge.svg)](https://github.com/Snazzah/duck-duck-scrape/actions?query=workflow%3A%22ESLint%22) [![DeepScan grade](https://deepscan.io/api/teams/11596/projects/16764/branches/365136/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=11596&pid=16764&bid=365136)
+[![NPM version](https://img.shields.io/npm/v/duck-duck-scrape?maxAge=3600?&color=3498db)](https://www.npmjs.com/package/duck-duck-scrape) [![NPM downloads](https://img.shields.io/npm/dt/duck-duck-scrape?maxAge=3600&color=3498db)](https://www.npmjs.com/package/duck-duck-scrape) [![ESLint status](https://github.com/Snazzah/duck-duck-scrape/workflows/ESLint/badge.svg)](https://github.com/Snazzah/duck-duck-scrape/actions?query=workflow%3A%22ESLint%22) [![DeepScan grade](https://deepscan.io/api/teams/11596/projects/16764/branches/365136/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=11596&pid=16764&bid=365136)
 
 `npm install duck-duck-scrape` - `yarn add duck-duck-scrape`
 
