@@ -101,6 +101,18 @@
 		<li class=" tsd-kind-function">
 			<a href="../modules.html#forecast" class="tsd-kind-icon">forecast</a>
 		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionarydefinition" class="tsd-kind-icon">dictionary<wbr>Definition</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionarypronunciation" class="tsd-kind-icon">dictionary<wbr>Pronunciation</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionaryhyphenation" class="tsd-kind-icon">dictionary<wbr>Hyphenation</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionaryaudio" class="tsd-kind-icon">dictionary<wbr>Audio</a>
+		</li>
 	</ul>
 	<ul>
 		<li class="current tsd-kind-interface">
@@ -133,6 +145,15 @@
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>The search results from <a href="../modules.html#search">search</a>.
+						<code>images</code>, <code>news</code>, <code>videos</code> and <code>related</code> only show up if the query
+					shows elements of these in a webpage search.</p>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
@@ -168,19 +189,29 @@
 				<div class="tsd-signature tsd-kind-icon">images<span class="tsd-signature-symbol">:</span> <a href="duckbarimageresult.html" class="tsd-signature-type" data-tsd-kind="Interface">DuckbarImageResult</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L54">search/search.ts:54</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/search.ts#L65">search/search.ts:65</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The image results of the search.</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="news" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagOptional">Optional</span> news</h3>
-				<div class="tsd-signature tsd-kind-icon">news<span class="tsd-signature-symbol">:</span> <a href="duckbarnewsresult.html" class="tsd-signature-type" data-tsd-kind="Interface">DuckbarNewsResult</a><span class="tsd-signature-symbol">[]</span></div>
+				<div class="tsd-signature tsd-kind-icon">news<span class="tsd-signature-symbol">:</span> <a href="newsresult.html" class="tsd-signature-type" data-tsd-kind="Interface">NewsResult</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L55">search/search.ts:55</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/search.ts#L67">search/search.ts:67</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The news article results of the search.</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="noresults" class="tsd-anchor"></a>
@@ -188,9 +219,14 @@
 				<div class="tsd-signature tsd-kind-icon">no<wbr>Results<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L51">search/search.ts:51</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/search.ts#L59">search/search.ts:59</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Whether there were no results found.</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="related" class="tsd-anchor"></a>
@@ -198,9 +234,14 @@
 				<div class="tsd-signature tsd-kind-icon">related<span class="tsd-signature-symbol">:</span> <a href="relatedresult.html" class="tsd-signature-type" data-tsd-kind="Interface">RelatedResult</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L57">search/search.ts:57</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/search.ts#L71">search/search.ts:71</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The related searches of the query.</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="results" class="tsd-anchor"></a>
@@ -208,9 +249,14 @@
 				<div class="tsd-signature tsd-kind-icon">results<span class="tsd-signature-symbol">:</span> <a href="searchresult.html" class="tsd-signature-type" data-tsd-kind="Interface">SearchResult</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L53">search/search.ts:53</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/search.ts#L63">search/search.ts:63</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The web results of the search.</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="videos" class="tsd-anchor"></a>
@@ -218,9 +264,14 @@
 				<div class="tsd-signature tsd-kind-icon">videos<span class="tsd-signature-symbol">:</span> <a href="videoresult.html" class="tsd-signature-type" data-tsd-kind="Interface">VideoResult</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L56">search/search.ts:56</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/search.ts#L69">search/search.ts:69</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The video results of the search.</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="vqd" class="tsd-anchor"></a>
@@ -228,9 +279,14 @@
 				<div class="tsd-signature tsd-kind-icon">vqd<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L52">search/search.ts:52</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/search.ts#L61">search/search.ts:61</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The VQD of the search query.</p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
