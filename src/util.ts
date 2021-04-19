@@ -40,6 +40,6 @@ export function ensureJSON(body: any) {
   return body;
 }
 
-export function parseSpiceBody(body: any, regex?: RegExp) {
-  return JSON.parse(body.toString().replace(regex || /^ddg_spice_[\w]+\(\n?((?:.|\n)+)\n?\);?/, '$1'));
+export function parseSpiceBody(body: any, regex = /^ddg_spice_[\w]+\(\n?((?:.|\n)+)\n?\);?/) {
+  return JSON.parse(regex.exec(body.toString())![1]);
 }
