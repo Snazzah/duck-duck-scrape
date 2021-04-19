@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SearchResultBang | DuckDuckScrape</title>
+	<title>CurrencyResult | DuckDuckScrape</title>
 	<meta name="description" content="Documentation for NPM module DuckDuckScrape">
-	<meta name="twitter:title" content="SearchResultBang | DuckDuckScrape">
+	<meta name="twitter:title" content="CurrencyResult | DuckDuckScrape">
 	<meta property="og:site_name" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
 	<meta property="og:url" content="https://duck-duck-scrape.js.org/">
-	<meta property="og:title" content="SearchResultBang | DuckDuckScrape">
+	<meta property="og:title" content="CurrencyResult | DuckDuckScrape">
 	<meta property="og:description" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
 	<meta name="twitter:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
 	<meta name="twitter:card" content="summary">
@@ -104,16 +104,16 @@
 	</ul>
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="searchresultbang.html" class="tsd-kind-icon">Search<wbr>Result<wbr>Bang</a>
+			<a href="currencyresult.html" class="tsd-kind-icon">Currency<wbr>Result</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="searchresultbang.html#domain" class="tsd-kind-icon">domain</a>
+					<a href="currencyresult.html#conversion" class="tsd-kind-icon">conversion</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="searchresultbang.html#prefix" class="tsd-kind-icon">prefix</a>
+					<a href="currencyresult.html#headers" class="tsd-kind-icon">headers</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="searchresultbang.html#title" class="tsd-kind-icon">title</a>
+					<a href="currencyresult.html#topconversions" class="tsd-kind-icon">top<wbr>Conversions</a>
 				</li>
 			</ul>
 		</li>
@@ -121,11 +121,18 @@
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>The result from the currency spice.</p>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">SearchResultBang</span>
+					<span class="target">CurrencyResult</span>
 				</li>
 			</ul>
 		</section>
@@ -136,9 +143,9 @@
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="searchresultbang.html#domain" class="tsd-kind-icon">domain</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="searchresultbang.html#prefix" class="tsd-kind-icon">prefix</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="searchresultbang.html#title" class="tsd-kind-icon">title</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="currencyresult.html#conversion" class="tsd-kind-icon">conversion</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="currencyresult.html#headers" class="tsd-kind-icon">headers</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="currencyresult.html#topconversions" class="tsd-kind-icon">top<wbr>Conversions</a></li>
 						</ul>
 					</section>
 				</div>
@@ -147,32 +154,61 @@
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="domain" class="tsd-anchor"></a>
-				<h3>domain</h3>
-				<div class="tsd-signature tsd-kind-icon">domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="conversion" class="tsd-anchor"></a>
+				<h3>conversion</h3>
+				<div class="tsd-signature tsd-kind-icon">conversion<span class="tsd-signature-symbol">:</span> <a href="currencyconversion.html" class="tsd-signature-type" data-tsd-kind="Interface">CurrencyConversion</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>rate-frequency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L73">search/search.ts:73</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/currency.ts#L40">spices/currency.ts:40</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="prefix" class="tsd-anchor"></a>
-				<h3>prefix</h3>
-				<div class="tsd-signature tsd-kind-icon">prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="headers" class="tsd-anchor"></a>
+				<h3>headers</h3>
+				<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>encoding<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;utf-8&quot;</span><span class="tsd-signature-symbol">; </span>help-notice<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>language<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>legal-warning<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>output-format<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;json&quot;</span><span class="tsd-signature-symbol">; </span>status<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;0&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;5&quot;</span><span class="tsd-signature-symbol">; </span>utc-timestamp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L71">search/search.ts:71</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/currency.ts#L30">spices/currency.ts:30</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter">
+							<h5>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+						</li>
+						<li class="tsd-parameter">
+							<h5>encoding<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;utf-8&quot;</span></h5>
+						</li>
+						<li class="tsd-parameter">
+							<h5>help-<wbr>notice<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+						</li>
+						<li class="tsd-parameter">
+							<h5>language<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+						</li>
+						<li class="tsd-parameter">
+							<h5>legal-<wbr>warning<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+						</li>
+						<li class="tsd-parameter">
+							<h5>output-<wbr>format<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;json&quot;</span></h5>
+						</li>
+						<li class="tsd-parameter">
+							<h5>status<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;0&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;5&quot;</span></h5>
+						</li>
+						<li class="tsd-parameter">
+							<h5>utc-<wbr>timestamp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="title" class="tsd-anchor"></a>
-				<h3>title</h3>
-				<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="topconversions" class="tsd-anchor"></a>
+				<h3>top<wbr>Conversions</h3>
+				<div class="tsd-signature tsd-kind-icon">top<wbr>Conversions<span class="tsd-signature-symbol">:</span> <a href="currencyconversion.html" class="tsd-signature-type" data-tsd-kind="Interface">CurrencyConversion</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L72">search/search.ts:72</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/currency.ts#L44">spices/currency.ts:44</a></li>
 					</ul>
 				</aside>
 			</section>

@@ -95,6 +95,12 @@
 		<li class=" tsd-kind-function">
 			<a href="modules.html#time" class="tsd-kind-icon">time</a>
 		</li>
+		<li class=" tsd-kind-function">
+			<a href="modules.html#currency" class="tsd-kind-icon">currency</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="modules.html#forecast" class="tsd-kind-icon">forecast</a>
+		</li>
 	</ul>
 	<ul>
 	</ul>
@@ -200,8 +206,15 @@
 						<h3>Interfaces</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-interface"><a href="interfaces/autocompleteterm.html" class="tsd-kind-icon">Autocomplete<wbr>Term</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/currencyconversion.html" class="tsd-kind-icon">Currency<wbr>Conversion</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/currencyresult.html" class="tsd-kind-icon">Currency<wbr>Result</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/duckbarimageresult.html" class="tsd-kind-icon">Duckbar<wbr>Image<wbr>Result</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/duckbarnewsresult.html" class="tsd-kind-icon">Duckbar<wbr>News<wbr>Result</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/forecastalert.html" class="tsd-kind-icon">Forecast<wbr>Alert</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/forecastdailydata.html" class="tsd-kind-icon">Forecast<wbr>Daily<wbr>Data</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/forecasthourlydata.html" class="tsd-kind-icon">Forecast<wbr>Hourly<wbr>Data</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/forecastminutelydata.html" class="tsd-kind-icon">Forecast<wbr>Minutely<wbr>Data</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/forecastresult.html" class="tsd-kind-icon">Forecast<wbr>Result</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/imagesearchoptions.html" class="tsd-kind-icon">Image<wbr>Search<wbr>Options</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/imagesearchresults.html" class="tsd-kind-icon">Image<wbr>Search<wbr>Results</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/newssearchoptions.html" class="tsd-kind-icon">News<wbr>Search<wbr>Options</a></li>
@@ -223,6 +236,14 @@
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
+						<h3>Type aliases</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-type-alias"><a href="modules.html#forecastalertseverity" class="tsd-kind-icon">Forecast<wbr>Alert<wbr>Severity</a></li>
+							<li class="tsd-kind-type-alias"><a href="modules.html#forecasticon" class="tsd-kind-icon">Forecast<wbr>Icon</a></li>
+							<li class="tsd-kind-type-alias"><a href="modules.html#forecastpreciptype" class="tsd-kind-icon">Forecast<wbr>Precip<wbr>Type</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
 						<h3>Search Functions</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-function"><a href="modules.html#autocomplete" class="tsd-kind-icon">autocomplete</a></li>
@@ -233,6 +254,8 @@
 						</ul>
 						<h3>Spice Functions</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-function"><a href="modules.html#currency" class="tsd-kind-icon">currency</a></li>
+							<li class="tsd-kind-function"><a href="modules.html#forecast" class="tsd-kind-icon">forecast</a></li>
 							<li class="tsd-kind-function"><a href="modules.html#stocks" class="tsd-kind-icon">stocks</a></li>
 							<li class="tsd-kind-function"><a href="modules.html#time" class="tsd-kind-icon">time</a></li>
 						</ul>
@@ -242,6 +265,39 @@
 						</ul>
 					</section>
 				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Type aliases</h2>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias">
+				<a name="forecastalertseverity" class="tsd-anchor"></a>
+				<h3>Forecast<wbr>Alert<wbr>Severity</h3>
+				<div class="tsd-signature tsd-kind-icon">Forecast<wbr>Alert<wbr>Severity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;advisory&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L15">spices/forecast.ts:15</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias">
+				<a name="forecasticon" class="tsd-anchor"></a>
+				<h3>Forecast<wbr>Icon</h3>
+				<div class="tsd-signature tsd-kind-icon">Forecast<wbr>Icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;partly-cloudy-day&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;partly-cloudy-night&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;cloudy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;rain&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;clear-day&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;snow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;fog&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;clear-night&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;clear-day&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L4">spices/forecast.ts:4</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias">
+				<a name="forecastpreciptype" class="tsd-anchor"></a>
+				<h3>Forecast<wbr>Precip<wbr>Type</h3>
+				<div class="tsd-signature tsd-kind-icon">Forecast<wbr>Precip<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;rain&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;snow&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L14">spices/forecast.ts:14</a></li>
+					</ul>
+				</aside>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
@@ -256,7 +312,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/ea00596/src/search/search.ts#L282">search/search.ts:282</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L282">search/search.ts:282</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -300,7 +356,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/ea00596/src/search/search.ts#L89">search/search.ts:89</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L89">search/search.ts:89</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -344,7 +400,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/ea00596/src/search/images.ts#L86">search/images.ts:86</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/images.ts#L86">search/images.ts:86</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -388,7 +444,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/ea00596/src/search/news.ts#L43">search/news.ts:43</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/news.ts#L43">search/news.ts:43</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -432,7 +488,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/ea00596/src/search/videos.ts#L77">search/videos.ts:77</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/videos.ts#L77">search/videos.ts:77</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -470,6 +526,102 @@
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Spice Functions</h2>
 			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="currency" class="tsd-anchor"></a>
+				<h3>currency</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">currency<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, amount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, needleOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">NeedleOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/currencyresult.html" class="tsd-signature-type" data-tsd-kind="Interface">CurrencyResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/currency.ts#L57">spices/currency.ts:57</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get the currency conversion between two currencies.
+								Data provided by XE.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>from: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The currency to convert from</p>
+								</div>
+							</li>
+							<li>
+								<h5>to: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The currency to convert to</p>
+								</div>
+							</li>
+							<li>
+								<h5>amount: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The amount of currency to convert</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> needleOptions: <span class="tsd-signature-type">NeedleOptions</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The options for the HTTP request</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/currencyresult.html" class="tsd-signature-type" data-tsd-kind="Interface">CurrencyResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>The currency result</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="forecast" class="tsd-anchor"></a>
+				<h3>forecast</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">forecast<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, locale<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, needleOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">NeedleOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/forecastresult.html" class="tsd-signature-type" data-tsd-kind="Interface">ForecastResult</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L136">spices/forecast.ts:136</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get the forecast of a location. Returns <code>null</code> if there are no results.
+								Data provided by Dark Sky and other sources.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>query: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The query to search with</p>
+								</div>
+							</li>
+							<li>
+								<h5>locale: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;en&#x27;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The locale to give the summaries in</p>
+								</div>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> needleOptions: <span class="tsd-signature-type">NeedleOptions</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The options for the HTTP request</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/forecastresult.html" class="tsd-signature-type" data-tsd-kind="Interface">ForecastResult</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>The currency result</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="stocks" class="tsd-anchor"></a>
 				<h3>stocks</h3>
 				<ul class="tsd-signatures tsd-kind-function">
@@ -479,7 +631,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/ea00596/src/spices/stocks.ts#L113">spices/stocks.ts:113</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/stocks.ts#L113">spices/stocks.ts:113</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -518,7 +670,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/ea00596/src/spices/time.ts#L109">spices/time.ts:109</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/time.ts#L109">spices/time.ts:109</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -560,7 +712,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/ea00596/src/util.ts#L28">util.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/util.ts#L28">util.ts:28</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>

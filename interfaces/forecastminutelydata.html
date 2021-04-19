@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SearchResultBang | DuckDuckScrape</title>
+	<title>ForecastMinutelyData | DuckDuckScrape</title>
 	<meta name="description" content="Documentation for NPM module DuckDuckScrape">
-	<meta name="twitter:title" content="SearchResultBang | DuckDuckScrape">
+	<meta name="twitter:title" content="ForecastMinutelyData | DuckDuckScrape">
 	<meta property="og:site_name" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
 	<meta property="og:url" content="https://duck-duck-scrape.js.org/">
-	<meta property="og:title" content="SearchResultBang | DuckDuckScrape">
+	<meta property="og:title" content="ForecastMinutelyData | DuckDuckScrape">
 	<meta property="og:description" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
 	<meta name="twitter:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
 	<meta name="twitter:card" content="summary">
@@ -104,16 +104,16 @@
 	</ul>
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="searchresultbang.html" class="tsd-kind-icon">Search<wbr>Result<wbr>Bang</a>
+			<a href="forecastminutelydata.html" class="tsd-kind-icon">Forecast<wbr>Minutely<wbr>Data</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="searchresultbang.html#domain" class="tsd-kind-icon">domain</a>
+					<a href="forecastminutelydata.html#precipintensity" class="tsd-kind-icon">precip<wbr>Intensity</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="searchresultbang.html#prefix" class="tsd-kind-icon">prefix</a>
+					<a href="forecastminutelydata.html#precipprobability" class="tsd-kind-icon">precip<wbr>Probability</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="searchresultbang.html#title" class="tsd-kind-icon">title</a>
+					<a href="forecastminutelydata.html#time" class="tsd-kind-icon">time</a>
 				</li>
 			</ul>
 		</li>
@@ -125,7 +125,12 @@
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">SearchResultBang</span>
+					<span class="target">ForecastMinutelyData</span>
+					<ul class="tsd-hierarchy">
+						<li>
+							<a href="forecasthourlydata.html" class="tsd-signature-type" data-tsd-kind="Interface">ForecastHourlyData</a>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -136,9 +141,9 @@
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="searchresultbang.html#domain" class="tsd-kind-icon">domain</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="searchresultbang.html#prefix" class="tsd-kind-icon">prefix</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="searchresultbang.html#title" class="tsd-kind-icon">title</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastminutelydata.html#precipintensity" class="tsd-kind-icon">precip<wbr>Intensity</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastminutelydata.html#precipprobability" class="tsd-kind-icon">precip<wbr>Probability</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastminutelydata.html#time" class="tsd-kind-icon">time</a></li>
 						</ul>
 					</section>
 				</div>
@@ -147,34 +152,39 @@
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="domain" class="tsd-anchor"></a>
-				<h3>domain</h3>
-				<div class="tsd-signature tsd-kind-icon">domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="precipintensity" class="tsd-anchor"></a>
+				<h3>precip<wbr>Intensity</h3>
+				<div class="tsd-signature tsd-kind-icon">precip<wbr>Intensity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L73">search/search.ts:73</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L20">spices/forecast.ts:20</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="prefix" class="tsd-anchor"></a>
-				<h3>prefix</h3>
-				<div class="tsd-signature tsd-kind-icon">prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="precipprobability" class="tsd-anchor"></a>
+				<h3>precip<wbr>Probability</h3>
+				<div class="tsd-signature tsd-kind-icon">precip<wbr>Probability<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L71">search/search.ts:71</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L21">spices/forecast.ts:21</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="title" class="tsd-anchor"></a>
-				<h3>title</h3>
-				<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="time" class="tsd-anchor"></a>
+				<h3>time</h3>
+				<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/search/search.ts#L72">search/search.ts:72</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L19">spices/forecast.ts:19</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The timestamp of the data point.</p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">

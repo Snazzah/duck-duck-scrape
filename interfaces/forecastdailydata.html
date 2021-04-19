@@ -1,0 +1,742 @@
+<!doctype html>
+<html class="minimal no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ForecastDailyData | DuckDuckScrape</title>
+	<meta name="description" content="Documentation for NPM module DuckDuckScrape">
+	<meta name="twitter:title" content="ForecastDailyData | DuckDuckScrape">
+	<meta property="og:site_name" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
+	<meta property="og:url" content="https://duck-duck-scrape.js.org/">
+	<meta property="og:title" content="ForecastDailyData | DuckDuckScrape">
+	<meta property="og:description" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
+	<meta name="twitter:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+	<meta name="twitter:card" content="summary">
+	<meta property="og:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+	<meta property="og:image:secure" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:alt" content="DuckDuckScrape Logo">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="en_US">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4495d4">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="theme-color" content="#4495d4">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/dark.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell">
+					<strong><a href="../index.html">DuckDuckScrape</a></strong>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#typedoc-main-index" class="tsd-widget menu no-caption">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<nav class="tsd-navigation secondary">
+	<a class="dds-icon" href="../index.html">DuckDuckScrape</a>
+	<a class="gh-icon" href="https://github.com/Snazzah/duck-duck-scrape">GitHub Repository</a>
+	<br>
+	<strong>Search</strong>
+	<ul>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#search" class="tsd-kind-icon">search</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#searchimages" class="tsd-kind-icon">search<wbr>Images</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#searchnews" class="tsd-kind-icon">search<wbr>News</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#searchvideos" class="tsd-kind-icon">search<wbr>Videos</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#autocomplete" class="tsd-kind-icon">autocomplete</a>
+		</li>
+	</ul>
+	<strong>Spices</strong>
+	<ul>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#stocks" class="tsd-kind-icon">stocks</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#time" class="tsd-kind-icon">time</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#currency" class="tsd-kind-icon">currency</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#forecast" class="tsd-kind-icon">forecast</a>
+		</li>
+	</ul>
+	<ul>
+		<li class="current tsd-kind-interface">
+			<a href="forecastdailydata.html" class="tsd-kind-icon">Forecast<wbr>Daily<wbr>Data</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#apparenttemperaturehigh" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>High</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#apparenttemperaturehightime" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>High<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#apparenttemperaturelow" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Low</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#apparenttemperaturelowtime" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Low<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#apparenttemperaturemax" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Max</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#apparenttemperaturemaxtime" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Max<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#apparenttemperaturemin" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Min</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#apparenttemperaturemintime" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Min<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#cloudcover" class="tsd-kind-icon">cloud<wbr>Cover</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#dewpoint" class="tsd-kind-icon">dew<wbr>Point</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#humidity" class="tsd-kind-icon">humidity</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#icon" class="tsd-kind-icon">icon</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#moonphase" class="tsd-kind-icon">moon<wbr>Phase</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#ozone" class="tsd-kind-icon">ozone</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#precipintensity" class="tsd-kind-icon">precip<wbr>Intensity</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#precipintensitymax" class="tsd-kind-icon">precip<wbr>Intensity<wbr>Max</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#precipintensitymaxtime" class="tsd-kind-icon">precip<wbr>Intensity<wbr>Max<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#precipprobability" class="tsd-kind-icon">precip<wbr>Probability</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#preciptype" class="tsd-kind-icon">precip<wbr>Type</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#pressure" class="tsd-kind-icon">pressure</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#summary" class="tsd-kind-icon">summary</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#sunrisetime" class="tsd-kind-icon">sunrise<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#sunsettime" class="tsd-kind-icon">sunset<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#temperature" class="tsd-kind-icon">temperature</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#temperaturehigh" class="tsd-kind-icon">temperature<wbr>High</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#temperaturehightime" class="tsd-kind-icon">temperature<wbr>High<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#temperaturelow" class="tsd-kind-icon">temperature<wbr>Low</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#temperaturelowtime" class="tsd-kind-icon">temperature<wbr>Low<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#temperaturemax" class="tsd-kind-icon">temperature<wbr>Max</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#temperaturemaxtime" class="tsd-kind-icon">temperature<wbr>Max<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#temperaturemin" class="tsd-kind-icon">temperature<wbr>Min</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#temperaturemintime" class="tsd-kind-icon">temperature<wbr>Min<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#time" class="tsd-kind-icon">time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#uvindex" class="tsd-kind-icon">uv<wbr>Index</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#uvindextime" class="tsd-kind-icon">uv<wbr>Index<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#visibility" class="tsd-kind-icon">visibility</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#windbearing" class="tsd-kind-icon">wind<wbr>Bearing</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#windgust" class="tsd-kind-icon">wind<wbr>Gust</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="forecastdailydata.html#windgusttime" class="tsd-kind-icon">wind<wbr>Gust<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a href="forecastdailydata.html#windspeed" class="tsd-kind-icon">wind<wbr>Speed</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main">
+	<div class="content-wrap">
+		<section class="tsd-panel tsd-hierarchy">
+			<h3>Hierarchy</h3>
+			<ul class="tsd-hierarchy">
+				<li>
+					<span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="forecasthourlydata.html" class="tsd-signature-type" data-tsd-kind="Interface">ForecastHourlyData</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;apparentTemperature&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;solar&quot;</span><span class="tsd-signature-symbol">&gt;</span>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">ForecastDailyData</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section ">
+						<h3>Properties</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#apparenttemperaturehigh" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>High</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#apparenttemperaturehightime" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>High<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#apparenttemperaturelow" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Low</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#apparenttemperaturelowtime" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Low<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#apparenttemperaturemax" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Max</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#apparenttemperaturemaxtime" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Max<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#apparenttemperaturemin" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Min</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#apparenttemperaturemintime" class="tsd-kind-icon">apparent<wbr>Temperature<wbr>Min<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#cloudcover" class="tsd-kind-icon">cloud<wbr>Cover</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#dewpoint" class="tsd-kind-icon">dew<wbr>Point</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#humidity" class="tsd-kind-icon">humidity</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#icon" class="tsd-kind-icon">icon</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#moonphase" class="tsd-kind-icon">moon<wbr>Phase</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#ozone" class="tsd-kind-icon">ozone</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#precipintensity" class="tsd-kind-icon">precip<wbr>Intensity</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#precipintensitymax" class="tsd-kind-icon">precip<wbr>Intensity<wbr>Max</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#precipintensitymaxtime" class="tsd-kind-icon">precip<wbr>Intensity<wbr>Max<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#precipprobability" class="tsd-kind-icon">precip<wbr>Probability</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#preciptype" class="tsd-kind-icon">precip<wbr>Type</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#pressure" class="tsd-kind-icon">pressure</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#summary" class="tsd-kind-icon">summary</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#sunrisetime" class="tsd-kind-icon">sunrise<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#sunsettime" class="tsd-kind-icon">sunset<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#temperature" class="tsd-kind-icon">temperature</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#temperaturehigh" class="tsd-kind-icon">temperature<wbr>High</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#temperaturehightime" class="tsd-kind-icon">temperature<wbr>High<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#temperaturelow" class="tsd-kind-icon">temperature<wbr>Low</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#temperaturelowtime" class="tsd-kind-icon">temperature<wbr>Low<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#temperaturemax" class="tsd-kind-icon">temperature<wbr>Max</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#temperaturemaxtime" class="tsd-kind-icon">temperature<wbr>Max<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#temperaturemin" class="tsd-kind-icon">temperature<wbr>Min</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#temperaturemintime" class="tsd-kind-icon">temperature<wbr>Min<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#time" class="tsd-kind-icon">time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#uvindex" class="tsd-kind-icon">uv<wbr>Index</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#uvindextime" class="tsd-kind-icon">uv<wbr>Index<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#visibility" class="tsd-kind-icon">visibility</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#windbearing" class="tsd-kind-icon">wind<wbr>Bearing</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#windgust" class="tsd-kind-icon">wind<wbr>Gust</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="forecastdailydata.html#windgusttime" class="tsd-kind-icon">wind<wbr>Gust<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="forecastdailydata.html#windspeed" class="tsd-kind-icon">wind<wbr>Speed</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="apparenttemperaturehigh" class="tsd-anchor"></a>
+				<h3>apparent<wbr>Temperature<wbr>High</h3>
+				<div class="tsd-signature tsd-kind-icon">apparent<wbr>Temperature<wbr>High<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L60">spices/forecast.ts:60</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="apparenttemperaturehightime" class="tsd-anchor"></a>
+				<h3>apparent<wbr>Temperature<wbr>High<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">apparent<wbr>Temperature<wbr>High<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L61">spices/forecast.ts:61</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="apparenttemperaturelow" class="tsd-anchor"></a>
+				<h3>apparent<wbr>Temperature<wbr>Low</h3>
+				<div class="tsd-signature tsd-kind-icon">apparent<wbr>Temperature<wbr>Low<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L62">spices/forecast.ts:62</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="apparenttemperaturelowtime" class="tsd-anchor"></a>
+				<h3>apparent<wbr>Temperature<wbr>Low<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">apparent<wbr>Temperature<wbr>Low<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L63">spices/forecast.ts:63</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="apparenttemperaturemax" class="tsd-anchor"></a>
+				<h3>apparent<wbr>Temperature<wbr>Max</h3>
+				<div class="tsd-signature tsd-kind-icon">apparent<wbr>Temperature<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L72">spices/forecast.ts:72</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="apparenttemperaturemaxtime" class="tsd-anchor"></a>
+				<h3>apparent<wbr>Temperature<wbr>Max<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">apparent<wbr>Temperature<wbr>Max<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L73">spices/forecast.ts:73</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="apparenttemperaturemin" class="tsd-anchor"></a>
+				<h3>apparent<wbr>Temperature<wbr>Min</h3>
+				<div class="tsd-signature tsd-kind-icon">apparent<wbr>Temperature<wbr>Min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L70">spices/forecast.ts:70</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="apparenttemperaturemintime" class="tsd-anchor"></a>
+				<h3>apparent<wbr>Temperature<wbr>Min<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">apparent<wbr>Temperature<wbr>Min<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L71">spices/forecast.ts:71</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="cloudcover" class="tsd-anchor"></a>
+				<h3>cloud<wbr>Cover</h3>
+				<div class="tsd-signature tsd-kind-icon">cloud<wbr>Cover<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.cloudCover</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L36">spices/forecast.ts:36</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="dewpoint" class="tsd-anchor"></a>
+				<h3>dew<wbr>Point</h3>
+				<div class="tsd-signature tsd-kind-icon">dew<wbr>Point<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.dewPoint</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L30">spices/forecast.ts:30</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="humidity" class="tsd-anchor"></a>
+				<h3>humidity</h3>
+				<div class="tsd-signature tsd-kind-icon">humidity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.humidity</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L31">spices/forecast.ts:31</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="icon" class="tsd-anchor"></a>
+				<h3>icon</h3>
+				<div class="tsd-signature tsd-kind-icon">icon<span class="tsd-signature-symbol">:</span> <a href="../modules.html#forecasticon" class="tsd-signature-type" data-tsd-kind="Type alias">ForecastIcon</a></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.icon</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L26">spices/forecast.ts:26</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="moonphase" class="tsd-anchor"></a>
+				<h3>moon<wbr>Phase</h3>
+				<div class="tsd-signature tsd-kind-icon">moon<wbr>Phase<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L53">spices/forecast.ts:53</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="ozone" class="tsd-anchor"></a>
+				<h3>ozone</h3>
+				<div class="tsd-signature tsd-kind-icon">ozone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.ozone</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L39">spices/forecast.ts:39</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="precipintensity" class="tsd-anchor"></a>
+				<h3>precip<wbr>Intensity</h3>
+				<div class="tsd-signature tsd-kind-icon">precip<wbr>Intensity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.precipIntensity</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L20">spices/forecast.ts:20</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="precipintensitymax" class="tsd-anchor"></a>
+				<h3>precip<wbr>Intensity<wbr>Max</h3>
+				<div class="tsd-signature tsd-kind-icon">precip<wbr>Intensity<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L54">spices/forecast.ts:54</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="precipintensitymaxtime" class="tsd-anchor"></a>
+				<h3>precip<wbr>Intensity<wbr>Max<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">precip<wbr>Intensity<wbr>Max<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L55">spices/forecast.ts:55</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="precipprobability" class="tsd-anchor"></a>
+				<h3>precip<wbr>Probability</h3>
+				<div class="tsd-signature tsd-kind-icon">precip<wbr>Probability<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.precipProbability</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L21">spices/forecast.ts:21</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="preciptype" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> precip<wbr>Type</h3>
+				<div class="tsd-signature tsd-kind-icon">precip<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../modules.html#forecastpreciptype" class="tsd-signature-type" data-tsd-kind="Type alias">ForecastPrecipType</a></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.precipType</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L27">spices/forecast.ts:27</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="pressure" class="tsd-anchor"></a>
+				<h3>pressure</h3>
+				<div class="tsd-signature tsd-kind-icon">pressure<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.pressure</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L32">spices/forecast.ts:32</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="summary" class="tsd-anchor"></a>
+				<h3>summary</h3>
+				<div class="tsd-signature tsd-kind-icon">summary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.summary</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L25">spices/forecast.ts:25</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="sunrisetime" class="tsd-anchor"></a>
+				<h3>sunrise<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">sunrise<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L51">spices/forecast.ts:51</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="sunsettime" class="tsd-anchor"></a>
+				<h3>sunset<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">sunset<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L52">spices/forecast.ts:52</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="temperature" class="tsd-anchor"></a>
+				<h3>temperature</h3>
+				<div class="tsd-signature tsd-kind-icon">temperature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.temperature</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L28">spices/forecast.ts:28</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="temperaturehigh" class="tsd-anchor"></a>
+				<h3>temperature<wbr>High</h3>
+				<div class="tsd-signature tsd-kind-icon">temperature<wbr>High<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L56">spices/forecast.ts:56</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="temperaturehightime" class="tsd-anchor"></a>
+				<h3>temperature<wbr>High<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">temperature<wbr>High<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L57">spices/forecast.ts:57</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="temperaturelow" class="tsd-anchor"></a>
+				<h3>temperature<wbr>Low</h3>
+				<div class="tsd-signature tsd-kind-icon">temperature<wbr>Low<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L58">spices/forecast.ts:58</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="temperaturelowtime" class="tsd-anchor"></a>
+				<h3>temperature<wbr>Low<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">temperature<wbr>Low<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L59">spices/forecast.ts:59</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="temperaturemax" class="tsd-anchor"></a>
+				<h3>temperature<wbr>Max</h3>
+				<div class="tsd-signature tsd-kind-icon">temperature<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L68">spices/forecast.ts:68</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="temperaturemaxtime" class="tsd-anchor"></a>
+				<h3>temperature<wbr>Max<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">temperature<wbr>Max<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L69">spices/forecast.ts:69</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="temperaturemin" class="tsd-anchor"></a>
+				<h3>temperature<wbr>Min</h3>
+				<div class="tsd-signature tsd-kind-icon">temperature<wbr>Min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L66">spices/forecast.ts:66</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="temperaturemintime" class="tsd-anchor"></a>
+				<h3>temperature<wbr>Min<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">temperature<wbr>Min<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L67">spices/forecast.ts:67</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="time" class="tsd-anchor"></a>
+				<h3>time</h3>
+				<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.time</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L19">spices/forecast.ts:19</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The timestamp of the data point.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="uvindex" class="tsd-anchor"></a>
+				<h3>uv<wbr>Index</h3>
+				<div class="tsd-signature tsd-kind-icon">uv<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.uvIndex</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L37">spices/forecast.ts:37</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="uvindextime" class="tsd-anchor"></a>
+				<h3>uv<wbr>Index<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">uv<wbr>Index<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L65">spices/forecast.ts:65</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="visibility" class="tsd-anchor"></a>
+				<h3>visibility</h3>
+				<div class="tsd-signature tsd-kind-icon">visibility<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.visibility</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L38">spices/forecast.ts:38</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="windbearing" class="tsd-anchor"></a>
+				<h3>wind<wbr>Bearing</h3>
+				<div class="tsd-signature tsd-kind-icon">wind<wbr>Bearing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.windBearing</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L35">spices/forecast.ts:35</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="windgust" class="tsd-anchor"></a>
+				<h3>wind<wbr>Gust</h3>
+				<div class="tsd-signature tsd-kind-icon">wind<wbr>Gust<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.windGust</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L34">spices/forecast.ts:34</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="windgusttime" class="tsd-anchor"></a>
+				<h3>wind<wbr>Gust<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">wind<wbr>Gust<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L64">spices/forecast.ts:64</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<a name="windspeed" class="tsd-anchor"></a>
+				<h3>wind<wbr>Speed</h3>
+				<div class="tsd-signature tsd-kind-icon">wind<wbr>Speed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<p>Inherited from Omit.windSpeed</p>
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/e65423b/src/spices/forecast.ts#L33">spices/forecast.ts:33</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<footer class="with-border-bottom">
+			<div class="container">
+				<h2>Legend</h2>
+				<div class="tsd-legend-group">
+					<ul class="tsd-legend">
+						<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<div class="container tsd-generator">
+			<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+		</div>
+	</div>
+</div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
