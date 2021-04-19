@@ -45,3 +45,7 @@
   background-size: contain;
   background-image: url(../images/github.svg);
 }
+
+a.dds-title {
+  color: #3498db;
+}

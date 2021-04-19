@@ -37,7 +37,7 @@
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">DuckDuckScrape</a></strong>
+					<a class="dds-icon dds-title" href="index.html">DuckDuck<b>Scrape</b></a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -68,6 +68,7 @@
 <nav class="tsd-navigation secondary">
 	<strong><a class="dds-icon" href="index.html">DuckDuckScrape</a></strong>
 	<a class="gh-icon" href="https://github.com/Snazzah/duck-duck-scrape">GitHub Repository</a>
+	<a href="https://github.com/Snazzah/duck-duck-scrape/blob/master/CHANGELOG.md">Changelog</a>
 	<br>
 	<strong>Search</strong>
 	<ul>
@@ -121,14 +122,11 @@
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
 			<div align="center">
-				<img src="https://get.snaz.in/45RrSvq.png">
+				<p><a href="https://duck-duck-scrape.js.org/"><img src="https://get.snaz.in/45RrSvq.png" alt=""></a></p>
 				<p><a href="https://www.npmjs.com/package/dexare"><img src="https://img.shields.io/npm/v/duck-duck-scrape?maxAge=3600?&color=3498db" alt="NPM version"></a> <a href="https://www.npmjs.com/package/dexare"><img src="https://img.shields.io/npm/dt/duck-duck-scrape?maxAge=3600&color=3498db" alt="NPM downloads"></a> <a href="https://github.com/Dexare/Dexare/actions?query=workflow%3A%22ESLint%22"><img src="https://github.com/Snazzah/duck-duck-scrape/workflows/ESLint/badge.svg" alt="ESLint status"></a> <a href="https://deepscan.io/dashboard#view=project&amp;tid=11596&amp;pid=16764&amp;bid=365136"><img src="https://deepscan.io/api/teams/11596/projects/16764/branches/365136/badge/grade.svg" alt="DeepScan grade"></a></p>
 				<p><code>npm install duck-duck-scrape</code> - <code>yarn add duck-duck-scrape</code></p>
 				<p>Search from DuckDuckGo and utilize its spice APIs for things such as stocks, weather, currency conversion and more!</p>
 			</div>
-			<blockquote>
-				<p>This is currently on a dev branch for v2 which is not yet live on NPM. You can install using the <code>v2</code> branch.</p>
-			</blockquote>
 			<a href="#available-features" id="available-features" style="color: inherit; text-decoration: none;">
 				<h3>Available Features</h3>
 			</a>
@@ -162,6 +160,10 @@
 <span style="color: #66D9EF">const</span><span style="color: #F8F8F2"> searchResults </span><span style="color: #F92672">=</span><span style="color: #F8F8F2"> </span><span style="color: #F92672">await</span><span style="color: #F8F8F2"> DDG.</span><span style="color: #A6E22E">search</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&#039;node.js&#039;</span><span style="color: #F8F8F2">, {</span>
 <span style="color: #F8F8F2">  safeSearch: DDG.SafeSearchType.STRICT</span>
 <span style="color: #F8F8F2">});</span>
+
+<span style="color: #88846F">// DDG.stocks(&#039;aapl&#039;)</span>
+<span style="color: #88846F">// DDG.currency(&#039;usd&#039;, &#039;eur&#039;, 1)</span>
+<span style="color: #88846F">// DDG.dictionaryDefinition(&#039;happy&#039;)</span>
 
 <span style="color: #F8F8F2">console.</span><span style="color: #A6E22E">log</span><span style="color: #F8F8F2">(searchResults);</span>
 <span style="color: #88846F">/**</span>
@@ -220,6 +222,7 @@
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-interface"><a href="interfaces/autocompleteterm.html" class="tsd-kind-icon">Autocomplete<wbr>Term</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/currencyconversion.html" class="tsd-kind-icon">Currency<wbr>Conversion</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/currencyexpandedconversion.html" class="tsd-kind-icon">Currency<wbr>Expanded<wbr>Conversion</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/currencyresult.html" class="tsd-kind-icon">Currency<wbr>Result</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/dictionaryaudioresult.html" class="tsd-kind-icon">Dictionary<wbr>Audio<wbr>Result</a></li>
 							<li class="tsd-kind-interface"><a href="interfaces/dictionarydefinitioncitation.html" class="tsd-kind-icon">Dictionary<wbr>Definition<wbr>Citation</a></li>
@@ -303,7 +306,7 @@
 				<div class="tsd-signature tsd-kind-icon">Dictionary<wbr>Definition<wbr>Part<wbr>OfSpeech<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;noun&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;adjective&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;verb&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;adverb&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;interjection&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pronoun&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;preposition&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;abbreviation&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;affix&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;article&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;auxiliary-verb&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;conjunction&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;definite-article&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;family-name&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;given-name&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;idiom&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;imperative&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;noun-plural&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;noun-posessive&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;past-participle&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;phrasal-prefix&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;proper-noun&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;proper-noun-plural&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;proper-noun-posessive&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;suffix&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;verb-intransitive&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;verb-transitive&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/dictionary/definition.ts#L4">spices/dictionary/definition.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/dictionary/definition.ts#L4">spices/dictionary/definition.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -313,7 +316,7 @@
 				<div class="tsd-signature tsd-kind-icon">Dictionary<wbr>Hyphenation<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;stress&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;secondary stress&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/dictionary/hyphenation.ts#L4">spices/dictionary/hyphenation.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/dictionary/hyphenation.ts#L4">spices/dictionary/hyphenation.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -323,7 +326,7 @@
 				<div class="tsd-signature tsd-kind-icon">Dictionary<wbr>Pronunciation<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;ahd-5&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;arpabet&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gcide-diacritical&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;IPA&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/dictionary/pronunciation.ts#L4">spices/dictionary/pronunciation.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/dictionary/pronunciation.ts#L4">spices/dictionary/pronunciation.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -333,7 +336,7 @@
 				<div class="tsd-signature tsd-kind-icon">Forecast<wbr>Alert<wbr>Severity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;advisory&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/forecast.ts#L15">spices/forecast.ts:15</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/forecast.ts#L15">spices/forecast.ts:15</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -343,7 +346,7 @@
 				<div class="tsd-signature tsd-kind-icon">Forecast<wbr>Icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;partly-cloudy-day&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;partly-cloudy-night&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;cloudy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;rain&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;clear-day&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;snow&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;fog&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;clear-night&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;clear-day&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/forecast.ts#L4">spices/forecast.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/forecast.ts#L4">spices/forecast.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -353,7 +356,7 @@
 				<div class="tsd-signature tsd-kind-icon">Forecast<wbr>Precip<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;rain&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;snow&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/forecast.ts#L14">spices/forecast.ts:14</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/forecast.ts#L14">spices/forecast.ts:14</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -370,7 +373,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/search.ts#L317">search/search.ts:317</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/search/search.ts#L317">search/search.ts:317</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -414,7 +417,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/search.ts#L117">search/search.ts:117</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/search/search.ts#L117">search/search.ts:117</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -458,7 +461,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/images.ts#L148">search/images.ts:148</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/search/images.ts#L148">search/images.ts:148</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -502,7 +505,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/news.ts#L68">search/news.ts:68</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/search/news.ts#L68">search/news.ts:68</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -546,7 +549,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/search/videos.ts#L105">search/videos.ts:105</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/search/videos.ts#L105">search/videos.ts:105</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -593,7 +596,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/currency.ts#L57">spices/currency.ts:57</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/currency.ts#L60">spices/currency.ts:60</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -644,7 +647,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/dictionary/audio.ts#L34">spices/dictionary/audio.ts:34</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/dictionary/audio.ts#L34">spices/dictionary/audio.ts:34</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -683,7 +686,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/dictionary/definition.ts#L83">spices/dictionary/definition.ts:83</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/dictionary/definition.ts#L83">spices/dictionary/definition.ts:83</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -722,7 +725,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/dictionary/hyphenation.ts#L24">spices/dictionary/hyphenation.ts:24</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/dictionary/hyphenation.ts#L24">spices/dictionary/hyphenation.ts:24</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -761,7 +764,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/dictionary/pronunciation.ts#L27">spices/dictionary/pronunciation.ts:27</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/dictionary/pronunciation.ts#L27">spices/dictionary/pronunciation.ts:27</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -800,7 +803,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/forecast.ts#L136">spices/forecast.ts:136</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/forecast.ts#L136">spices/forecast.ts:136</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -845,7 +848,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/stocks.ts#L113">spices/stocks.ts:113</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/stocks.ts#L113">spices/stocks.ts:113</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -884,7 +887,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/spices/time.ts#L109">spices/time.ts:109</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/spices/time.ts#L109">spices/time.ts:109</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -926,7 +929,7 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/a7872e6/src/util.ts#L43">util.ts:43</a></li>
+								<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/062d00a/src/util.ts#L43">util.ts:43</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
