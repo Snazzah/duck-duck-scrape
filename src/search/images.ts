@@ -78,6 +78,24 @@ export enum ImageColor {
   WHITE = 'White'
 }
 
+/** The types of image licenses. */
+export enum ImageLicense {
+  /** Any image license. */
+  ALL = '',
+  /** All Creative Commons. */
+  CREATIVE_COMMONS = 'Any',
+  /** Public Domain images. */
+  PUBLIC_DOMAIN = 'Public',
+  /** Free to share and use. */
+  SHARE = 'Share',
+  /** Free to share and use commercially. */
+  SHARE_COMMERCIALLY = 'ShareCommercially',
+  /** Free to modify, share, and use. */
+  MODIFY = 'Modify',
+  /** Free to modify, share, and use commercially. */
+  MODIFY_COMMERCIALLY = 'ModifyCommercially'
+}
+
 /** The options for {@link searchImages}. */
 export interface ImageSearchOptions {
   /** The safe search type of the search. */
@@ -99,6 +117,8 @@ export interface ImageSearchOptions {
   size?: ImageSize;
   /** The type of the images to search. */
   type?: ImageType;
+  /** The license of the images to search. */
+  license?: ImageLicense;
 }
 
 const defaultOptions: ImageSearchOptions = {
@@ -202,6 +222,9 @@ function sanityCheck(options: ImageSearchOptions) {
 
   if (options.color && !Object.values(ImageColor).includes(options.color))
     throw new TypeError(`${options.color} is an invalid color filter!`);
+
+  if (options.license && !Object.values(ImageLicense).includes(options.license))
+    throw new TypeError(`${options.license} is an invalid license filter!`);
 
   if (options.vqd && !/\d-\d+-\d+/.test(options.vqd)) throw new Error(`${options.vqd} is an invalid VQD!`);
 

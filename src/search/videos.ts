@@ -4,22 +4,35 @@ import { DuckbarResponse, DuckbarVideoResult } from '../types';
 import { ensureJSON, getVQD, queryString, SearchTimeType } from '../util';
 import { SafeSearchType } from '../util';
 
+/** The types of video definition. */
 export enum VideoDefinition {
+  /** Any definition. */
   ANY = '',
+  /** High definition. */
   HIGH = 'high',
+  /** Standard definition. */
   STANDARD = 'standard'
 }
 
+/** The types of video duration. */
 export enum VideoDuration {
+  /** Any video duration. */
   ANY = '',
+  /** Short videos, shorter than ~5 minutes. */
   SHORT = 'short',
+  /** Medium length videos, between 5 and 20 minutes. */
   MEDIUM = 'medium',
+  /** Long videos, longer than 20 minutes. */
   LONG = 'long'
 }
 
+/** The types of video licenses. */
 export enum VideoLicense {
+  /** Any video license. */
   ANY = '',
+  /** Creative Commons license. */
   CREATIVE_COMMONS = 'creativeCommon',
+  /** YouTube Standard license. */
   YOUTUBE = 'youtube'
 }
 
