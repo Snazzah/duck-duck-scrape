@@ -23,6 +23,12 @@ export interface CurrencyConversion {
   'conversion-inverse': string;
 }
 
+/** An expanded conversion of currency. */
+export interface CurrencyExpandedConversion extends CurrencyConversion {
+  /** The frequency of the rate. */
+  'rate-frequency': string;
+}
+
 /**
  * The result from the currency spice.
  */
@@ -37,10 +43,7 @@ export interface CurrencyResult {
     'output-format': 'json';
     description: string;
   };
-  conversion: CurrencyConversion & {
-    /** The frequency of the rate. */
-    'rate-frequency': string;
-  };
+  conversion: CurrencyExpandedConversion;
   topConversions: CurrencyConversion[];
 }
 
