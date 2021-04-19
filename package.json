@@ -1,7 +1,7 @@
 {
   "name": "duck-duck-scrape",
   "version": "2.0.0",
-  "description": "A DuckDuckGo scraper for Node.js.",
+  "description": "Search from DuckDuckGo and use it's spice APIs.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "author": "Snazzah",
@@ -10,9 +10,12 @@
   ],
   "license": "MIT",
   "repository": "https://github.com/Snazzah/duck-duck-scrape",
+  "homepage": "https://duck-duck-scrape.js.org/",
   "keywords": [
     "duckduckgo",
-    "ddg"
+    "ddg",
+    "search",
+    "api"
   ],
   "bugs": {
     "url": "https://github.com/Snazzah/duck-duck-scrape/issues"
