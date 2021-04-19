@@ -131,7 +131,7 @@ export interface ForecastResult {
  * @param query The query to search with
  * @param locale The locale to give the summaries in
  * @param needleOptions The options for the HTTP request
- * @returns The currency result
+ * @returns The forecast result
  */
 export async function forecast(
   query: string,

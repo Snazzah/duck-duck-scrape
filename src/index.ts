@@ -10,3 +10,4 @@ export * from './spices/stocks';
 export * from './spices/time';
 export * from './spices/currency';
 export * from './spices/forecast';
+export * from './spices/dictionary/definition';
