@@ -19,7 +19,7 @@ export interface DictionaryHyphenationResult {
  * @category Spice
  * @param word The word to define
  * @param needleOptions The options for the HTTP request
- * @returns The dictionary definition result
+ * @returns The dictionary hyphenation result
  */
 export async function dictionaryHyphenation(
   word: string,

@@ -22,7 +22,7 @@ export interface DictionaryPronunciationResult {
  * @category Spice
  * @param word The word to define
  * @param needleOptions The options for the HTTP request
- * @returns The dictionary definition result
+ * @returns The dictionary pronunciation result
  */
 export async function dictionaryPronunciation(
   word: string,

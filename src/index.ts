@@ -13,3 +13,4 @@ export * from './spices/forecast';
 export * from './spices/dictionary/definition';
 export * from './spices/dictionary/pronunciation';
 export * from './spices/dictionary/hyphenation';
+export * from './spices/dictionary/audio';
