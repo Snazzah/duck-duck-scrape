@@ -11,7 +11,9 @@ import {
 } from '../types';
 import { SafeSearchType, SearchTimeType, getVQD, queryString, ensureJSON } from '../util';
 import { VideoResult } from './videos';
+import { NewsResult } from './news';
 
+/** The options for {@link search}. */
 export interface SearchOptions {
   /** The safe search type of the search. */
   safeSearch?: SafeSearchType;
@@ -47,29 +49,55 @@ const NEWS_REGEX = /;DDG\.duckbar\.load\('news', ({"ads":.+"vqd":{".+":"\d-\d+-\
 const VIDEOS_REGEX = /;DDG\.duckbar\.load\('videos', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.loadModule\('related_searches/;
 const RELATED_SEARCHES_REGEX = /DDG\.duckbar\.loadModule\('related_searches', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.load\('products/;
 
+/**
+ * The search results from {@link search}.
+ * `images`, `news`, `videos` and `related` only show up if the query
+ * shows elements of these in a webpage search.
+ */
 export interface SearchResults {
+  /** Whether there were no results found. */
   noResults: boolean;
+  /** The VQD of the search query. */
   vqd: string;
+  /** The web results of the search. */
   results: SearchResult[];
+  /** The image results of the search. */
   images?: DuckbarImageResult[];
-  news?: DuckbarNewsResult[];
+  /** The news article results of the search. */
+  news?: NewsResult[];
+  /** The video results of the search. */
   videos?: VideoResult[];
+  /** The related searches of the query. */
   related?: RelatedResult[];
 }
 
+/** A web search result. */
 export interface SearchResult {
+  /** The hostname of the website. (i.e. "google.com") */
   hostname: string;
+  /** The URL of the result. */
   url: string;
+  /** The title of the result. */
   title: string;
+  /**
+   * The sanitized description of the result.
+   * Bold tags will still be present in this string.
+   */
   description: string;
+  /** The description of the result. */
   rawDescription: string;
+  /** The icon of the website. */
   icon: string;
+  /** The ddg!bang information of the website, if any. */
   bang?: SearchResultBang;
 }
 
 export interface SearchResultBang {
+  /** The prefix of the bang. (i.e. "w" for !w) */
   prefix: string;
+  /** The title of the bang. */
   title: string;
+  /** The domain of the bang. */
   domain: string;
 }
 
@@ -183,11 +211,16 @@ export async function search(
     const newsResult = JSON.parse(
       newsMatch[1].replace(/\t/g, '    ')
     ) as CallbackDuckbarPayload<DuckbarNewsResult>;
-    results.news = newsResult.results.map((n) => {
-      n.title = decode(n.title);
-      n.excerpt = decode(n.excerpt);
-      return n;
-    });
+    results.news = newsResult.results.map((article) => ({
+      date: article.date,
+      excerpt: decode(article.excerpt),
+      image: article.image,
+      relativeTime: article.relative_time,
+      syndicate: article.syndicate,
+      title: decode(article.title),
+      url: article.url,
+      isOld: !!article.is_old
+    })) as NewsResult[];
   }
 
   // Videos
@@ -202,11 +235,11 @@ export async function search(
         url: video.content,
         title: decode(video.title),
         description: decode(video.description),
-        image: video.images.large,
+        image: video.images.large || video.images.medium || video.images.small || video.images.motion,
         duration: video.duration,
         publishedOn: video.publisher,
         published: video.published,
-        publisher: video.publisher,
+        publisher: video.uploader,
         viewCount: video.statistics.viewCount || undefined
       });
     }
@@ -267,12 +300,14 @@ function sanityCheck(options: SearchOptions) {
   return options;
 }
 
+/** An auto-complete term. */
 export interface AutocompleteTerm {
+  /** The phrase of the auto-completed term. */
   phrase: string;
 }
 
 /**
- * Get autocomplete terms from a query.
+ * Get auto-complete terms from a query.
  * @category Search
  * @param query The query to search
  * @param region The region to search as

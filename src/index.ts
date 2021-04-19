@@ -1,4 +1,4 @@
-export { DuckbarImageResult, DuckbarNewsResult } from './types';
+export { DuckbarImageResult } from './types';
 export { SafeSearchType, getVQD } from './util';
 
 export * from './search/search';

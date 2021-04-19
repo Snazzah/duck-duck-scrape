@@ -23,6 +23,7 @@ export enum VideoLicense {
   YOUTUBE = 'youtube'
 }
 
+/** The options for {@link searchVideos}. */
 export interface VideoSearchOptions {
   /** The safe search type of the search. */
   safeSearch?: SafeSearchType;
@@ -48,21 +49,35 @@ const defaultOptions: VideoSearchOptions = {
   offset: 0
 };
 
+/** The video results from {@link searchVideos}. */
 export interface VideoSearchResults {
+  /** Whether there were no results found. */
   noResults: boolean;
+  /** The VQD of the search query. */
   vqd: string;
+  /** The video results of the search. */
   results: VideoResult[];
 }
 
+/** A video search result. */
 export interface VideoResult {
+  /** The URL of the video. */
   url: string;
+  /** The title of the video. */
   title: string;
+  /** The description of the video. */
   description: string;
+  /** The image URL of the video. */
   image: string;
+  /** The duration of the video. (i.e. "9:20") */
   duration: string;
+  /** The ISO timestamp of when the video was published. */
   published: string;
+  /** Where the video was publised on. (i.e. "YouTube") */
   publishedOn: string;
+  /** The name of who uploaded the video. */
   publisher: string;
+  /** The view count of the video. */
   viewCount?: number;
 }
 
@@ -120,11 +135,11 @@ export async function searchVideos(
       url: video.content,
       title: decode(video.title),
       description: decode(video.description),
-      image: video.images.large,
+      image: video.images.large || video.images.medium || video.images.small || video.images.motion,
       duration: video.duration,
       publishedOn: video.publisher,
       published: video.published,
-      publisher: video.publisher,
+      publisher: video.uploader,
       viewCount: video.statistics.viewCount || undefined
     }))
   };

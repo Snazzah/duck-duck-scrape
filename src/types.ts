@@ -48,12 +48,19 @@ export interface CallbackDuckbarPayload<T> {
 }
 
 export interface DuckbarImageResult {
+  /** The height of the image in pixels. */
   height: number;
+  /** The image URL. */
   image: string;
+  /** The source of the image. */
   source: string;
+  /** The thumbnail URL. */
   thumbnail: string;
+  /** The title (or caption) of the image. */
   title: string;
+  /** The website URL of where the image came from. */
   url: string;
+  /** The width of the image in pixels. */
   width: number;
 }
 
@@ -99,14 +106,24 @@ export interface DuckbarRelatedSearch {
 }
 
 export interface DuckbarNewsResult {
+  /** The timestamp of when the article was created. */
   date: number;
+  /** An except of the article. */
   excerpt: string;
-  image: string;
+  /** The image URL used in the article. */
+  image?: string;
+  /** The relative time of when the article was posted, in human readable format. */
   relative_time: string;
+  /** Where this article was indexed from. */
   syndicate: string;
+  /** The title of the article. */
   title: string;
+  /** The URL of the article. */
   url: string;
   use_relevancy: number;
+  /** Whether this article is classified as old. */
+  is_old?: number;
+  fetch_image?: number;
 }
 
 export interface DuckbarResponse<T> extends CallbackDuckbarPayload<T> {

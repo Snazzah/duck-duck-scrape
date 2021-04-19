@@ -4,6 +4,7 @@ import { DuckbarNewsResult, DuckbarResponse } from '../types';
 import { ensureJSON, getVQD, queryString, SearchTimeType } from '../util';
 import { SafeSearchType } from '../util';
 
+/** The options for {@link searchNews}. */
 export interface NewsSearchOptions {
   /** The safe search type of the search. */
   safeSearch?: SafeSearchType;
@@ -26,10 +27,34 @@ const defaultOptions: NewsSearchOptions = {
   offset: 0
 };
 
+/** The news article results from {@link searchNews}. */
 export interface NewsSearchResults {
+  /** Whether there were no results found. */
   noResults: boolean;
+  /** The VQD of the search query. */
   vqd: string;
-  results: DuckbarNewsResult[];
+  /** The news article results of the search. */
+  results: NewsResult[];
+}
+
+/** A news article search result. */
+export interface NewsResult {
+  /** The timestamp of when the article was created. */
+  date: number;
+  /** An except of the article. */
+  excerpt: string;
+  /** The image URL used in the article. */
+  image?: string;
+  /** The relative time of when the article was posted, in human readable format. */
+  relativeTime: string;
+  /** Where this article was indexed from. */
+  syndicate: string;
+  /** The title of the article. */
+  title: string;
+  /** The URL of the article. */
+  url: string;
+  /** Whether this article is classified as old. */
+  isOld: boolean;
 }
 
 /**
@@ -76,11 +101,16 @@ export async function searchNews(
   return {
     noResults: !!newsResult.results.length,
     vqd,
-    results: newsResult.results.map((article) => {
-      article.title = decode(article.title);
-      article.excerpt = decode(article.excerpt);
-      return article;
-    })
+    results: newsResult.results.map((article) => ({
+      date: article.date,
+      excerpt: decode(article.excerpt),
+      image: article.image,
+      relativeTime: article.relative_time,
+      syndicate: article.syndicate,
+      title: decode(article.title),
+      url: article.url,
+      isOld: !!article.is_old
+    })) as NewsResult[]
   };
 }
 
