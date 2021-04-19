@@ -11,8 +11,6 @@ Search from DuckDuckGo and utilize its spice APIs for things such as stocks, wea
 
 </div>
 
-> This is currently on a dev branch for v2 which is not yet live on NPM. You can install using the `v2` branch.
-
 ### Available Features
 - Search
   - Regular search
@@ -36,6 +34,10 @@ const DDG = require('duck-duck-scrape');
 const searchResults = await DDG.search('node.js', {
   safeSearch: DDG.SafeSearchType.STRICT
 });
+
+// DDG.stocks('aapl')
+// DDG.currency('usd', 'eur', 1)
+// DDG.dictionaryDefinition('happy')
 
 console.log(searchResults);
 /**
