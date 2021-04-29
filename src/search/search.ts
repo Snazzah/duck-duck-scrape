@@ -306,6 +306,19 @@ export interface AutocompleteTerm {
   phrase: string;
 }
 
+/** An auto-complete bang. */
+export interface AutocompleteBang {
+  /** The image of the bang */
+  image: string;
+  /** The prefix of the bang. */
+  phrase: string;
+  score: number;
+  /** The title of the bang. */
+  snippet: string;
+}
+
+export type AutocompleteResult = AutocompleteTerm | AutocompleteBang;
+
 /**
  * Get auto-complete terms from a query.
  * @category Search
@@ -318,7 +331,7 @@ export async function autocomplete(
   query: string,
   region?: string,
   needleOptions?: NeedleOptions
-): Promise<AutocompleteTerm[]> {
+): Promise<AutocompleteResult[]> {
   if (!query) throw new Error('Query cannot be empty!');
 
   const queryObject: Record<string, string> = {
