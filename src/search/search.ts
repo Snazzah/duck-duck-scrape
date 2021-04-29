@@ -158,8 +158,8 @@ export async function search(
   )[];
 
   // check for no results
-  if (searchResults.length === 1 && !('n' in searchResults[1])) {
-    const onlyResult = searchResults[1] as CallbackSearchResult;
+  if (searchResults.length === 1 && !('n' in searchResults[0])) {
+    const onlyResult = searchResults[0] as CallbackSearchResult;
     if ((!onlyResult.da && onlyResult.t === 'EOF') || !onlyResult.a || onlyResult.d === 'google.com search')
       return {
         noResults: true,
