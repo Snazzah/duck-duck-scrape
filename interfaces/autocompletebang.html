@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>VideoSearchResults | DuckDuckScrape</title>
+	<title>AutocompleteBang | DuckDuckScrape</title>
 	<meta name="description" content="Documentation for NPM module DuckDuckScrape">
-	<meta name="twitter:title" content="VideoSearchResults | DuckDuckScrape">
+	<meta name="twitter:title" content="AutocompleteBang | DuckDuckScrape">
 	<meta property="og:site_name" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
 	<meta property="og:url" content="https://duck-duck-scrape.js.org/">
-	<meta property="og:title" content="VideoSearchResults | DuckDuckScrape">
+	<meta property="og:title" content="AutocompleteBang | DuckDuckScrape">
 	<meta property="og:description" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
 	<meta name="twitter:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
 	<meta name="twitter:card" content="summary">
@@ -120,16 +120,19 @@
 	</ul>
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="videosearchresults.html" class="tsd-kind-icon">Video<wbr>Search<wbr>Results</a>
+			<a href="autocompletebang.html" class="tsd-kind-icon">Autocomplete<wbr>Bang</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="videosearchresults.html#noresults" class="tsd-kind-icon">no<wbr>Results</a>
+					<a href="autocompletebang.html#image" class="tsd-kind-icon">image</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="videosearchresults.html#results" class="tsd-kind-icon">results</a>
+					<a href="autocompletebang.html#phrase" class="tsd-kind-icon">phrase</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="videosearchresults.html#vqd" class="tsd-kind-icon">vqd</a>
+					<a href="autocompletebang.html#score" class="tsd-kind-icon">score</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="autocompletebang.html#snippet" class="tsd-kind-icon">snippet</a>
 				</li>
 			</ul>
 		</li>
@@ -140,7 +143,7 @@
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p>The video results from <a href="../modules.html#searchvideos">searchVideos</a>.</p>
+					<p>An auto-complete bang.</p>
 				</div>
 			</div>
 		</section>
@@ -148,7 +151,7 @@
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">VideoSearchResults</span>
+					<span class="target">AutocompleteBang</span>
 				</li>
 			</ul>
 		</section>
@@ -159,9 +162,10 @@
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="videosearchresults.html#noresults" class="tsd-kind-icon">no<wbr>Results</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="videosearchresults.html#results" class="tsd-kind-icon">results</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="videosearchresults.html#vqd" class="tsd-kind-icon">vqd</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="autocompletebang.html#image" class="tsd-kind-icon">image</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="autocompletebang.html#phrase" class="tsd-kind-icon">phrase</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="autocompletebang.html#score" class="tsd-kind-icon">score</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="autocompletebang.html#snippet" class="tsd-kind-icon">snippet</a></li>
 						</ul>
 					</section>
 				</div>
@@ -170,47 +174,57 @@
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="noresults" class="tsd-anchor"></a>
-				<h3>no<wbr>Results</h3>
-				<div class="tsd-signature tsd-kind-icon">no<wbr>Results<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+				<a name="image" class="tsd-anchor"></a>
+				<h3>image</h3>
+				<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/videos.ts#L68">search/videos.ts:68</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/search.ts#L316">search/search.ts:316</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Whether there were no results found.</p>
+						<p>The image of the bang</p>
 					</div>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="results" class="tsd-anchor"></a>
-				<h3>results</h3>
-				<div class="tsd-signature tsd-kind-icon">results<span class="tsd-signature-symbol">:</span> <a href="videoresult.html" class="tsd-signature-type" data-tsd-kind="Interface">VideoResult</a><span class="tsd-signature-symbol">[]</span></div>
+				<a name="phrase" class="tsd-anchor"></a>
+				<h3>phrase</h3>
+				<div class="tsd-signature tsd-kind-icon">phrase<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/videos.ts#L72">search/videos.ts:72</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/search.ts#L318">search/search.ts:318</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The video results of the search.</p>
+						<p>The prefix of the bang.</p>
 					</div>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="vqd" class="tsd-anchor"></a>
-				<h3>vqd</h3>
-				<div class="tsd-signature tsd-kind-icon">vqd<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="score" class="tsd-anchor"></a>
+				<h3>score</h3>
+				<div class="tsd-signature tsd-kind-icon">score<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/videos.ts#L70">search/videos.ts:70</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/search.ts#L319">search/search.ts:319</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="snippet" class="tsd-anchor"></a>
+				<h3>snippet</h3>
+				<div class="tsd-signature tsd-kind-icon">snippet<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/search.ts#L321">search/search.ts:321</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The VQD of the search query.</p>
+						<p>The title of the bang.</p>
 					</div>
 				</div>
 			</section>

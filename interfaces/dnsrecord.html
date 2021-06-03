@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>VideoSearchResults | DuckDuckScrape</title>
+	<title>DNSRecord | DuckDuckScrape</title>
 	<meta name="description" content="Documentation for NPM module DuckDuckScrape">
-	<meta name="twitter:title" content="VideoSearchResults | DuckDuckScrape">
+	<meta name="twitter:title" content="DNSRecord | DuckDuckScrape">
 	<meta property="og:site_name" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
 	<meta property="og:url" content="https://duck-duck-scrape.js.org/">
-	<meta property="og:title" content="VideoSearchResults | DuckDuckScrape">
+	<meta property="og:title" content="DNSRecord | DuckDuckScrape">
 	<meta property="og:description" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
 	<meta name="twitter:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
 	<meta name="twitter:card" content="summary">
@@ -120,16 +120,22 @@
 	</ul>
 	<ul>
 		<li class="current tsd-kind-interface">
-			<a href="videosearchresults.html" class="tsd-kind-icon">Video<wbr>Search<wbr>Results</a>
+			<a href="dnsrecord.html" class="tsd-kind-icon">DNSRecord</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="videosearchresults.html#noresults" class="tsd-kind-icon">no<wbr>Results</a>
+					<a href="dnsrecord.html#class" class="tsd-kind-icon">class</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="videosearchresults.html#results" class="tsd-kind-icon">results</a>
+					<a href="dnsrecord.html#data" class="tsd-kind-icon">data</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="videosearchresults.html#vqd" class="tsd-kind-icon">vqd</a>
+					<a href="dnsrecord.html#name" class="tsd-kind-icon">name</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="dnsrecord.html#ttl" class="tsd-kind-icon">ttl</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="dnsrecord.html#type" class="tsd-kind-icon">type</a>
 				</li>
 			</ul>
 		</li>
@@ -140,7 +146,7 @@
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p>The video results from <a href="../modules.html#searchvideos">searchVideos</a>.</p>
+					<p>A DNS record.</p>
 				</div>
 			</div>
 		</section>
@@ -148,7 +154,7 @@
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">VideoSearchResults</span>
+					<span class="target">DNSRecord</span>
 				</li>
 			</ul>
 		</section>
@@ -159,9 +165,11 @@
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="videosearchresults.html#noresults" class="tsd-kind-icon">no<wbr>Results</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="videosearchresults.html#results" class="tsd-kind-icon">results</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="videosearchresults.html#vqd" class="tsd-kind-icon">vqd</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="dnsrecord.html#class" class="tsd-kind-icon">class</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="dnsrecord.html#data" class="tsd-kind-icon">data</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="dnsrecord.html#name" class="tsd-kind-icon">name</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="dnsrecord.html#ttl" class="tsd-kind-icon">ttl</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="dnsrecord.html#type" class="tsd-kind-icon">type</a></li>
 						</ul>
 					</section>
 				</div>
@@ -170,49 +178,54 @@
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="noresults" class="tsd-anchor"></a>
-				<h3>no<wbr>Results</h3>
-				<div class="tsd-signature tsd-kind-icon">no<wbr>Results<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+				<a name="class" class="tsd-anchor"></a>
+				<h3>class</h3>
+				<div class="tsd-signature tsd-kind-icon">class<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;IN&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/videos.ts#L68">search/videos.ts:68</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/spices/dns.ts#L48">spices/dns.ts:48</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Whether there were no results found.</p>
-					</div>
-				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="results" class="tsd-anchor"></a>
-				<h3>results</h3>
-				<div class="tsd-signature tsd-kind-icon">results<span class="tsd-signature-symbol">:</span> <a href="videoresult.html" class="tsd-signature-type" data-tsd-kind="Interface">VideoResult</a><span class="tsd-signature-symbol">[]</span></div>
+				<a name="data" class="tsd-anchor"></a>
+				<h3>data</h3>
+				<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/videos.ts#L72">search/videos.ts:72</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/spices/dns.ts#L50">spices/dns.ts:50</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The video results of the search.</p>
-					</div>
-				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="vqd" class="tsd-anchor"></a>
-				<h3>vqd</h3>
-				<div class="tsd-signature tsd-kind-icon">vqd<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="name" class="tsd-anchor"></a>
+				<h3>name</h3>
+				<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/search/videos.ts#L70">search/videos.ts:70</a></li>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/spices/dns.ts#L46">spices/dns.ts:46</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The VQD of the search query.</p>
-					</div>
-				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="ttl" class="tsd-anchor"></a>
+				<h3>ttl</h3>
+				<div class="tsd-signature tsd-kind-icon">ttl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/spices/dns.ts#L47">spices/dns.ts:47</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="type" class="tsd-anchor"></a>
+				<h3>type</h3>
+				<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/dnsrecordtype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">DNSRecordType</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/17e6262/src/spices/dns.ts#L49">spices/dns.ts:49</a></li>
+					</ul>
+				</aside>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
