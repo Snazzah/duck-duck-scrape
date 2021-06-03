@@ -1,5 +1,5 @@
 export { DuckbarImageResult } from './types';
-export { SafeSearchType, getVQD } from './util';
+export { SafeSearchType, SearchTimeType, getVQD } from './util';
 
 export * from './search/search';
 export * from './search/images';
