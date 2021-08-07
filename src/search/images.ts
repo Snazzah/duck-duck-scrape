@@ -185,7 +185,7 @@ export async function searchImages(
   const imagesResult = JSON.parse(response.body.toString()) as DuckbarResponse<DuckbarImageResult>;
 
   return {
-    noResults: !!imagesResult.results.length,
+    noResults: !imagesResult.results.length,
     vqd,
     results: imagesResult.results.map((image) => ({
       ...image,
