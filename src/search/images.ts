@@ -26,7 +26,7 @@ export enum ImageType {
   PHOTOGRAPH = 'photo',
   /** Clipart. */
   CLIPART = 'clipart',
-  /** Adnimated GIFs. */
+  /** Animated GIFs. */
   GIF = 'gif',
   /** Transparent photos. */
   TRANSPARENT = 'transparent'
