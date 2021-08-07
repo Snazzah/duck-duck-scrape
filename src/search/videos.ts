@@ -142,7 +142,7 @@ export async function searchVideos(
   const videosResult = ensureJSON(response.body) as DuckbarResponse<DuckbarVideoResult>;
 
   return {
-    noResults: !!videosResult.results.length,
+    noResults: !videosResult.results.length,
     vqd,
     results: videosResult.results.map((video) => ({
       url: video.content,
