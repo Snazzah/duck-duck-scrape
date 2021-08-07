@@ -1,0 +1,674 @@
+<!doctype html>
+<html class="minimal no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>DNSRecordType | DuckDuckScrape</title>
+	<meta name="description" content="Documentation for NPM module DuckDuckScrape">
+	<meta name="twitter:title" content="DNSRecordType | DuckDuckScrape">
+	<meta property="og:site_name" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
+	<meta property="og:url" content="https://duck-duck-scrape.js.org/">
+	<meta property="og:title" content="DNSRecordType | DuckDuckScrape">
+	<meta property="og:description" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
+	<meta name="twitter:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+	<meta name="twitter:card" content="summary">
+	<meta property="og:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+	<meta property="og:image:secure" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:alt" content="DuckDuckScrape Logo">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="en_US">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4495d4">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="theme-color" content="#4495d4">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/dark.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell">
+					<a class="dds-icon dds-title" href="../index.html">DuckDuck<b>Scrape</b></a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#typedoc-main-index" class="tsd-widget menu no-caption">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<nav class="tsd-navigation secondary">
+	<a class="dds-icon" href="../index.html">DuckDuckScrape</a>
+	<a class="gh-icon" href="https://github.com/Snazzah/duck-duck-scrape">GitHub Repository</a>
+	<a href="https://github.com/Snazzah/duck-duck-scrape/blob/master/CHANGELOG.md">Changelog</a>
+	<br>
+	<strong>Search</strong>
+	<ul>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#search" class="tsd-kind-icon">search</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#searchimages" class="tsd-kind-icon">search<wbr>Images</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#searchnews" class="tsd-kind-icon">search<wbr>News</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#searchvideos" class="tsd-kind-icon">search<wbr>Videos</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#autocomplete" class="tsd-kind-icon">autocomplete</a>
+		</li>
+	</ul>
+	<strong>Spices</strong>
+	<ul>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#stocks" class="tsd-kind-icon">stocks</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#time" class="tsd-kind-icon">time</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#currency" class="tsd-kind-icon">currency</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#forecast" class="tsd-kind-icon">forecast</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dns" class="tsd-kind-icon">dns</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionarydefinition" class="tsd-kind-icon">dictionary<wbr>Definition</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionarypronunciation" class="tsd-kind-icon">dictionary<wbr>Pronunciation</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionaryhyphenation" class="tsd-kind-icon">dictionary<wbr>Hyphenation</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionaryaudio" class="tsd-kind-icon">dictionary<wbr>Audio</a>
+		</li>
+	</ul>
+	<ul>
+		<li class="current tsd-kind-enum">
+			<a href="DNSRecordType.html" class="tsd-kind-icon">DNSRecord<wbr>Type</a>
+			<ul>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#A" class="tsd-kind-icon">A</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#AAAA" class="tsd-kind-icon">AAAA</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#AFSDB" class="tsd-kind-icon">AFSDB</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#ANY" class="tsd-kind-icon">ANY</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#APL" class="tsd-kind-icon">APL</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#CAA" class="tsd-kind-icon">CAA</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#CERT" class="tsd-kind-icon">CERT</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#CNAME" class="tsd-kind-icon">CNAME</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#DHCID" class="tsd-kind-icon">DHCID</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#DLV" class="tsd-kind-icon">DLV</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#DNAME" class="tsd-kind-icon">DNAME</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#DNSKEY" class="tsd-kind-icon">DNSKEY</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#DS" class="tsd-kind-icon">DS</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#HIP" class="tsd-kind-icon">HIP</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#IPSECKEY" class="tsd-kind-icon">IPSECKEY</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#KEY" class="tsd-kind-icon">KEY</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#KX" class="tsd-kind-icon">KX</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#LOC" class="tsd-kind-icon">LOC</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#MX" class="tsd-kind-icon">MX</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#NS" class="tsd-kind-icon">NS</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#NSEC" class="tsd-kind-icon">NSEC</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#NSEC3" class="tsd-kind-icon">NSEC3</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#NSEC3PARAM" class="tsd-kind-icon">NSEC3PARAM</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#RP" class="tsd-kind-icon">RP</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#RRSIG" class="tsd-kind-icon">RRSIG</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#SIG" class="tsd-kind-icon">SIG</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#SOA" class="tsd-kind-icon">SOA</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#SPF" class="tsd-kind-icon">SPF</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#SRV" class="tsd-kind-icon">SRV</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#SSHFP" class="tsd-kind-icon">SSHFP</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#TA" class="tsd-kind-icon">TA</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#TKEY" class="tsd-kind-icon">TKEY</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#TLSA" class="tsd-kind-icon">TLSA</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#TSIG" class="tsd-kind-icon">TSIG</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#TX" class="tsd-kind-icon">TX</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="DNSRecordType.html#TXT" class="tsd-kind-icon">TXT</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main">
+	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>A type of DNS record.</p>
+				</div>
+			</div>
+		</section>
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section ">
+						<h3>Enumeration members</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#A" class="tsd-kind-icon">A</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#AAAA" class="tsd-kind-icon">AAAA</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#AFSDB" class="tsd-kind-icon">AFSDB</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#ANY" class="tsd-kind-icon">ANY</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#APL" class="tsd-kind-icon">APL</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#CAA" class="tsd-kind-icon">CAA</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#CERT" class="tsd-kind-icon">CERT</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#CNAME" class="tsd-kind-icon">CNAME</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#DHCID" class="tsd-kind-icon">DHCID</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#DLV" class="tsd-kind-icon">DLV</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#DNAME" class="tsd-kind-icon">DNAME</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#DNSKEY" class="tsd-kind-icon">DNSKEY</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#DS" class="tsd-kind-icon">DS</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#HIP" class="tsd-kind-icon">HIP</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#IPSECKEY" class="tsd-kind-icon">IPSECKEY</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#KEY" class="tsd-kind-icon">KEY</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#KX" class="tsd-kind-icon">KX</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#LOC" class="tsd-kind-icon">LOC</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#MX" class="tsd-kind-icon">MX</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#NS" class="tsd-kind-icon">NS</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#NSEC" class="tsd-kind-icon">NSEC</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#NSEC3" class="tsd-kind-icon">NSEC3</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#NSEC3PARAM" class="tsd-kind-icon">NSEC3PARAM</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#RP" class="tsd-kind-icon">RP</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#RRSIG" class="tsd-kind-icon">RRSIG</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#SIG" class="tsd-kind-icon">SIG</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#SOA" class="tsd-kind-icon">SOA</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#SPF" class="tsd-kind-icon">SPF</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#SRV" class="tsd-kind-icon">SRV</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#SSHFP" class="tsd-kind-icon">SSHFP</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#TA" class="tsd-kind-icon">TA</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#TKEY" class="tsd-kind-icon">TKEY</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#TLSA" class="tsd-kind-icon">TLSA</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#TSIG" class="tsd-kind-icon">TSIG</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#TX" class="tsd-kind-icon">TX</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="DNSRecordType.html#TXT" class="tsd-kind-icon">TXT</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Enumeration members</h2>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="A" class="tsd-anchor"></a>
+				<h3>A</h3>
+				<div class="tsd-signature tsd-kind-icon">A<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;a&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L7">spices/dns.ts:7</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="AAAA" class="tsd-anchor"></a>
+				<h3>AAAA</h3>
+				<div class="tsd-signature tsd-kind-icon">AAAA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;aaaa&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L8">spices/dns.ts:8</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="AFSDB" class="tsd-anchor"></a>
+				<h3>AFSDB</h3>
+				<div class="tsd-signature tsd-kind-icon">AFSDB<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;afsdb&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L9">spices/dns.ts:9</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="ANY" class="tsd-anchor"></a>
+				<h3>ANY</h3>
+				<div class="tsd-signature tsd-kind-icon">ANY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;any&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L6">spices/dns.ts:6</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="APL" class="tsd-anchor"></a>
+				<h3>APL</h3>
+				<div class="tsd-signature tsd-kind-icon">APL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;apl&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L10">spices/dns.ts:10</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="CAA" class="tsd-anchor"></a>
+				<h3>CAA</h3>
+				<div class="tsd-signature tsd-kind-icon">CAA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;caa&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L11">spices/dns.ts:11</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="CERT" class="tsd-anchor"></a>
+				<h3>CERT</h3>
+				<div class="tsd-signature tsd-kind-icon">CERT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;cert&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L12">spices/dns.ts:12</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="CNAME" class="tsd-anchor"></a>
+				<h3>CNAME</h3>
+				<div class="tsd-signature tsd-kind-icon">CNAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;cname&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L13">spices/dns.ts:13</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="DHCID" class="tsd-anchor"></a>
+				<h3>DHCID</h3>
+				<div class="tsd-signature tsd-kind-icon">DHCID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;dhcid&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L14">spices/dns.ts:14</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="DLV" class="tsd-anchor"></a>
+				<h3>DLV</h3>
+				<div class="tsd-signature tsd-kind-icon">DLV<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;dlv&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L15">spices/dns.ts:15</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="DNAME" class="tsd-anchor"></a>
+				<h3>DNAME</h3>
+				<div class="tsd-signature tsd-kind-icon">DNAME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;dname&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L16">spices/dns.ts:16</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="DNSKEY" class="tsd-anchor"></a>
+				<h3>DNSKEY</h3>
+				<div class="tsd-signature tsd-kind-icon">DNSKEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;dnskey&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L17">spices/dns.ts:17</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="DS" class="tsd-anchor"></a>
+				<h3>DS</h3>
+				<div class="tsd-signature tsd-kind-icon">DS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;ds&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L18">spices/dns.ts:18</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="HIP" class="tsd-anchor"></a>
+				<h3>HIP</h3>
+				<div class="tsd-signature tsd-kind-icon">HIP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;hip&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L19">spices/dns.ts:19</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="IPSECKEY" class="tsd-anchor"></a>
+				<h3>IPSECKEY</h3>
+				<div class="tsd-signature tsd-kind-icon">IPSECKEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;ipseckey&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L20">spices/dns.ts:20</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="KEY" class="tsd-anchor"></a>
+				<h3>KEY</h3>
+				<div class="tsd-signature tsd-kind-icon">KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;key&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L21">spices/dns.ts:21</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="KX" class="tsd-anchor"></a>
+				<h3>KX</h3>
+				<div class="tsd-signature tsd-kind-icon">KX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;kx&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L22">spices/dns.ts:22</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="LOC" class="tsd-anchor"></a>
+				<h3>LOC</h3>
+				<div class="tsd-signature tsd-kind-icon">LOC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;loc&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L23">spices/dns.ts:23</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="MX" class="tsd-anchor"></a>
+				<h3>MX</h3>
+				<div class="tsd-signature tsd-kind-icon">MX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;mx&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L24">spices/dns.ts:24</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="NS" class="tsd-anchor"></a>
+				<h3>NS</h3>
+				<div class="tsd-signature tsd-kind-icon">NS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;ns&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L25">spices/dns.ts:25</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="NSEC" class="tsd-anchor"></a>
+				<h3>NSEC</h3>
+				<div class="tsd-signature tsd-kind-icon">NSEC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;nsec&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L26">spices/dns.ts:26</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="NSEC3" class="tsd-anchor"></a>
+				<h3>NSEC3</h3>
+				<div class="tsd-signature tsd-kind-icon">NSEC3<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;nsec3&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L27">spices/dns.ts:27</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="NSEC3PARAM" class="tsd-anchor"></a>
+				<h3>NSEC3PARAM</h3>
+				<div class="tsd-signature tsd-kind-icon">NSEC3PARAM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;nsec3param&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L28">spices/dns.ts:28</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="RP" class="tsd-anchor"></a>
+				<h3>RP</h3>
+				<div class="tsd-signature tsd-kind-icon">RP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;rp&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L30">spices/dns.ts:30</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="RRSIG" class="tsd-anchor"></a>
+				<h3>RRSIG</h3>
+				<div class="tsd-signature tsd-kind-icon">RRSIG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;rrsig&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L29">spices/dns.ts:29</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="SIG" class="tsd-anchor"></a>
+				<h3>SIG</h3>
+				<div class="tsd-signature tsd-kind-icon">SIG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;sig&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L31">spices/dns.ts:31</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="SOA" class="tsd-anchor"></a>
+				<h3>SOA</h3>
+				<div class="tsd-signature tsd-kind-icon">SOA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;soa&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L32">spices/dns.ts:32</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="SPF" class="tsd-anchor"></a>
+				<h3>SPF</h3>
+				<div class="tsd-signature tsd-kind-icon">SPF<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;spf&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L33">spices/dns.ts:33</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="SRV" class="tsd-anchor"></a>
+				<h3>SRV</h3>
+				<div class="tsd-signature tsd-kind-icon">SRV<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;srv&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L34">spices/dns.ts:34</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="SSHFP" class="tsd-anchor"></a>
+				<h3>SSHFP</h3>
+				<div class="tsd-signature tsd-kind-icon">SSHFP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;sshfp&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L35">spices/dns.ts:35</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="TA" class="tsd-anchor"></a>
+				<h3>TA</h3>
+				<div class="tsd-signature tsd-kind-icon">TA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;ta&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L36">spices/dns.ts:36</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="TKEY" class="tsd-anchor"></a>
+				<h3>TKEY</h3>
+				<div class="tsd-signature tsd-kind-icon">TKEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;tkey&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L37">spices/dns.ts:37</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="TLSA" class="tsd-anchor"></a>
+				<h3>TLSA</h3>
+				<div class="tsd-signature tsd-kind-icon">TLSA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;tlsa&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L38">spices/dns.ts:38</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="TSIG" class="tsd-anchor"></a>
+				<h3>TSIG</h3>
+				<div class="tsd-signature tsd-kind-icon">TSIG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;tsig&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L39">spices/dns.ts:39</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="TX" class="tsd-anchor"></a>
+				<h3>TX</h3>
+				<div class="tsd-signature tsd-kind-icon">TX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;tx&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L40">spices/dns.ts:40</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="TXT" class="tsd-anchor"></a>
+				<h3>TXT</h3>
+				<div class="tsd-signature tsd-kind-icon">TXT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;txt&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/dns.ts#L41">spices/dns.ts:41</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<footer class="with-border-bottom">
+			<div class="container">
+				<h2>Legend</h2>
+				<div class="tsd-legend-group">
+					<ul class="tsd-legend">
+						<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<div class="container tsd-generator">
+			<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+		</div>
+	</div>
+</div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

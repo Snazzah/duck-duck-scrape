@@ -1,0 +1,857 @@
+<!doctype html>
+<html class="minimal no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>StocksResult | DuckDuckScrape</title>
+	<meta name="description" content="Documentation for NPM module DuckDuckScrape">
+	<meta name="twitter:title" content="StocksResult | DuckDuckScrape">
+	<meta property="og:site_name" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
+	<meta property="og:url" content="https://duck-duck-scrape.js.org/">
+	<meta property="og:title" content="StocksResult | DuckDuckScrape">
+	<meta property="og:description" content="duck-duck-scrape documentation - search from DuckDuckGo and use spice API">
+	<meta name="twitter:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+	<meta name="twitter:card" content="summary">
+	<meta property="og:image" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+	<meta property="og:image:secure" content="https://duck-duck-scrape.js.org/assets/images/icon.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:alt" content="DuckDuckScrape Logo">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="en_US">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4495d4">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="theme-color" content="#4495d4">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/dark.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell">
+					<a class="dds-icon dds-title" href="../index.html">DuckDuck<b>Scrape</b></a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#typedoc-main-index" class="tsd-widget menu no-caption">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<nav class="tsd-navigation secondary">
+	<a class="dds-icon" href="../index.html">DuckDuckScrape</a>
+	<a class="gh-icon" href="https://github.com/Snazzah/duck-duck-scrape">GitHub Repository</a>
+	<a href="https://github.com/Snazzah/duck-duck-scrape/blob/master/CHANGELOG.md">Changelog</a>
+	<br>
+	<strong>Search</strong>
+	<ul>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#search" class="tsd-kind-icon">search</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#searchimages" class="tsd-kind-icon">search<wbr>Images</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#searchnews" class="tsd-kind-icon">search<wbr>News</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#searchvideos" class="tsd-kind-icon">search<wbr>Videos</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#autocomplete" class="tsd-kind-icon">autocomplete</a>
+		</li>
+	</ul>
+	<strong>Spices</strong>
+	<ul>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#stocks" class="tsd-kind-icon">stocks</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#time" class="tsd-kind-icon">time</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#currency" class="tsd-kind-icon">currency</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#forecast" class="tsd-kind-icon">forecast</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dns" class="tsd-kind-icon">dns</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionarydefinition" class="tsd-kind-icon">dictionary<wbr>Definition</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionarypronunciation" class="tsd-kind-icon">dictionary<wbr>Pronunciation</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionaryhyphenation" class="tsd-kind-icon">dictionary<wbr>Hyphenation</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="../modules.html#dictionaryaudio" class="tsd-kind-icon">dictionary<wbr>Audio</a>
+		</li>
+	</ul>
+	<ul>
+		<li class="current tsd-kind-interface">
+			<a href="StocksResult.html" class="tsd-kind-icon">Stocks<wbr>Result</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Ask" class="tsd-kind-icon">Ask</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#AskDate" class="tsd-kind-icon">Ask<wbr>Date</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#AskMarketIdentificationCode" class="tsd-kind-icon">Ask<wbr>Market<wbr>Identification<wbr>Code</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#AskSize" class="tsd-kind-icon">Ask<wbr>Size</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#AskTime" class="tsd-kind-icon">Ask<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Bid" class="tsd-kind-icon">Bid</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#BidDate" class="tsd-kind-icon">Bid<wbr>Date</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#BidMarketIdentificationCode" class="tsd-kind-icon">Bid<wbr>Market<wbr>Identification<wbr>Code</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#BidSize" class="tsd-kind-icon">Bid<wbr>Size</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#BidTime" class="tsd-kind-icon">Bid<wbr>Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#ChangeFromPreviousClose" class="tsd-kind-icon">Change<wbr>From<wbr>Previous<wbr>Close</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Close" class="tsd-kind-icon">Close</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Currency" class="tsd-kind-icon">Currency</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Date" class="tsd-kind-icon">Date</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Delay" class="tsd-kind-icon">Delay</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#High" class="tsd-kind-icon">High</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#High52Weeks" class="tsd-kind-icon">High52<wbr>Weeks</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Identifier" class="tsd-kind-icon">Identifier</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#IdentifierType" class="tsd-kind-icon">Identifier<wbr>Type</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Identity" class="tsd-kind-icon">Identity</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Last" class="tsd-kind-icon">Last</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#LastMarketIdentificationCode" class="tsd-kind-icon">Last<wbr>Market<wbr>Identification<wbr>Code</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#LastSize" class="tsd-kind-icon">Last<wbr>Size</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Low" class="tsd-kind-icon">Low</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Low52Weeks" class="tsd-kind-icon">Low52<wbr>Weeks</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Message" class="tsd-kind-icon">Message</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Open" class="tsd-kind-icon">Open</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Outcome" class="tsd-kind-icon">Outcome</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#PercentChangeFromPreviousClose" class="tsd-kind-icon">Percent<wbr>Change<wbr>From<wbr>Previous<wbr>Close</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#PreviousClose" class="tsd-kind-icon">Previous<wbr>Close</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#PreviousCloseDate" class="tsd-kind-icon">Previous<wbr>Close<wbr>Date</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Security" class="tsd-kind-icon">Security</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Time" class="tsd-kind-icon">Time</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#TradingHalted" class="tsd-kind-icon">Trading<wbr>Halted</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#UTCOffset" class="tsd-kind-icon">UTCOffset</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="StocksResult.html#Volume" class="tsd-kind-icon">Volume</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+<div class="container container-main">
+	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>The result from the stocks spice.</p>
+				</div>
+				<dl class="tsd-comment-tags">
+					<dt>see</dt>
+					<dd><p><a href="https://www.xignite.com/product/global-stock-quote-data#/DeveloperResources/request/GetGlobalDelayedQuote">https://www.xignite.com/product/global-stock-quote-data#/DeveloperResources/request/GetGlobalDelayedQuote</a></p>
+					</dd>
+				</dl>
+			</div>
+		</section>
+		<section class="tsd-panel tsd-hierarchy">
+			<h3>Hierarchy</h3>
+			<ul class="tsd-hierarchy">
+				<li>
+					<span class="target">StocksResult</span>
+				</li>
+			</ul>
+		</section>
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section ">
+						<h3>Properties</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Ask" class="tsd-kind-icon">Ask</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#AskDate" class="tsd-kind-icon">Ask<wbr>Date</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#AskMarketIdentificationCode" class="tsd-kind-icon">Ask<wbr>Market<wbr>Identification<wbr>Code</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#AskSize" class="tsd-kind-icon">Ask<wbr>Size</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#AskTime" class="tsd-kind-icon">Ask<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Bid" class="tsd-kind-icon">Bid</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#BidDate" class="tsd-kind-icon">Bid<wbr>Date</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#BidMarketIdentificationCode" class="tsd-kind-icon">Bid<wbr>Market<wbr>Identification<wbr>Code</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#BidSize" class="tsd-kind-icon">Bid<wbr>Size</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#BidTime" class="tsd-kind-icon">Bid<wbr>Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#ChangeFromPreviousClose" class="tsd-kind-icon">Change<wbr>From<wbr>Previous<wbr>Close</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Close" class="tsd-kind-icon">Close</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Currency" class="tsd-kind-icon">Currency</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Date" class="tsd-kind-icon">Date</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Delay" class="tsd-kind-icon">Delay</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#High" class="tsd-kind-icon">High</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#High52Weeks" class="tsd-kind-icon">High52<wbr>Weeks</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Identifier" class="tsd-kind-icon">Identifier</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#IdentifierType" class="tsd-kind-icon">Identifier<wbr>Type</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Identity" class="tsd-kind-icon">Identity</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Last" class="tsd-kind-icon">Last</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#LastMarketIdentificationCode" class="tsd-kind-icon">Last<wbr>Market<wbr>Identification<wbr>Code</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#LastSize" class="tsd-kind-icon">Last<wbr>Size</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Low" class="tsd-kind-icon">Low</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Low52Weeks" class="tsd-kind-icon">Low52<wbr>Weeks</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Message" class="tsd-kind-icon">Message</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Open" class="tsd-kind-icon">Open</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Outcome" class="tsd-kind-icon">Outcome</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#PercentChangeFromPreviousClose" class="tsd-kind-icon">Percent<wbr>Change<wbr>From<wbr>Previous<wbr>Close</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#PreviousClose" class="tsd-kind-icon">Previous<wbr>Close</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#PreviousCloseDate" class="tsd-kind-icon">Previous<wbr>Close<wbr>Date</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Security" class="tsd-kind-icon">Security</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Time" class="tsd-kind-icon">Time</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#TradingHalted" class="tsd-kind-icon">Trading<wbr>Halted</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#UTCOffset" class="tsd-kind-icon">UTCOffset</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="StocksResult.html#Volume" class="tsd-kind-icon">Volume</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Ask" class="tsd-anchor"></a>
+				<h3>Ask</h3>
+				<div class="tsd-signature tsd-kind-icon">Ask<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L42">spices/stocks.ts:42</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The lowest ask price for the security as of the quote&#39;s Date and Time.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="AskDate" class="tsd-anchor"></a>
+				<h3>Ask<wbr>Date</h3>
+				<div class="tsd-signature tsd-kind-icon">Ask<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L88">spices/stocks.ts:88</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The date of the Ask in the local time of the exchange (Eastern Time).</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="AskMarketIdentificationCode" class="tsd-anchor"></a>
+				<h3>Ask<wbr>Market<wbr>Identification<wbr>Code</h3>
+				<div class="tsd-signature tsd-kind-icon">Ask<wbr>Market<wbr>Identification<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L80">spices/stocks.ts:80</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The Market Identification Code of the Ask.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="AskSize" class="tsd-anchor"></a>
+				<h3>Ask<wbr>Size</h3>
+				<div class="tsd-signature tsd-kind-icon">Ask<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L40">spices/stocks.ts:40</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The total quantity offered at the ask price.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="AskTime" class="tsd-anchor"></a>
+				<h3>Ask<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">Ask<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L86">spices/stocks.ts:86</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The time of the Ask in the local time of the exchange (Eastern Time).</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Bid" class="tsd-anchor"></a>
+				<h3>Bid</h3>
+				<div class="tsd-signature tsd-kind-icon">Bid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L46">spices/stocks.ts:46</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The highest bid price for the security as of the quote&#39;s Date and Time.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="BidDate" class="tsd-anchor"></a>
+				<h3>Bid<wbr>Date</h3>
+				<div class="tsd-signature tsd-kind-icon">Bid<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L92">spices/stocks.ts:92</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The date of the Bid in the local time of the exchange (Eastern Time).</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="BidMarketIdentificationCode" class="tsd-anchor"></a>
+				<h3>Bid<wbr>Market<wbr>Identification<wbr>Code</h3>
+				<div class="tsd-signature tsd-kind-icon">Bid<wbr>Market<wbr>Identification<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L82">spices/stocks.ts:82</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The Market Identification Code of the Bid.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="BidSize" class="tsd-anchor"></a>
+				<h3>Bid<wbr>Size</h3>
+				<div class="tsd-signature tsd-kind-icon">Bid<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L44">spices/stocks.ts:44</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The total quantity offered at the bid price.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="BidTime" class="tsd-anchor"></a>
+				<h3>Bid<wbr>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">Bid<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L90">spices/stocks.ts:90</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The time of the Bid in the local time of the exchange (Eastern Time).</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="ChangeFromPreviousClose" class="tsd-anchor"></a>
+				<h3>Change<wbr>From<wbr>Previous<wbr>Close</h3>
+				<div class="tsd-signature tsd-kind-icon">Change<wbr>From<wbr>Previous<wbr>Close<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L50">spices/stocks.ts:50</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The price difference between Last and PreviousClose prices.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Close" class="tsd-anchor"></a>
+				<h3>Close</h3>
+				<div class="tsd-signature tsd-kind-icon">Close<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L64">spices/stocks.ts:64</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The closing price for the security as of the quote&#39;s Date.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Currency" class="tsd-anchor"></a>
+				<h3>Currency</h3>
+				<div class="tsd-signature tsd-kind-icon">Currency<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L84">spices/stocks.ts:84</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The currency of the equity.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Date" class="tsd-anchor"></a>
+				<h3>Date</h3>
+				<div class="tsd-signature tsd-kind-icon">Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L98">spices/stocks.ts:98</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The date of the last trade, in Eastern Time.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Delay" class="tsd-anchor"></a>
+				<h3>Delay</h3>
+				<div class="tsd-signature tsd-kind-icon">Delay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L70">spices/stocks.ts:70</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The time it took for the server to complete a request.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="High" class="tsd-anchor"></a>
+				<h3>High</h3>
+				<div class="tsd-signature tsd-kind-icon">High<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L62">spices/stocks.ts:62</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The day&#39;s highest traded price for the security as of the quote&#39;s Date and Time.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="High52Weeks" class="tsd-anchor"></a>
+				<h3>High52<wbr>Weeks</h3>
+				<div class="tsd-signature tsd-kind-icon">High52<wbr>Weeks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L38">spices/stocks.ts:38</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The highest price at which the security traded in the last 52 weeks.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Identifier" class="tsd-anchor"></a>
+				<h3>Identifier</h3>
+				<div class="tsd-signature tsd-kind-icon">Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L76">spices/stocks.ts:76</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="IdentifierType" class="tsd-anchor"></a>
+				<h3>Identifier<wbr>Type</h3>
+				<div class="tsd-signature tsd-kind-icon">Identifier<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L75">spices/stocks.ts:75</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Identity" class="tsd-anchor"></a>
+				<h3>Identity</h3>
+				<div class="tsd-signature tsd-kind-icon">Identity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;IP&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;Cookie&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;Header&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;Request&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L100">spices/stocks.ts:100</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A description of how the call was authenticated.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Last" class="tsd-anchor"></a>
+				<h3>Last</h3>
+				<div class="tsd-signature tsd-kind-icon">Last<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L58">spices/stocks.ts:58</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The price at which the last trade occurred for the security as of the quote&#39;s Time.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="LastMarketIdentificationCode" class="tsd-anchor"></a>
+				<h3>Last<wbr>Market<wbr>Identification<wbr>Code</h3>
+				<div class="tsd-signature tsd-kind-icon">Last<wbr>Market<wbr>Identification<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L78">spices/stocks.ts:78</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The Market Identification Code of the Last price.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="LastSize" class="tsd-anchor"></a>
+				<h3>Last<wbr>Size</h3>
+				<div class="tsd-signature tsd-kind-icon">Last<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L56">spices/stocks.ts:56</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The number of shares traded at the last price.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Low" class="tsd-anchor"></a>
+				<h3>Low</h3>
+				<div class="tsd-signature tsd-kind-icon">Low<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L60">spices/stocks.ts:60</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The day&#39;s lowest traded price for the security as of the quote&#39;s Date and Time.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Low52Weeks" class="tsd-anchor"></a>
+				<h3>Low52<wbr>Weeks</h3>
+				<div class="tsd-signature tsd-kind-icon">Low52<wbr>Weeks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L36">spices/stocks.ts:36</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The lowest price at which the security traded in the last 52 weeks.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Message" class="tsd-anchor"></a>
+				<h3>Message</h3>
+				<div class="tsd-signature tsd-kind-icon">Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L102">spices/stocks.ts:102</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A short message describing the error or an informational message.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Open" class="tsd-anchor"></a>
+				<h3>Open</h3>
+				<div class="tsd-signature tsd-kind-icon">Open<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L66">spices/stocks.ts:66</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The opening price for the security as of the quote&#39;s Date.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Outcome" class="tsd-anchor"></a>
+				<h3>Outcome</h3>
+				<div class="tsd-signature tsd-kind-icon">Outcome<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;Success&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;SystemError&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;RequestError&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;RegistrationError&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L72">spices/stocks.ts:72</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The outcome of the call.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="PercentChangeFromPreviousClose" class="tsd-anchor"></a>
+				<h3>Percent<wbr>Change<wbr>From<wbr>Previous<wbr>Close</h3>
+				<div class="tsd-signature tsd-kind-icon">Percent<wbr>Change<wbr>From<wbr>Previous<wbr>Close<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L48">spices/stocks.ts:48</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The percentage difference between Last and PreviousClose prices.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="PreviousClose" class="tsd-anchor"></a>
+				<h3>Previous<wbr>Close</h3>
+				<div class="tsd-signature tsd-kind-icon">Previous<wbr>Close<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L52">spices/stocks.ts:52</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The price for the security at Market close of the previous trading day.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="PreviousCloseDate" class="tsd-anchor"></a>
+				<h3>Previous<wbr>Close<wbr>Date</h3>
+				<div class="tsd-signature tsd-kind-icon">Previous<wbr>Close<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L94">spices/stocks.ts:94</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The date for the closing price returned in the PreviousClose parameter.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Security" class="tsd-anchor"></a>
+				<h3>Security</h3>
+				<div class="tsd-signature tsd-kind-icon">Security<span class="tsd-signature-symbol">:</span> <a href="StocksSecurity.html" class="tsd-signature-type" data-tsd-kind="Interface">StocksSecurity</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L74">spices/stocks.ts:74</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The security instance of the quote.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Time" class="tsd-anchor"></a>
+				<h3>Time</h3>
+				<div class="tsd-signature tsd-kind-icon">Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L96">spices/stocks.ts:96</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The time of the last trade, in Eastern Time.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="TradingHalted" class="tsd-anchor"></a>
+				<h3>Trading<wbr>Halted</h3>
+				<div class="tsd-signature tsd-kind-icon">Trading<wbr>Halted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L34">spices/stocks.ts:34</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The trading halt status of the security. &quot;true&quot; means that trading in the security is halted as of the quote Time.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="UTCOffset" class="tsd-anchor"></a>
+				<h3>UTCOffset</h3>
+				<div class="tsd-signature tsd-kind-icon">UTCOffset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L68">spices/stocks.ts:68</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The offset or difference, in hours, from the NASDAQ local time to UTC.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="Volume" class="tsd-anchor"></a>
+				<h3>Volume</h3>
+				<div class="tsd-signature tsd-kind-icon">Volume<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/Snazzah/duck-duck-scrape/blob/1b78209/src/spices/stocks.ts#L54">spices/stocks.ts:54</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The total trading volume of the security for the day.</p>
+					</div>
+				</div>
+			</section>
+		</section>
+		<footer class="with-border-bottom">
+			<div class="container">
+				<h2>Legend</h2>
+				<div class="tsd-legend-group">
+					<ul class="tsd-legend">
+						<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<div class="container tsd-generator">
+			<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+		</div>
+	</div>
+</div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
