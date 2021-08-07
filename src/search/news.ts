@@ -99,7 +99,7 @@ export async function searchNews(
   const newsResult = ensureJSON(response.body) as DuckbarResponse<DuckbarNewsResult>;
 
   return {
-    noResults: !!newsResult.results.length,
+    noResults: !newsResult.results.length,
     vqd,
     results: newsResult.results.map((article) => ({
       date: article.date,
