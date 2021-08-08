@@ -39,7 +39,7 @@ export interface CurrencyResult {
     'legal-warning': string;
     'help-notice': string;
     'utc-timestamp': string;
-    status: '0' | '5';
+    status: '0' | '4' | '5';
     'output-format': 'json';
     description: string;
   };
