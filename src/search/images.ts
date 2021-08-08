@@ -161,7 +161,8 @@ export async function searchImages(
     options.size ? `size:${options.size}` : '',
     options.type ? `type:${options.type}` : '',
     options.layout ? `layout:${options.layout}` : '',
-    options.color ? `color:${options.color}` : ''
+    options.color ? `color:${options.color}` : '',
+    options.license ? `license:${options.license}` : ''
   ];
 
   const queryObject: Record<string, string> = {
