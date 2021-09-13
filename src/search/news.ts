@@ -131,7 +131,7 @@ function sanityCheck(options: NewsSearchOptions) {
   if (!options.locale || typeof options.locale! !== 'string')
     throw new TypeError('Search locale must be a string!');
 
-  if (options.time && Object.values(SearchTimeType).includes(options.time))
+  if (options.time && !Object.values(SearchTimeType).includes(options.time))
     throw new TypeError(`${options.time} is an invalid time filter!`);
 
   if (options.vqd && !/\d-\d+-\d+/.test(options.vqd)) throw new Error(`${options.vqd} is an invalid VQD!`);

@@ -175,10 +175,10 @@ function sanityCheck(options: VideoSearchOptions) {
   if (!options.locale || typeof options.locale! !== 'string')
     throw new TypeError('Search locale must be a string!');
 
-  if (options.time && Object.values(SearchTimeType).includes(options.time))
+  if (options.time && !Object.values(SearchTimeType).includes(options.time))
     throw new TypeError(`${options.time} is an invalid time filter!`);
 
-  if (options.definition && Object.values(VideoDefinition).includes(options.definition))
+  if (options.definition && !Object.values(VideoDefinition).includes(options.definition))
     throw new TypeError(`${options.definition} is an invalid video definition!`);
 
   if (options.duration && !Object.values(VideoDuration).includes(options.duration))
