@@ -97,8 +97,13 @@ export interface ForecastResult {
   latitude: number;
   longitude: number;
   timezone: string;
-  currenly: any;
-  minutely?: {
+  currently: Omit<ForecastHourlyData, 'precipType'> & {
+    nearestStormDistance: number;
+    nearestStormBearing: number;
+    precipIntensity: number;
+    precipProbability: number;
+  };
+  minutely: {
     summary: string;
     icon: ForecastIcon;
     data: ForecastMinutelyData[];
