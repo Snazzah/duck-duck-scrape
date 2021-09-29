@@ -1,7 +1,7 @@
 import { decode } from 'html-entities';
 import needle, { NeedleOptions } from 'needle';
 import { DuckbarResponse, DuckbarImageResult } from '../types';
-import { getVQD, queryString } from '../util';
+import { ensureJSON, getVQD, queryString } from '../util';
 import { SafeSearchType } from '../util';
 
 /** The types of image sizes. */
@@ -183,7 +183,7 @@ export async function searchImages(
 
   if (response.statusCode === 403) throw new Error('A server error occurred!');
 
-  const imagesResult = JSON.parse(response.body.toString()) as DuckbarResponse<DuckbarImageResult>;
+  const imagesResult = ensureJSON(response.body) as DuckbarResponse<DuckbarImageResult>;
 
   return {
     noResults: !imagesResult.results.length,
