@@ -3,7 +3,9 @@ import { parseSpiceBody, SPICE_BASE } from '../util';
 
 /** A list of synonyms and antonyms. */
 export interface ThesaurusList {
+  /** The synonyms of this word */
   syn?: string[];
+  /** The antonyms of this word */
   ant?: string[];
 }
 

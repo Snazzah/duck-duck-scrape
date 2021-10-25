@@ -12,6 +12,7 @@ export * from './spices/dictionary/definition';
 export * from './spices/dictionary/hyphenation';
 export * from './spices/dictionary/pronunciation';
 export * from './spices/dns';
+export * from './spices/emojipedia';
 export * from './spices/forecast';
 export * from './spices/stocks';
 export * from './spices/time';
