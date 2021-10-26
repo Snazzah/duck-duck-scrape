@@ -51,6 +51,7 @@ export interface CurrencyResult {
  * Get the currency conversion between two currencies.
  * Data provided by XE.
  * @category Spice
+ * @see https://www.xe.com/
  * @param from The currency to convert from
  * @param to The currency to convert to
  * @param amount The amount of currency to convert

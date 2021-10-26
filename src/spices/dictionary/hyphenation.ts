@@ -17,6 +17,7 @@ export interface DictionaryHyphenationResult {
  * Get word syllables.
  * Data provided by Wordnik.
  * @category Spice
+ * @see https://www.wordnik.com/
  * @param word The word to define
  * @param needleOptions The options for the HTTP request
  * @returns The dictionary hyphenation result

@@ -41,7 +41,8 @@ export interface EmojipediaResult {
  * Get information on an emoji.
  * Data provided by Emojipedia.
  * @category Spice
- * @param word The emoji to use
+ * @see https://emojipedia.org/
+ * @param emoji The emoji to use
  * @param needleOptions The options for the HTTP request
  * @returns The emojipedia result
  */

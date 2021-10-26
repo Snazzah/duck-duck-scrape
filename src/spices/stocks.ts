@@ -106,6 +106,7 @@ export interface StocksResult {
  * Get the stocks of a symbol.
  * Data provided by Xignite.
  * @category Spice
+ * @see https://www.xignite.com/
  * @param symbol What symbol to get stats from
  * @param needleOptions The options for the HTTP request
  * @returns The stocks result

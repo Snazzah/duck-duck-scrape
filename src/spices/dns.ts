@@ -68,6 +68,7 @@ export interface DNSResult {
  * Get DNS records of a domain.
  * Data provided by ViewDNS.info.
  * @category Spice
+ * @see https://viewdns.info/
  * @param from The domain name to lookup
  * @param recordType The type of DNS record to retrieve
  * @param needleOptions The options for the HTTP request

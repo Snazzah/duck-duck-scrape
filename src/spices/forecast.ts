@@ -133,6 +133,7 @@ export interface ForecastResult {
  * Get the forecast of a location. Returns `null` if there are no results.
  * Data provided by Dark Sky and other sources.
  * @category Spice
+ * @see https://darksky.net/
  * @param query The query to search with
  * @param locale The locale to give the summaries in
  * @param needleOptions The options for the HTTP request

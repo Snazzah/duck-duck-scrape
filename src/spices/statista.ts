@@ -47,7 +47,8 @@ export interface StatistaResult {
  * Search statistics.
  * Data provided by Statista.
  * @category Spice
- * @param word The emoji to use
+ * @see https://www.statista.com/
+ * @param query The query to search with
  * @param needleOptions The options for the HTTP request
  * @returns The statista result
  */

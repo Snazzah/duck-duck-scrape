@@ -102,6 +102,7 @@ export interface TimeResult {
  * Search the time of locations with a query.
  * Data provided by TimeAndDate.com.
  * @category Spice
+ * @see https://www.timeanddate.com/
  * @param query The query to search with
  * @param needleOptions The options of the HTTP request
  * @returns The time result

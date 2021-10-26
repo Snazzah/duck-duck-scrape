@@ -76,6 +76,7 @@ export interface DictionaryDefinitionResult {
  * Get definitions of a word.
  * Data provided by Wordnik.
  * @category Spice
+ * @see https://www.wordnik.com/
  * @param word The word to define
  * @param needleOptions The options for the HTTP request
  * @returns The dictionary definition result

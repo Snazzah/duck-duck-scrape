@@ -20,6 +20,7 @@ export interface ThesaurusResult {
  * Get synonyms and antonyms of a word.
  * Data provided by Big Huge Thesaurus.
  * @category Spice
+ * @see https://words.bighugelabs.com/
  * @param word The word to define
  * @param needleOptions The options for the HTTP request
  * @returns The thesaurus result
