@@ -13,6 +13,7 @@ export * from './spices/dictionary/hyphenation';
 export * from './spices/dictionary/pronunciation';
 export * from './spices/dns';
 export * from './spices/emojipedia';
+export * from './spices/expandUrl';
 export * from './spices/forecast';
 export * from './spices/statista';
 export * from './spices/stocks';
