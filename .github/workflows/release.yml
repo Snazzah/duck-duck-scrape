@@ -28,6 +28,7 @@ jobs:
       - name: Set up Node.js for NPM
         uses: actions/setup-node@v1
         with:
+          node-version: 12.x
           registry-url: 'https://registry.npmjs.org'
 
       - run: npm install
@@ -45,6 +46,7 @@ jobs:
       - name: Set up Node.js for GPR
         uses: actions/setup-node@v1
         with:
+          node-version: 12.x
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@snazzah'
 
