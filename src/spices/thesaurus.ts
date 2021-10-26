@@ -24,10 +24,14 @@ export interface ThesaurusResult {
  * @param needleOptions The options for the HTTP request
  * @returns The thesaurus result
  */
-export async function thesaurus(word: string, needleOptions?: NeedleOptions): Promise<ThesaurusResult> {
+export async function thesaurus(
+  word: string,
+  needleOptions?: NeedleOptions
+): Promise<ThesaurusResult | null> {
   if (!word) throw new Error('Word cannot be empty!');
 
   const response = await needle('get', `${SPICE_BASE}/thesaurus/${word}`, needleOptions);
+  if (response.body.toString() === 'ddg_spice_thesaurus();\n') return null;
   const result = parseSpiceBody(response.body) as ThesaurusResult;
 
   return result;
