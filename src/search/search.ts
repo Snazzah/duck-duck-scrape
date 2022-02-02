@@ -132,7 +132,9 @@ export async function search(
 
   const queryObject: Record<string, string> = {
     q: query,
+    ...(options.safeSearch !== SafeSearchType.STRICT ? { t: 'D' } : {}),
     l: options.locale!,
+    ...(options.safeSearch === SafeSearchType.STRICT ? { p: '1' } : {}),
     kl: options.region || 'wt-wt',
     s: String(options.offset),
     dl: 'en',
@@ -140,17 +142,32 @@ export async function search(
     ss_mkt: options.marketRegion!,
     df: options.time! as string,
     vqd,
-    ex: String(options.safeSearch),
+    ...(options.safeSearch !== SafeSearchType.STRICT ? { ex: String(options.safeSearch) } : {}),
     sp: '1',
     bpa: '1',
-    cdrexp: 'b',
     biaexp: 'b',
-    msvrtexp: 'b'
+    msvrtexp: 'b',
+    ...(options.safeSearch === SafeSearchType.STRICT
+      ? {
+          videxp: 'a',
+          nadse: 'b',
+          eclsexp: 'a',
+          stiaexp: 'a',
+          tjsexp: 'b',
+          related: 'b',
+          msnexp: 'a'
+        }
+      : {
+          nadse: 'b',
+          eclsexp: 'b',
+          tjsexp: 'b'
+          // cdrexp: 'b'
+        })
   };
 
   const response = await needle(
     'get',
-    `https://duckduckgo.com/d.js?${queryString(queryObject)}`,
+    `https://links.duckduckgo.com/d.js?${queryString(queryObject)}`,
     needleOptions
   );
 
