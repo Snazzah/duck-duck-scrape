@@ -23,6 +23,7 @@ export interface ThesaurusResult {
  * @see https://words.bighugelabs.com/
  * @param word The word to define
  * @param needleOptions The options for the HTTP request
+ * @since v2.2.0
  * @returns The thesaurus result
  */
 export async function thesaurus(

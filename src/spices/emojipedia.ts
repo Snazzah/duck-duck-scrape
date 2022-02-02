@@ -44,6 +44,7 @@ export interface EmojipediaResult {
  * @see https://emojipedia.org/
  * @param emoji The emoji to use
  * @param needleOptions The options for the HTTP request
+ * @since v2.2.0
  * @returns The emojipedia result
  */
 export async function emojipedia(emoji: string, needleOptions?: NeedleOptions): Promise<EmojipediaResult> {

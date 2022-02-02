@@ -50,6 +50,7 @@ export interface StatistaResult {
  * @see https://www.statista.com/
  * @param query The query to search with
  * @param needleOptions The options for the HTTP request
+ * @since v2.2.0
  * @returns The statista result
  */
 export async function statista(query: string, needleOptions?: NeedleOptions): Promise<StatistaResult> {

@@ -72,6 +72,7 @@ export interface DNSResult {
  * @param from The domain name to lookup
  * @param recordType The type of DNS record to retrieve
  * @param needleOptions The options for the HTTP request
+ * @since v2.1.0
  * @returns The dns result
  */
 export async function dns(

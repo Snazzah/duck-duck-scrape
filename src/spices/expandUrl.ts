@@ -20,6 +20,7 @@ export interface ExpandUrlResult {
  * @see https://unshorten.me/
  * @param url The URL to unshorten
  * @param needleOptions The options for the HTTP request
+ * @since v2.2.0
  * @returns The expandUrl result
  */
 export async function expandUrl(url: string, needleOptions?: NeedleOptions): Promise<ExpandUrlResult> {
