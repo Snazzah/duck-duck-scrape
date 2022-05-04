@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "hbenl.vscode-mocha-test-adapter",
+    "dbaeumer.vscode-eslint",
+    "deepscan.vscode-deepscan",
+    "hbenl.vscode-test-explorer",
+    "Gruntfuggly.todo-tree"
+  ]
+}

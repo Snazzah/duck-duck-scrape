@@ -1,0 +1,5 @@
+{
+  "deepscan.enable": true,
+  "mochaExplorer.files": "test/**/*.ts",
+  "mochaExplorer.require": "ts-node/register"
+}

@@ -1,13 +1,4 @@
 module.exports = {
-  extends: 'snazzah',
-  overrides: [
-    {
-      files: ['test/**/*.ts'],
-      globals: {
-        describe: true,
-        it: true,
-        beforeEach: true
-      }
-    }
-  ]
+  ignorePatterns: ['scripts', 'test/__util__/data'],
+  extends: 'snazzah'
 };

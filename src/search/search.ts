@@ -123,6 +123,7 @@ export async function search(query: string, options?: SearchOptions, needleOptio
   let vqd = options.vqd!;
   if (!vqd) vqd = await getVQD(query, 'web', needleOptions);
 
+  /* istanbul ignore next */
   const queryObject: Record<string, string> = {
     q: query,
     ...(options.safeSearch !== SafeSearchType.STRICT ? { t: 'D' } : {}),
@@ -167,6 +168,7 @@ export async function search(query: string, options?: SearchOptions, needleOptio
   // check for no results
   if (searchResults.length === 1 && !('n' in searchResults[0])) {
     const onlyResult = searchResults[0] as CallbackSearchResult;
+    /* istanbul ignore next */
     if ((!onlyResult.da && onlyResult.t === 'EOF') || !onlyResult.a || onlyResult.d === 'google.com search')
       return {
         noResults: true,
@@ -231,6 +233,7 @@ export async function search(query: string, options?: SearchOptions, needleOptio
   if (videosMatch) {
     const videoResult = JSON.parse(videosMatch[1].replace(/\t/g, '    ')) as CallbackDuckbarPayload<DuckbarVideoResult>;
     results.videos = [];
+    /* istanbul ignore next */
     for (const video of videoResult.results) {
       results.videos.push({
         url: video.content,
@@ -269,16 +272,15 @@ function sanityCheck(options: SearchOptions) {
 
   if (!(options.safeSearch! in SafeSearchType)) throw new TypeError(`${options.safeSearch} is an invalid safe search type!`);
 
-  if (typeof options.safeSearch! === 'string')
-    // @ts-ignore
-    options.safeSearch = SafeSearchType[options.safeSearch!];
+  /* istanbul ignore next */
+  if (typeof options.safeSearch! === 'string') options.safeSearch = SafeSearchType[options.safeSearch!] as any as SafeSearchType;
 
   if (typeof options.offset !== 'number') throw new TypeError(`Search offset is not a number!`);
 
   if (options.offset! < 0) throw new RangeError('Search offset cannot be below zero!');
 
   if (
-    !options.time &&
+    options.time &&
     !Object.values(SearchTimeType).includes(options.time as SearchTimeType) &&
     !/\d{4}-\d{2}-\d{2}..\d{4}-\d{2}-\d{2}/.test(options.time as string)
   )

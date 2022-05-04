@@ -5,10 +5,10 @@ package-lock.json
 # Log files
 logs/
 *.log
+.nyc_output
 
 # Miscellaneous
 .tmp/
-.vscode/
 docs/docs.json
 webpack/
 testing/
