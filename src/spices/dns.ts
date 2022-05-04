@@ -1,4 +1,5 @@
 import needle, { NeedleOptions } from 'needle';
+
 import { parseSpiceBody, SPICE_BASE } from '../util';
 
 /** A type of DNS record. */
@@ -75,11 +76,7 @@ export interface DNSResult {
  * @since v2.1.0
  * @returns The dns result
  */
-export async function dns(
-  domain: string,
-  recordType = DNSRecordType.ANY,
-  needleOptions?: NeedleOptions
-): Promise<DNSResult> {
+export async function dns(domain: string, recordType = DNSRecordType.ANY, needleOptions?: NeedleOptions): Promise<DNSResult> {
   if (!domain) throw new Error('Domain cannot be empty!');
 
   const response = await needle('get', `${SPICE_BASE}/dns/${recordType}/${domain}`, needleOptions);

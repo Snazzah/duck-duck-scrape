@@ -1,4 +1,5 @@
 import needle, { NeedleOptions } from 'needle';
+
 import { parseSpiceBody, SPICE_BASE } from '../util';
 
 /** A conversion of currency. */
@@ -58,12 +59,7 @@ export interface CurrencyResult {
  * @param needleOptions The options for the HTTP request
  * @returns The currency result
  */
-export async function currency(
-  from: string,
-  to: string,
-  amount = 1,
-  needleOptions?: NeedleOptions
-): Promise<CurrencyResult> {
+export async function currency(from: string, to: string, amount = 1, needleOptions?: NeedleOptions): Promise<CurrencyResult> {
   if (!from) throw new Error('Currency `from` cannot be empty!');
   if (!to) throw new Error('Currency `to` cannot be empty!');
 

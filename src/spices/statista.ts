@@ -1,4 +1,5 @@
 import needle, { NeedleOptions } from 'needle';
+
 import { parseSpiceBody, SPICE_BASE } from '../util';
 
 /** A teaser image to a Statista statistic. */

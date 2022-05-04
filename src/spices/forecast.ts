@@ -1,4 +1,5 @@
 import needle, { NeedleOptions } from 'needle';
+
 import { parseSpiceBody, SPICE_BASE } from '../util';
 
 export type ForecastIcon =
@@ -139,19 +140,11 @@ export interface ForecastResult {
  * @param needleOptions The options for the HTTP request
  * @returns The forecast result
  */
-export async function forecast(
-  query: string,
-  locale = 'en',
-  needleOptions?: NeedleOptions
-): Promise<ForecastResult | null> {
+export async function forecast(query: string, locale = 'en', needleOptions?: NeedleOptions): Promise<ForecastResult | null> {
   if (!query) throw new Error('Query cannot be empty!');
   if (!locale) throw new Error('Locale cannot be empty!');
 
-  const response = await needle(
-    'get',
-    `${SPICE_BASE}/forecast/${encodeURIComponent(query)}/${locale}`,
-    needleOptions
-  );
+  const response = await needle('get', `${SPICE_BASE}/forecast/${encodeURIComponent(query)}/${locale}`, needleOptions);
 
   if (response.body.toString() === 'ddg_spice_forecast();\n') return null;
   return parseSpiceBody(response.body, /ddg_spice_[\w]+\(\n?((?:.|\n)+)\n?\);?/) as ForecastResult;

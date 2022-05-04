@@ -1,17 +1,18 @@
-import needle, { NeedleOptions } from 'needle';
 import { decode } from 'html-entities';
+import needle, { NeedleOptions } from 'needle';
+
 import {
   CallbackDuckbarPayload,
-  DuckbarImageResult,
   CallbackNextSearch,
   CallbackSearchResult,
-  DuckbarVideoResult,
+  DuckbarImageResult,
+  DuckbarNewsResult,
   DuckbarRelatedSearch,
-  DuckbarNewsResult
+  DuckbarVideoResult
 } from '../types';
-import { SafeSearchType, SearchTimeType, getVQD, queryString, ensureJSON } from '../util';
-import { VideoResult } from './videos';
+import { ensureJSON, getVQD, queryString, SafeSearchType, SearchTimeType } from '../util';
 import { NewsResult } from './news';
+import { VideoResult } from './videos';
 
 /** The options for {@link search}. */
 export interface SearchOptions {
@@ -44,14 +45,10 @@ const defaultOptions: SearchOptions = {
 };
 
 const SEARCH_REGEX = /DDG\.pageLayout\.load\('d',(\[.+\])\);DDG\.duckbar\.load\('images'/;
-const IMAGES_REGEX =
-  /;DDG\.duckbar\.load\('images', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.load\('news/;
-const NEWS_REGEX =
-  /;DDG\.duckbar\.load\('news', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.load\('videos/;
-const VIDEOS_REGEX =
-  /;DDG\.duckbar\.load\('videos', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.loadModule\('related_searches/;
-const RELATED_SEARCHES_REGEX =
-  /DDG\.duckbar\.loadModule\('related_searches', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.load\('products/;
+const IMAGES_REGEX = /;DDG\.duckbar\.load\('images', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.load\('news/;
+const NEWS_REGEX = /;DDG\.duckbar\.load\('news', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.load\('videos/;
+const VIDEOS_REGEX = /;DDG\.duckbar\.load\('videos', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.loadModule\('related_searches/;
+const RELATED_SEARCHES_REGEX = /DDG\.duckbar\.loadModule\('related_searches', ({"ads":.+"vqd":{".+":"\d-\d+-\d+"}})\);DDG\.duckbar\.load\('products/;
 
 /**
  * The search results from {@link search}.
@@ -118,11 +115,7 @@ export interface RelatedResult {
  * @param needleOptions The options of the HTTP request
  * @returns Search results
  */
-export async function search(
-  query: string,
-  options?: SearchOptions,
-  needleOptions?: NeedleOptions
-): Promise<SearchResults> {
+export async function search(query: string, options?: SearchOptions, needleOptions?: NeedleOptions): Promise<SearchResults> {
   if (!query) throw new Error('Query cannot be empty!');
   if (!options) options = defaultOptions;
   else options = sanityCheck(options);
@@ -165,18 +158,11 @@ export async function search(
         })
   };
 
-  const response = await needle(
-    'get',
-    `https://links.duckduckgo.com/d.js?${queryString(queryObject)}`,
-    needleOptions
-  );
+  const response = await needle('get', `https://links.duckduckgo.com/d.js?${queryString(queryObject)}`, needleOptions);
 
   if ((response.body as string).includes('DDG.deep.is506')) throw new Error('A server error occurred!');
 
-  const searchResults = JSON.parse(SEARCH_REGEX.exec(response.body)![1].replace(/\t/g, '    ')) as (
-    | CallbackSearchResult
-    | CallbackNextSearch
-  )[];
+  const searchResults = JSON.parse(SEARCH_REGEX.exec(response.body)![1].replace(/\t/g, '    ')) as (CallbackSearchResult | CallbackNextSearch)[];
 
   // check for no results
   if (searchResults.length === 1 && !('n' in searchResults[0])) {
@@ -217,9 +203,7 @@ export async function search(
   // Images
   const imagesMatch = IMAGES_REGEX.exec(response.body);
   if (imagesMatch) {
-    const imagesResult = JSON.parse(
-      imagesMatch[1].replace(/\t/g, '    ')
-    ) as CallbackDuckbarPayload<DuckbarImageResult>;
+    const imagesResult = JSON.parse(imagesMatch[1].replace(/\t/g, '    ')) as CallbackDuckbarPayload<DuckbarImageResult>;
     results.images = imagesResult.results.map((i) => {
       i.title = decode(i.title);
       return i;
@@ -229,9 +213,7 @@ export async function search(
   // News
   const newsMatch = NEWS_REGEX.exec(response.body);
   if (newsMatch) {
-    const newsResult = JSON.parse(
-      newsMatch[1].replace(/\t/g, '    ')
-    ) as CallbackDuckbarPayload<DuckbarNewsResult>;
+    const newsResult = JSON.parse(newsMatch[1].replace(/\t/g, '    ')) as CallbackDuckbarPayload<DuckbarNewsResult>;
     results.news = newsResult.results.map((article) => ({
       date: article.date,
       excerpt: decode(article.excerpt),
@@ -247,9 +229,7 @@ export async function search(
   // Videos
   const videosMatch = VIDEOS_REGEX.exec(response.body);
   if (videosMatch) {
-    const videoResult = JSON.parse(
-      videosMatch[1].replace(/\t/g, '    ')
-    ) as CallbackDuckbarPayload<DuckbarVideoResult>;
+    const videoResult = JSON.parse(videosMatch[1].replace(/\t/g, '    ')) as CallbackDuckbarPayload<DuckbarVideoResult>;
     results.videos = [];
     for (const video of videoResult.results) {
       results.videos.push({
@@ -269,9 +249,7 @@ export async function search(
   // Related Searches
   const relatedMatch = RELATED_SEARCHES_REGEX.exec(response.body);
   if (relatedMatch) {
-    const relatedResult = JSON.parse(
-      relatedMatch[1].replace(/\t/g, '    ')
-    ) as CallbackDuckbarPayload<DuckbarRelatedSearch>;
+    const relatedResult = JSON.parse(relatedMatch[1].replace(/\t/g, '    ')) as CallbackDuckbarPayload<DuckbarRelatedSearch>;
     results.related = [];
     for (const related of relatedResult.results) {
       results.related.push({
@@ -289,8 +267,7 @@ export async function search(
 function sanityCheck(options: SearchOptions) {
   options = Object.assign({}, defaultOptions, options);
 
-  if (!(options.safeSearch! in SafeSearchType))
-    throw new TypeError(`${options.safeSearch} is an invalid safe search type!`);
+  if (!(options.safeSearch! in SafeSearchType)) throw new TypeError(`${options.safeSearch} is an invalid safe search type!`);
 
   if (typeof options.safeSearch! === 'string')
     // @ts-ignore
@@ -307,14 +284,11 @@ function sanityCheck(options: SearchOptions) {
   )
     throw new TypeError(`${options.time} is an invalid search time!`);
 
-  if (!options.locale || typeof options.locale! !== 'string')
-    throw new TypeError('Search locale must be a string!');
+  if (!options.locale || typeof options.locale! !== 'string') throw new TypeError('Search locale must be a string!');
 
-  if (!options.region || typeof options.region! !== 'string')
-    throw new TypeError('Search region must be a string!');
+  if (!options.region || typeof options.region! !== 'string') throw new TypeError('Search region must be a string!');
 
-  if (!options.marketRegion || typeof options.marketRegion! !== 'string')
-    throw new TypeError('Search market region must be a string!');
+  if (!options.marketRegion || typeof options.marketRegion! !== 'string') throw new TypeError('Search market region must be a string!');
 
   if (options.vqd && !/\d-\d+-\d+/.test(options.vqd)) throw new Error(`${options.vqd} is an invalid VQD!`);
 
@@ -348,11 +322,7 @@ export type AutocompleteResult = AutocompleteTerm | AutocompleteBang;
  * @param needleOptions The options of the HTTP request
  * @returns Autocomplete terms
  */
-export async function autocomplete(
-  query: string,
-  region?: string,
-  needleOptions?: NeedleOptions
-): Promise<AutocompleteResult[]> {
+export async function autocomplete(query: string, region?: string, needleOptions?: NeedleOptions): Promise<AutocompleteResult[]> {
   if (!query) throw new Error('Query cannot be empty!');
 
   const queryObject: Record<string, string> = {
@@ -360,11 +330,7 @@ export async function autocomplete(
     kl: region || 'wt-wt'
   };
 
-  const response = await needle(
-    'get',
-    `https://duckduckgo.com/ac/?${queryString(queryObject)}`,
-    needleOptions
-  );
+  const response = await needle('get', `https://duckduckgo.com/ac/?${queryString(queryObject)}`, needleOptions);
 
   return ensureJSON(response.body);
 }

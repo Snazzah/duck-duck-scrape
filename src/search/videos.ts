@@ -1,8 +1,8 @@
 import { decode } from 'html-entities';
 import needle, { NeedleOptions } from 'needle';
+
 import { DuckbarResponse, DuckbarVideoResult } from '../types';
-import { ensureJSON, getVQD, queryString, SearchTimeType } from '../util';
-import { SafeSearchType } from '../util';
+import { ensureJSON, getVQD, queryString, SafeSearchType, SearchTimeType } from '../util';
 
 /** The types of video definition. */
 export enum VideoDefinition {
@@ -102,11 +102,7 @@ export interface VideoResult {
  * @param needleOptions The options of the HTTP request
  * @returns Search results
  */
-export async function searchVideos(
-  query: string,
-  options?: VideoSearchOptions,
-  needleOptions?: NeedleOptions
-): Promise<VideoSearchResults> {
+export async function searchVideos(query: string, options?: VideoSearchOptions, needleOptions?: NeedleOptions): Promise<VideoSearchResults> {
   if (!query) throw new Error('Query cannot be empty!');
   if (!options) options = defaultOptions;
   else options = sanityCheck(options);
@@ -131,11 +127,7 @@ export async function searchVideos(
     s: String(options.offset || 0)
   };
 
-  const response = await needle(
-    'get',
-    `https://duckduckgo.com/v.js?${queryString(queryObject)}`,
-    needleOptions
-  );
+  const response = await needle('get', `https://duckduckgo.com/v.js?${queryString(queryObject)}`, needleOptions);
 
   if (response.statusCode === 403) throw new Error('A server error occurred!');
 
@@ -161,8 +153,7 @@ export async function searchVideos(
 function sanityCheck(options: VideoSearchOptions) {
   options = Object.assign({}, defaultOptions, options);
 
-  if (!(options.safeSearch! in SafeSearchType))
-    throw new TypeError(`${options.safeSearch} is an invalid safe search type!`);
+  if (!(options.safeSearch! in SafeSearchType)) throw new TypeError(`${options.safeSearch} is an invalid safe search type!`);
 
   if (typeof options.safeSearch! === 'string')
     // @ts-ignore
@@ -172,11 +163,9 @@ function sanityCheck(options: VideoSearchOptions) {
 
   if (options.offset! < 0) throw new RangeError('Search offset cannot be below zero!');
 
-  if (!options.locale || typeof options.locale! !== 'string')
-    throw new TypeError('Search locale must be a string!');
+  if (!options.locale || typeof options.locale! !== 'string') throw new TypeError('Search locale must be a string!');
 
-  if (options.time && !Object.values(SearchTimeType).includes(options.time))
-    throw new TypeError(`${options.time} is an invalid time filter!`);
+  if (options.time && !Object.values(SearchTimeType).includes(options.time)) throw new TypeError(`${options.time} is an invalid time filter!`);
 
   if (options.definition && !Object.values(VideoDefinition).includes(options.definition))
     throw new TypeError(`${options.definition} is an invalid video definition!`);

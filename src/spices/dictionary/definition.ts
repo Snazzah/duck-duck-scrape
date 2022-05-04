@@ -1,4 +1,5 @@
 import needle, { NeedleOptions } from 'needle';
+
 import { parseSpiceBody, SPICE_BASE } from '../../util';
 
 export type DictionaryDefinitionPartOfSpeech =
@@ -81,10 +82,7 @@ export interface DictionaryDefinitionResult {
  * @param needleOptions The options for the HTTP request
  * @returns The dictionary definition result
  */
-export async function dictionaryDefinition(
-  word: string,
-  needleOptions?: NeedleOptions
-): Promise<DictionaryDefinitionResult[]> {
+export async function dictionaryDefinition(word: string, needleOptions?: NeedleOptions): Promise<DictionaryDefinitionResult[]> {
   if (!word) throw new Error('Word cannot be empty!');
 
   const response = await needle('get', `${SPICE_BASE}/dictionary/definition/${word}`, needleOptions);

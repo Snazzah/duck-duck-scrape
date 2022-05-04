@@ -1,4 +1,5 @@
 import needle, { NeedleOptions } from 'needle';
+
 import { SPICE_BASE } from '../../util';
 
 export type DictionaryPronunciationType = 'ahd-5' | 'arpabet' | 'gcide-diacritical' | 'IPA';
@@ -25,10 +26,7 @@ export interface DictionaryPronunciationResult {
  * @param needleOptions The options for the HTTP request
  * @returns The dictionary pronunciation result
  */
-export async function dictionaryPronunciation(
-  word: string,
-  needleOptions?: NeedleOptions
-): Promise<DictionaryPronunciationResult[]> {
+export async function dictionaryPronunciation(word: string, needleOptions?: NeedleOptions): Promise<DictionaryPronunciationResult[]> {
   if (!word) throw new Error('Word cannot be empty!');
 
   const response = await needle('get', `${SPICE_BASE}/dictionary/pronunciation/${word}`, needleOptions);

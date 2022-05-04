@@ -1,4 +1,5 @@
 import needle, { NeedleOptions } from 'needle';
+
 import { SPICE_BASE } from '../../util';
 
 /**
@@ -32,10 +33,7 @@ export interface DictionaryAudioResult {
  * @param needleOptions The options for the HTTP request
  * @returns The dictionary audio result
  */
-export async function dictionaryAudio(
-  word: string,
-  needleOptions?: NeedleOptions
-): Promise<DictionaryAudioResult[]> {
+export async function dictionaryAudio(word: string, needleOptions?: NeedleOptions): Promise<DictionaryAudioResult[]> {
   if (!word) throw new Error('Word cannot be empty!');
 
   const response = await needle('get', `${SPICE_BASE}/dictionary/audio/${word}`, needleOptions);
