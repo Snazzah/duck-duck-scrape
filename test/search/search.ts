@@ -3,10 +3,10 @@ import 'mocha';
 import * as chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 
-import { search } from '../../src/search/search';
+import { autocomplete, search } from '../../src/search/search';
 import { SafeSearchType } from '../../src/util';
 import { SEARCH_QUERY_VQD } from '../__util__/constants';
-import { makeSearchNock, makeVQDNock } from '../__util__/nock';
+import { makeAutocompleteNock, makeSearchNock, makeVQDNock } from '../__util__/nock';
 
 chai.use(chaiAsPromised);
 const expect = chai.expect;
@@ -188,6 +188,28 @@ describe('search/search', () => {
 
       await expect(search('node', { vqd: SEARCH_QUERY_VQD })).to.eventually.be.rejectedWith(Error, 'A server error occurred!');
       scope.done();
+    });
+  });
+
+  describe('autocomplete()', () => {
+    it('should return results', async () => {
+      const scope = makeAutocompleteNock('node');
+
+      await expect(autocomplete('node')).to.eventually.deep.equal([
+        { phrase: 'node.js' },
+        { phrase: 'node js install' },
+        { phrase: 'nodes of ranvier' },
+        { phrase: 'node lib' },
+        { phrase: 'node unblocker' },
+        { phrase: 'node red' },
+        { phrase: 'nodecraft' },
+        { phrase: 'nodemon' }
+      ]);
+      scope.done();
+    });
+
+    it('should throw on empty queries', async () => {
+      await expect(autocomplete('')).to.eventually.be.rejectedWith(Error, 'Query cannot be empty!');
     });
   });
 });

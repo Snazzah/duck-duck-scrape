@@ -153,6 +153,7 @@ export async function searchImages(query: string, options?: ImageSearchOptions, 
   let vqd = options.vqd!;
   if (!vqd) vqd = await getVQD(query, 'web', needleOptions);
 
+  /* istanbul ignore next */
   const filters = [
     options.size ? `size:${options.size}` : '',
     options.type ? `type:${options.type}` : '',
@@ -192,9 +193,8 @@ function sanityCheck(options: ImageSearchOptions) {
 
   if (!(options.safeSearch! in SafeSearchType)) throw new TypeError(`${options.safeSearch} is an invalid safe search type!`);
 
-  if (typeof options.safeSearch! === 'string')
-    // @ts-ignore
-    options.safeSearch = SafeSearchType[options.safeSearch!];
+  /* istanbul ignore next */
+  if (typeof options.safeSearch! === 'string') options.safeSearch = SafeSearchType[options.safeSearch!] as any as SafeSearchType;
 
   if (typeof options.offset !== 'number') throw new TypeError(`Search offset is not a number!`);
 

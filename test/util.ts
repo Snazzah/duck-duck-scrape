@@ -11,13 +11,13 @@ chai.use(chaiAsPromised);
 const expect = chai.expect;
 
 describe('util', () => {
-  describe('queryString', () => {
+  describe('queryString()', () => {
     it('should convert object to query string', () => {
       expect(queryString({ a: '1', b: '2', c: '3' })).to.equal('a=1&b=2&c=3');
     });
   });
 
-  describe('getVQD', () => {
+  describe('getVQD()', () => {
     it('should get a VQD', async () => {
       const scope = nock(DDG_HOST).get('/').query({ q: 'node', ia: 'web' }).replyWithFile(200, 'test/__util__/pages/vqd.html');
 
@@ -33,7 +33,7 @@ describe('util', () => {
     });
   });
 
-  describe('ensureJSON', () => {
+  describe('ensureJSON()', () => {
     it('should parse JSON in buffers', () => {
       expect(ensureJSON(Buffer.from('{"done":true}'))).to.deep.equal({ done: true });
     });
@@ -47,7 +47,7 @@ describe('util', () => {
     });
   });
 
-  describe('parseSpiceBody', () => {
+  describe('parseSpiceBody()', () => {
     it('should parse spice body', () => {
       const body = 'ddg_spice_test(\n{"done":true});\n';
       expect(parseSpiceBody(body)).to.deep.equal({ done: true });
