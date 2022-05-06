@@ -2,11 +2,11 @@ import 'mocha';
 
 import * as chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import nock from 'nock';
 
-import { autocomplete, search } from '../../src/search/search';
+import { search } from '../../src/search/search';
 import { SafeSearchType } from '../../src/util';
-import { DDG_HOST, DDG_LINKS_HOST, SEARCH_QUERY_VQD } from '../__util__/constants';
+import { SEARCH_QUERY_VQD } from '../__util__/constants';
+import { makeSearchNock, makeVQDNock } from '../__util__/nock';
 
 chai.use(chaiAsPromised);
 const expect = chai.expect;
@@ -59,8 +59,8 @@ const STRICT_QUERY = {
 describe('search/search', () => {
   describe('search()', () => {
     it('should return fetch VQD when not defined', async () => {
-      const vqdScope = nock(DDG_HOST).get('/').query({ q: 'node', ia: 'web' }).replyWithFile(200, 'test/__util__/pages/vqd.html');
-      const scope = nock(DDG_LINKS_HOST).get('/d.js').query(DEFAULT_QUERY).replyWithFile(200, 'test/__util__/data/search/search/default.js');
+      const vqdScope = makeVQDNock('node');
+      const scope = makeSearchNock(DEFAULT_QUERY);
 
       await expect(search('node')).to.eventually.include({ vqd: SEARCH_QUERY_VQD });
 
@@ -69,7 +69,7 @@ describe('search/search', () => {
     });
 
     it('should return results', async () => {
-      const scope = nock(DDG_LINKS_HOST).get('/d.js').query(DEFAULT_QUERY).replyWithFile(200, 'test/__util__/data/search/search/default.js');
+      const scope = makeSearchNock(DEFAULT_QUERY);
 
       await expect(search('node', { vqd: SEARCH_QUERY_VQD })).to.eventually.have.nested.include({
         noResults: false,
@@ -86,7 +86,7 @@ describe('search/search', () => {
     });
 
     it('should return results in strict safe search', async () => {
-      const scope = nock(DDG_LINKS_HOST).get('/d.js').query(STRICT_QUERY).replyWithFile(200, 'test/__util__/data/search/search/strict.js');
+      const scope = makeSearchNock(STRICT_QUERY, 'search/strict.js');
 
       await expect(search('node', { vqd: SEARCH_QUERY_VQD, safeSearch: SafeSearchType.STRICT })).to.eventually.have.nested.include({
         noResults: false,
@@ -102,7 +102,7 @@ describe('search/search', () => {
     });
 
     it('should return no results', async () => {
-      const scope = nock(DDG_LINKS_HOST).get('/d.js').query(DEFAULT_QUERY).replyWithFile(200, 'test/__util__/data/search/search/noResults.js');
+      const scope = makeSearchNock(DEFAULT_QUERY, 'search/noResults.js');
 
       await expect(search('node', { vqd: SEARCH_QUERY_VQD })).to.eventually.deep.equal({
         noResults: true,
@@ -113,7 +113,7 @@ describe('search/search', () => {
     });
 
     it('should return news results', async () => {
-      const scope = nock(DDG_LINKS_HOST).get('/d.js').query(DEFAULT_QUERY).replyWithFile(200, 'test/__util__/data/search/search/news.js');
+      const scope = makeSearchNock(DEFAULT_QUERY, 'search/news.js');
 
       await expect(search('node', { vqd: SEARCH_QUERY_VQD })).to.eventually.have.nested.include({
         noResults: false,
@@ -129,7 +129,7 @@ describe('search/search', () => {
     });
 
     it('should return video results', async () => {
-      const scope = nock(DDG_LINKS_HOST).get('/d.js').query(DEFAULT_QUERY).replyWithFile(200, 'test/__util__/data/search/search/videos.js');
+      const scope = makeSearchNock(DEFAULT_QUERY, 'search/videos.js');
 
       await expect(search('node', { vqd: SEARCH_QUERY_VQD })).to.eventually.have.nested.include({
         noResults: false,
@@ -184,35 +184,10 @@ describe('search/search', () => {
     });
 
     it('should throw on server errors', async () => {
-      const scope = nock(DDG_LINKS_HOST).get('/d.js').query(DEFAULT_QUERY).replyWithFile(200, 'test/__util__/data/search/506.js');
+      const scope = makeSearchNock(DEFAULT_QUERY, '506.js');
 
       await expect(search('node', { vqd: SEARCH_QUERY_VQD })).to.eventually.be.rejectedWith(Error, 'A server error occurred!');
       scope.done();
-    });
-  });
-
-  describe('autocomplete()', () => {
-    it('should return results', async () => {
-      const scope = nock(DDG_HOST)
-        .get('/ac/')
-        .query({ q: 'node', kl: 'wt-wt' })
-        .replyWithFile(200, 'test/__util__/data/search/search/autocomplete.json');
-
-      await expect(autocomplete('node')).to.eventually.deep.equal([
-        { phrase: 'node.js' },
-        { phrase: 'node js install' },
-        { phrase: 'nodes of ranvier' },
-        { phrase: 'node lib' },
-        { phrase: 'node unblocker' },
-        { phrase: 'node red' },
-        { phrase: 'nodecraft' },
-        { phrase: 'nodemon' }
-      ]);
-      scope.done();
-    });
-
-    it('should throw on empty queries', async () => {
-      await expect(autocomplete('')).to.eventually.be.rejectedWith(Error, 'Query cannot be empty!');
     });
   });
 });
