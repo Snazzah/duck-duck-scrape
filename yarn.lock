@@ -1016,9 +1016,9 @@ eslint-config-prettier@^8.3.0:
   integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
 
 eslint-config-snazzah@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-snazzah/-/eslint-config-snazzah-1.2.0.tgz#5822d6eb088156bc02bd50d34df91f28f91d40f6"
-  integrity sha512-G9D5lOgWB28p/qsCUXp/4gjZd+PIhman2oQoFtemd0LJEC+UN6w9Xn4p2BRu0XscPwOF5x1rXBhheRoAOU6wVw==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-snazzah/-/eslint-config-snazzah-1.2.1.tgz#1afd752c97597599a32e8bb982c5f91f5436cef5"
+  integrity sha512-7xmc13vwToMuACbNbrYDZ/DQCS2B77TvY/PEw2ktU+PqlAS3VOJXx44LVsJ83MuobrKfB4gt3gjKZZNlnfDCLg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.30.7"
     "@typescript-eslint/parser" "^5.30.7"
