@@ -341,10 +341,10 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-10.0.1.tgz#2f4f65bb08bc368ac39c96da7b2f09140b26851b"
   integrity sha512-/fvYntiO1GeICvqbQ3doGDIP97vWmvFt83GKguJ6prmQM2iXZfFcq6YE8KteFyRtX2/h5Hf91BYvPodJKFYv5Q==
 
-"@types/needle@^2.5.1":
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/@types/needle/-/needle-2.5.3.tgz#cc64f46411b811df260171b68756e67d36890ea1"
-  integrity sha512-RwgTwMRaedfyCBe5SSWMpm1Yqzc5UPZEMw0eAd09OSyV93nLRj9/evMGZmgFeHKzUOd4xxtHvgtc+rjcBjI1Qg==
+"@types/needle@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@types/needle/-/needle-3.2.0.tgz#68badb910fae8e9d81c8aff4d9dc9b2044695fc7"
+  integrity sha512-6XzvzEyJ2ozFNfPajFmqH9JOt0Hp+9TawaYpJT59iIP/zR0U37cfWCRwosyIeEBBZBi021Osq4jGAD3AOju5fg==
   dependencies:
     "@types/node" "*"
 
