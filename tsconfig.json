@@ -16,6 +16,8 @@
   "exclude": [
     "node_modules",
     "lib",
+    "scripts",
+    "test",
     "testing",
     "examples",
     "docs"
