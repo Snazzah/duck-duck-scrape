@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [2.2.2] - 2023-02-14
+### Fixed:
+- Updated VQD fetching
 ## [2.2.1] - 2022-02-02
 ### Fixed:
 - Improved web safe search filter ([#33](https://github.com/Snazzah/duck-duck-scrape/issues/33))
@@ -47,7 +50,7 @@ Complete rewrite of the package, read the [documentation](https://duck-duck-scra
 ## [1.0.3] - 2018-04-07
 - Initial(-ish) release.
 
-[Unreleased]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.1...HEAD
+[Unreleased]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.2...HEAD
 [1.0.3]: https://github.com/Snazzah/duck-duck-scrape/releases/tag/v1.0.3
 [2.0.0]: https://github.com/Snazzah/duck-duck-scrape/compare/v1.0.3...v2.0.0
 [2.0.1]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.0.0...v2.0.1
@@ -59,3 +62,4 @@ Complete rewrite of the package, read the [documentation](https://duck-duck-scra
 [2.1.5]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.1.4...v2.1.5
 [2.2.0]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.1.5...v2.2.0
 [2.2.1]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.0...v2.2.1
+[2.2.2]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.0...v2.2.2
