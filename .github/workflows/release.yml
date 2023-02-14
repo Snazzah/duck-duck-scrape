@@ -4,6 +4,7 @@ on:
     types: [published]
   workflow_dispatch:
 
+
 jobs:
   tag:
     name: Add/update 'latest' tag
@@ -56,7 +57,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Package
-        run: pnpm run build:package
+        run: pnpm run build
 
       - name: Publish Package
         run: pnpm publish --no-git-checks
@@ -107,7 +108,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Package
-        run: pnpm run build:package && pnpm run gpr
+        run: pnpm run build && pnpm run gpr
 
       - name: Publish Package
         run: npm publish
