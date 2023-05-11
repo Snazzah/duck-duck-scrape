@@ -26,11 +26,11 @@
   "scripts": {
     "build": "tsc",
     "build:prepare": "shx test -d ./lib || npm run build",
-    "changelog": "ts-node scripts/changelog",
+    "changelog": "tsx scripts/changelog",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "nyc mocha -r ts-node/register --extension ts 'test/**/*.ts'",
-    "gpr": "ts-node scripts/gpr",
+    "test": "nyc mocha -r tsx --extension ts 'test/**/*.ts'",
+    "gpr": "tsx scripts/gpr",
     "docs": "typedoc",
     "prepare": "husky install && npm run build:prepare",
     "prepublishOnly": "(shx test -d ./lib || (echo \"lib folder does not exist\" && exit 1)) && npm run lint:fix"
@@ -59,7 +59,7 @@
     "nyc": "^15.1.0",
     "prettier": "^2.8.1",
     "shx": "^0.3.4",
-    "ts-node": "^10.9.1",
+    "tsx": "^3.12.7",
     "typedoc": "0.21.9",
     "typescript": "4.4",
     "yarn": "^1.22.19"
