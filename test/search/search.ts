@@ -189,6 +189,16 @@ describe('search/search', () => {
       await expect(search('node', { vqd: SEARCH_QUERY_VQD })).to.eventually.be.rejectedWith(Error, 'A server error occurred!');
       scope.done();
     });
+
+    it('should throw on server anomalies', async () => {
+      const scope = makeSearchNock(DEFAULT_QUERY, 'anomalyDetectionBlock.js');
+
+      await expect(search('node', { vqd: SEARCH_QUERY_VQD })).to.eventually.be.rejectedWith(
+        Error,
+        'DDG detected an anomaly in the request, you are likely making requests too quickly.'
+      );
+      scope.done();
+    });
   });
 
   describe('autocomplete()', () => {
