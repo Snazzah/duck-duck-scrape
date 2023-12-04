@@ -163,7 +163,7 @@ export async function search(query: string, options?: SearchOptions, needleOptio
 
   if ((response.body as string).includes('DDG.deep.is506')) throw new Error('A server error occurred!');
   if (response.body.toString().includes('DDG.deep.anomalyDetectionBlock'))
-    throw new Error('DDG detected an anonaly in the request, you are likely making requests too quickly.');
+    throw new Error('DDG detected an anomaly in the request, you are likely making requests too quickly.');
 
   const searchResults = JSON.parse(SEARCH_REGEX.exec(response.body)![1].replace(/\t/g, '    ')) as (CallbackSearchResult | CallbackNextSearch)[];
 
