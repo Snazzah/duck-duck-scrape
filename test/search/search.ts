@@ -195,7 +195,7 @@ describe('search/search', () => {
 
       await expect(search('node', { vqd: SEARCH_QUERY_VQD })).to.eventually.be.rejectedWith(
         Error,
-        'DDG detected an anonaly in the request, you are likely making requests too quickly.'
+        'DDG detected an anomaly in the request, you are likely making requests too quickly.'
       );
       scope.done();
     });
