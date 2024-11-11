@@ -133,7 +133,6 @@ export async function search(query: string, options?: SearchOptions, needleOptio
     s: String(options.offset),
     dl: 'en',
     ct: 'US',
-    ss_mkt: options.marketRegion!,
     df: options.time! as string,
     vqd,
     ...(options.safeSearch !== SafeSearchType.STRICT ? { ex: String(options.safeSearch) } : {}),
