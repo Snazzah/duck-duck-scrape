@@ -41,7 +41,7 @@ const defaultOptions: SearchOptions = {
   locale: 'en-us',
   region: 'wt-wt',
   offset: 0,
-  marketRegion: 'us'
+  marketRegion: 'en-US'
 };
 
 const SEARCH_REGEX = /DDG\.pageLayout\.load\('d',(\[.+\])\);DDG\.duckbar\.load\('images'/;
@@ -134,6 +134,7 @@ export async function search(query: string, options?: SearchOptions, needleOptio
     dl: 'en',
     ct: 'US',
     df: options.time! as string,
+    bing_market: marketRegion,
     vqd,
     ...(options.safeSearch !== SafeSearchType.STRICT ? { ex: String(options.safeSearch) } : {}),
     sp: '1',
