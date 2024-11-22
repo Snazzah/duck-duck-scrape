@@ -32,11 +32,8 @@
     "test": "nyc mocha -r tsx --extension ts 'test/**/*.ts'",
     "gpr": "tsx scripts/gpr",
     "docs": "typedoc",
-    "prepare": "husky install && npm run build:prepare",
+    "prepare": "npm run build:prepare",
     "prepublishOnly": "(shx test -d ./lib || (echo \"lib folder does not exist\" && exit 1)) && npm run lint:fix"
-  },
-  "lint-staged": {
-    "*.ts": "eslint --fix"
   },
   "dependencies": {
     "html-entities": "^2.3.3",
@@ -52,8 +49,6 @@
     "chai-as-promised": "^7.1.1",
     "eslint": "^8.30.0",
     "eslint-config-snazzah": "^1.2.1",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.1.0",
     "mocha": "^10.2.0",
     "nock": "^13.2.9",
     "nyc": "^15.1.0",
