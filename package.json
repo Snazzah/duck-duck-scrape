@@ -1,6 +1,6 @@
 {
   "name": "duck-duck-scrape",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "Search from DuckDuckGo and use it's spice APIs.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -59,7 +59,7 @@
     "nyc": "^15.1.0",
     "prettier": "^2.8.1",
     "shx": "^0.3.4",
-    "tsx": "^3.12.7",
+    "tsx": "^4.19.2",
     "typedoc": "0.21.9",
     "typescript": "4.4",
     "yarn": "^1.22.19"
