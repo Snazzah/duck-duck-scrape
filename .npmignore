@@ -17,6 +17,7 @@ deploy/
 scripts/
 static/
 docs/
+src/
 
 # NPM ignore
 .eslintignore
@@ -32,3 +33,5 @@ testing/
 tsconfig.json
 .husky/
 typedoc.json
+.mergify.yml
+tsconfig.eslint.json
