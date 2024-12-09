@@ -10,7 +10,7 @@ import {
   DuckbarRelatedSearch,
   DuckbarVideoResult
 } from '../types';
-import { ensureJSON, getVQD, queryString, SafeSearchType, SearchTimeType } from '../util';
+import { COMMON_HEADERS, ensureJSON, getVQD, queryString, SafeSearchType, SearchTimeType } from '../util';
 import { NewsResult } from './news';
 import { VideoResult } from './videos';
 
@@ -121,7 +121,7 @@ export async function search(query: string, options?: SearchOptions, needleOptio
   else options = sanityCheck(options);
 
   let vqd = options.vqd!;
-  if (!vqd) vqd = await getVQD(query, 'web', needleOptions);
+  if (!vqd) vqd = await getVQD(query, 'web', needleOptions || { headers: COMMON_HEADERS });
 
   /* istanbul ignore next */
   const queryObject: Record<string, string> = {

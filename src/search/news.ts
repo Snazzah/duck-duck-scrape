@@ -2,7 +2,7 @@ import { decode } from 'html-entities';
 import needle, { NeedleOptions } from 'needle';
 
 import { DuckbarNewsResult, DuckbarResponse } from '../types';
-import { ensureJSON, getVQD, queryString, SafeSearchType, SearchTimeType } from '../util';
+import { COMMON_HEADERS, ensureJSON, getVQD, queryString, SafeSearchType, SearchTimeType } from '../util';
 
 /** The options for {@link searchNews}. */
 export interface NewsSearchOptions {
@@ -84,7 +84,7 @@ export async function searchNews(query: string, options?: NewsSearchOptions, nee
     s: String(options.offset || 0)
   };
 
-  const response = await needle('get', `https://duckduckgo.com/news.js?${queryString(queryObject)}`, needleOptions);
+  const response = await needle('get', `https://duckduckgo.com/news.js?${queryString(queryObject)}`, needleOptions || { headers: COMMON_HEADERS });
 
   if (response.statusCode === 403) throw new Error('A server error occurred!');
 

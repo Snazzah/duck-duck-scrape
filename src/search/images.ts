@@ -2,7 +2,7 @@ import { decode } from 'html-entities';
 import needle, { NeedleOptions } from 'needle';
 
 import { DuckbarImageResult, DuckbarResponse } from '../types';
-import { ensureJSON, getVQD, queryString, SafeSearchType } from '../util';
+import { COMMON_HEADERS, ensureJSON, getVQD, queryString, SafeSearchType } from '../util';
 
 /** The types of image sizes. */
 export enum ImageSize {
@@ -172,7 +172,7 @@ export async function searchImages(query: string, options?: ImageSearchOptions, 
     s: String(options.offset || 0)
   };
 
-  const response = await needle('get', `https://duckduckgo.com/i.js?${queryString(queryObject)}`, needleOptions);
+  const response = await needle('get', `https://duckduckgo.com/i.js?${queryString(queryObject)}`, needleOptions || { headers: COMMON_HEADERS });
 
   if (response.statusCode === 403) throw new Error('A server error occurred!');
 

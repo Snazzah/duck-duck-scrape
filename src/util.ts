@@ -4,6 +4,19 @@ import needle, { NeedleOptions } from 'needle';
 export const SPICE_BASE = 'https://duckduckgo.com/js/spice';
 /** @internal */
 export const VQD_REGEX = /vqd=['"](\d+-\d+(?:-\d+)?)['"]/;
+/** @internal */
+export const COMMON_HEADERS: Record<string, string> = {
+  'sec-ch-ua': '"Not=A?Brand";v="8", "Chromium";v="129"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'document',
+  'sec-fetch-mode': 'navigate',
+  'sec-fetch-site': 'none',
+  'sec-fetch-user': '?1',
+  'sec-gpc': '1',
+  'upgrade-insecure-requests': '1',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36'
+};
 
 /** The safe search values when searching DuckDuckGo. */
 export enum SafeSearchType {

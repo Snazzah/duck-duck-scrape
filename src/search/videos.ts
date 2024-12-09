@@ -2,7 +2,7 @@ import { decode } from 'html-entities';
 import needle, { NeedleOptions } from 'needle';
 
 import { DuckbarResponse, DuckbarVideoResult } from '../types';
-import { ensureJSON, getVQD, queryString, SafeSearchType, SearchTimeType } from '../util';
+import { COMMON_HEADERS, ensureJSON, getVQD, queryString, SafeSearchType, SearchTimeType } from '../util';
 
 /** The types of video definition. */
 export enum VideoDefinition {
@@ -127,7 +127,7 @@ export async function searchVideos(query: string, options?: VideoSearchOptions, 
     s: String(options.offset || 0)
   };
 
-  const response = await needle('get', `https://duckduckgo.com/v.js?${queryString(queryObject)}`, needleOptions);
+  const response = await needle('get', `https://duckduckgo.com/v.js?${queryString(queryObject)}`, needleOptions || { headers: COMMON_HEADERS });
 
   if (response.statusCode === 403) throw new Error('A server error occurred!');
 
