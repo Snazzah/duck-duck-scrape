@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [2.2.7] - 2025-01-09
+### Fixed:
+- Updated search regex to account for response changes
 ## [2.2.6] - 2024-11-22
 ### Changed:
 - `ss_mkt` is now replaced with `bing_market` which should allow for fewer anomalies ([#141](https://github.com/Snazzah/duck-duck-scrape/issues/141))
@@ -62,7 +65,7 @@ Complete rewrite of the package, read the [documentation](https://duck-duck-scra
 ## [1.0.3] - 2018-04-07
 - Initial(-ish) release.
 
-[Unreleased]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.6...HEAD
+[Unreleased]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.7...HEAD
 [1.0.3]: https://github.com/Snazzah/duck-duck-scrape/releases/tag/v1.0.3
 [2.0.0]: https://github.com/Snazzah/duck-duck-scrape/compare/v1.0.3...v2.0.0
 [2.0.1]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.0.0...v2.0.1
@@ -79,3 +82,4 @@ Complete rewrite of the package, read the [documentation](https://duck-duck-scra
 [2.2.4]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.3...v2.2.4
 [2.2.5]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.4...v2.2.5
 [2.2.6]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.5...v2.2.6
+[2.2.7]: https://github.com/Snazzah/duck-duck-scrape/compare/v2.2.6...v2.2.7
