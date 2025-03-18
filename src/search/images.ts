@@ -29,7 +29,9 @@ export enum ImageType {
   /** Animated GIFs. */
   GIF = 'gif',
   /** Transparent photos. */
-  TRANSPARENT = 'transparent'
+  TRANSPARENT = 'transparent',
+  /** Line drawings. */
+  LINE_DRAWING = 'line'
 }
 
 /** The types of image layouts. */
